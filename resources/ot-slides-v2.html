@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지피터스 22기 OT</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --link: #0000FF;
+  --grey-light: #F0F0F0;
+  --grey-mid: #CCCCCC;
+  --grey-dim: #888888;
+  --b-thin: 1px;
+  --b-thick: 3px;
+  --b-heavy: 5px;
+}
+
+.reveal {
+  font-family: "Work Sans", "Pretendard", sans-serif;
+  color: var(--black);
+  background: var(--white);
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+.reveal h1 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 88px;
+  line-height: 1.0;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal h2 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 60px;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.005em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal h3 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--black);
+  margin: 0;
+}
+.reveal p {
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--black);
+  margin: 0;
+}
+.reveal li { font-size: 22px; line-height: 1.6; color: var(--black); }
+
+.reveal .keymsg {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 100px;
+  line-height: 1.0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .keymsg-md {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .subhead {
+  font-family: "Work Sans", "Pretendard", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.4;
+  margin: 0;
+}
+.reveal .lead {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .sub {
+  font-size: 16px;
+  color: var(--grey-dim);
+  line-height: 1.5;
+  margin: 0;
+}
+.reveal .micro {
+  font-size: 12px;
+  color: var(--grey-dim);
+  margin: 0;
+}
+.reveal .num-big {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 88px;
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1;
+}
+
+.reveal code, .reveal pre code {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-weight: 400;
+}
+.reveal pre {
+  background: var(--grey-light);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 24px 32px;
+  box-shadow: none;
+  margin: 0;
+  min-width: 760px;
+  max-width: 920px;
+  align-self: stretch;
+  width: auto;
+}
+.reveal pre code {
+  font-size: 22px;
+  line-height: 1.6;
+  background: transparent;
+  padding: 0;
+  display: block;
+  white-space: pre;
+  color: var(--black);
+}
+.reveal .cmd-explain {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 18px;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .cmd-explain strong { color: var(--black); font-weight: 700; }
+
+.reveal .accent {
+  background: var(--black);
+  color: var(--white);
+  padding: 0 8px;
+  display: inline-block;
+}
+.reveal strong { color: var(--black); font-weight: 700; }
+
+.reveal .slide {
+  width: 100%;
+  height: 720px;
+  padding: 80px 96px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--white);
+}
+.reveal .slide[data-layout="title"]  { justify-content: center; align-items: flex-start; gap: 32px; }
+.reveal .slide[data-layout="center"] { justify-content: center; align-items: center; text-align: center; gap: 32px; }
+.reveal .slide[data-layout="left"]   { justify-content: flex-start; align-items: flex-start; padding-top: 80px; gap: 24px; }
+.reveal .slide[data-layout="grid"]   { justify-content: flex-start; align-items: flex-start; padding-top: 80px; gap: 28px; }
+
+.reveal .page-tag {
+  position: absolute;
+  top: 32px;
+  left: 96px;
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.reveal .tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 0;
+  font-family: "Work Sans", "Pretendard", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.reveal .micro-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 0;
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.reveal .section-meta {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 0;
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.reveal .blocklabel {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+}
+
+/* Cards */
+.reveal .card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 24px 28px;
+  text-align: left;
+}
+.reveal .card.soft { background: var(--grey-light); }
+.reveal .card.elevate { border-width: var(--b-heavy); box-shadow: none; }
+.reveal .card.bar-left { border-left: var(--b-heavy) solid var(--black); }
+.reveal .card.bar-left-soft {
+  background: var(--grey-light);
+  border-left: var(--b-heavy) solid var(--black);
+}
+.reveal .card.hero { padding: 28px 32px; }
+.reveal .card .card-desc {
+  font-size: 18px;
+  color: var(--black);
+  line-height: 1.5;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Stage (4단 진화) */
+.reveal .stage {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 22px 18px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reveal .stage .num {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .stage .ttl {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: -0.005em;
+}
+.reveal .stage .out { font-size: 14px; color: var(--black); }
+.reveal .stage.now { background: var(--black); border-color: var(--black); }
+.reveal .stage.now * { color: var(--white) !important; }
+.reveal .stage.inactive {
+  border-color: var(--grey-mid);
+  background: var(--white);
+  opacity: 1;
+  filter: none;
+}
+.reveal .stage.inactive * { color: var(--grey-mid); }
+
+/* Grid */
+.reveal .grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
+  align-items: stretch;
+  width: 100%;
+}
+.reveal .grid-4 .arrow {
+  color: var(--black);
+  font-size: 20px;
+  align-self: center;
+  text-align: center;
+  font-weight: 900;
+}
+.reveal .grid-1 { display: grid; grid-template-columns: 1fr; gap: 16px; width: 100%; }
+.reveal .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; width: 100%; }
+.reveal .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; width: 100%; }
+
+/* QA block (OT 자기소개) */
+.reveal .qa-block {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-top: var(--b-thick) solid var(--black);
+  width: 100%;
+}
+.reveal .qa-block:first-of-type { border-top: 0; padding-top: 4px; }
+.reveal .qa-block .qnum {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 56px;
+  text-align: left;
+}
+.reveal .qa-block .qbody { flex: 1; }
+.reveal .qa-block .qbody h3 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+.reveal .qa-block .qbody p { color: var(--black); font-size: 18px; margin: 0; }
+
+/* Check list — RawBlock 디바이더 스타일 */
+.reveal .check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  border-top: var(--b-thick) solid var(--black);
+  border-bottom: var(--b-thick) solid var(--black);
+}
+.reveal .slide[data-layout="left"] > .check-list { margin-top: -8px; }
+.reveal .check-item {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 12px 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--black);
+}
+.reveal .check-item:last-child { border-bottom: 0; }
+.reveal .check-item .check-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.reveal .check-item h3 { font-family: "Work Sans", "Pretendard", sans-serif; font-size: 22px; font-weight: 600; line-height: 1.3; }
+.reveal .check-item p { font-size: 22px; font-weight: 600; line-height: 1.3; }
+
+/* Pillar card (스터디장 소개) */
+.reveal .pillar-card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 32px 36px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.reveal .pillar-card .role {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .pillar-card .name {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .pillar-card .desc { font-size: 16px; color: var(--black); line-height: 1.6; margin: 0; }
+.reveal .pillar-card .live {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--white);
+  background: var(--black);
+  font-weight: 700;
+  padding: 6px 12px;
+  display: inline-block;
+  margin-top: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+/* Result card (4주 후 결과물) */
+.reveal .result-card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 24px 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reveal .result-card .rnum {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .result-card .rttl {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--black);
+}
+.reveal .result-card .rdesc { font-size: 14px; color: var(--black); line-height: 1.5; }
+
+.reveal .grid-results-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+/* Hero row — RawBlock 검정 inverted */
+.reveal .hero-row {
+  display: flex;
+  width: 100%;
+  background: var(--black);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 28px 32px;
+  align-items: center;
+  gap: 24px;
+}
+.reveal .hero-row * { color: var(--white); }
+.reveal .hero-row.elevate { border-width: var(--b-heavy); box-shadow: none; }
+.reveal .hero-row .hero-num {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+.reveal .hero-row .hero-body { flex: 1; text-align: left; }
+.reveal .hero-row .hero-ttl {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--white);
+  margin: 0 0 6px 0;
+}
+.reveal .hero-row .hero-desc { font-size: 16px; color: var(--white); line-height: 1.5; margin: 0; }
+
+/* Example pair */
+.reveal .example-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 720px;
+  max-width: 100%;
+}
+.reveal .example-pair .card p { font-size: 22px; line-height: 1.5; color: var(--black); }
+
+/* Job card */
+.reveal .job-card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 22px 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reveal .job-card .jtag {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .job-card p { font-size: 18px; line-height: 1.5; color: var(--black); }
+
+/* Week mini (1주차 예고 미니 스테이지) */
+.reveal .week-mini {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  width: 100%;
+  border: var(--b-thick) solid var(--black);
+}
+.reveal .week-mini .stage {
+  border: 0;
+  border-right: var(--b-thick) solid var(--black);
+  padding: 18px 12px;
+}
+.reveal .week-mini .stage:last-child { border-right: 0; }
+.reveal .week-mini .stage .ttl { font-size: 18px; }
+.reveal .week-mini .stage .out { font-size: 12px; }
+
+/* Role row (W1) */
+.reveal .role-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+.reveal .role-card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.reveal .role-card .rlabel {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .role-card p { font-size: 18px; color: var(--black); font-weight: 600; line-height: 1.45; }
+
+/* Timeline (W1) */
+.reveal .timeline {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  width: 100%;
+  border: var(--b-thick) solid var(--black);
+}
+.reveal .timeline .step {
+  background: var(--white);
+  border: 0;
+  border-right: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 12px 8px;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.reveal .timeline .step:last-child { border-right: 0; }
+.reveal .timeline .step .t {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.reveal .timeline .step .l {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 900;
+}
+
+/* Q&A card (W1) */
+.reveal .qrow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.reveal .qcard {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 28px 32px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+.reveal .qcard .qhead {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+/* qcard 안 h3는 의도적으로 전역 h3(32px)를 40px로 재정의 — 카드 밖과 다른 건 버그 아님 */
+.reveal .qcard h3 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.reveal .qcard p.lead {
+  font-family: "Work Sans", "Pretendard", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Preview box (W1) */
+.reveal .preview-box { width: 100%; max-width: 880px; }
+.reveal .preview-box .pre-text { font-size: 22px; color: var(--black); line-height: 1.5; }
+
+.reveal .closing-list { padding-left: 20px; margin: 0; }
+
+/* === Visual devices === */
+.reveal .slide[data-layout="dark-cover"] {
+  background: var(--black);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+}
+.reveal .slide[data-layout="dark-cover"] *,
+.reveal .slide[data-layout="dark-cover"] h1,
+.reveal .slide[data-layout="dark-cover"] .lead,
+.reveal .slide[data-layout="dark-cover"] p,
+.reveal .slide[data-layout="dark-cover"] .subhead {
+  color: var(--white);
+}
+.reveal .slide[data-layout="dark-cover"] .accent {
+  background: var(--white);
+  color: var(--black);
+}
+.reveal .slide[data-layout="dark-cover"] .sub { color: rgba(255,255,255,0.6); }
+.reveal .slide[data-layout="dark-cover"] .tag {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+.reveal .slide[data-layout="dark-cover"] .page-tag { color: rgba(255,255,255,0.6); }
+.reveal .slide[data-layout="dark-cover"]::after {
+  content: attr(data-ghost);
+  position: absolute;
+  right: 64px;
+  bottom: 24px;
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 360px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.08);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Section break — 흰 배경 + 두꺼운 검정 좌측 바 */
+.reveal .slide[data-layout="section-break"] {
+  background: var(--white);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+.reveal .slide[data-layout="section-break"] .sub { font-size: 14px; }
+.reveal .slide[data-layout="section-break"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  background: var(--black);
+}
+
+/* QA ghost num — RawBlock 검정 거대 숫자 */
+.reveal .qa-ghost-num {
+  position: absolute;
+  right: 32px;
+  bottom: -40px;
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 540px;
+  font-weight: 900;
+  color: var(--black);
+  opacity: 0.05;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.reveal .slide.qa-bg {
+  background: var(--white);
+  box-shadow: inset 0 5px 0 var(--black);
+}
+
+/* Buddy card (S3 보조) */
+.reveal .buddy-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+  border-top: var(--b-thick) solid var(--black);
+  padding-top: 16px;
+}
+.reveal .buddy-row .blocklabel { margin: 0; flex-shrink: 0; min-width: 80px; }
+.reveal .buddy-row .bname {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--black);
+}
+.reveal .buddy-row .bdesc { font-size: 22px; color: var(--black); }
+
+.reveal .video-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 500px;
+  border: var(--b-thick) solid var(--black);
+  background: var(--black);
+  align-self: center;
+}
+.reveal .video-embed iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+.reveal .slide[data-layout="left"] > .video-embed { margin-top: 4px; }
+
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<!-- S1. 표지 (버디 추가) -->
+<section>
+<div class="slide" data-layout="dark-cover" data-ghost="22">
+  <span class="tag">지피터스 22기</span>
+  <h1>내 자동화에<br><span class="accent">'인터페이스'</span>를 입히는 4주</h1>
+  <p class="lead">Claude Code로 텔레그램 · API · MCP까지</p>
+  <p class="sub">5/20 · 5/27 · 6/3 · 6/10 (수) 21:00–23:00</p>
+  <p class="sub">스터디장 이재엽 &amp; 온어닷 · 버디 새록_</p>
+</div>
+<aside class="notes">
+오프닝 1분. 큰 제목 한 번 천천히 읽어주고 분위기 잡기. 4주 동안 함께할 인사. 일정과 진행팀(스터디장 2 + 버디 1) 한 번 더 확인.
+</aside>
+</section>
+
+<!-- S2. 줌 표시 이름 변경 안내 -->
+<section>
+<div class="slide" data-layout="left">
+  <div class="page-tag">BEFORE WE START</div>
+  <h2>줌 표시 이름을 <span class="accent">바꿔주세요</span></h2>
+  <p class="sub">원활한 소통을 위해 아래 형식으로 이름을 설정해주세요.</p>
+  <div class="grid-2">
+    <div class="card bar-left">
+      <p class="blocklabel">내 강의</p>
+      <h3>실명 혹은 닉네임</h3>
+      <p class="card-desc">예: 김지피 / gpters_kim</p>
+    </div>
+    <div class="card bar-left">
+      <p class="blocklabel">청강</p>
+      <h3>실명 혹은 닉네임 <span class="accent">(청강)</span></h3>
+      <p class="card-desc">예: 박청강 (청강)</p>
+    </div>
+  </div>
+  <p class="sub">줌 설정 &gt; 프로필 &gt; 이름 변경에서 수정 가능합니다.</p>
+</div>
+<aside class="notes">
+1분. 호스트가 출석 체크 및 소통 가능하도록 표시 이름 정리. 청강자는 괄호로 구분.
+</aside>
+</section>
+
+<!-- S3. 스터디장 + 버디 소개 -->
+<section>
+<div class="slide" data-layout="grid">
+  <div class="page-tag">STUDY LEADERS</div>
+  <h2>두 스터디장 + <span class="accent">버디</span>가 함께합니다</h2>
+  <div class="grid-2">
+    <div class="pillar-card">
+      <div class="role">스터디장</div>
+      <p class="name">이재엽</p>
+      <p class="desc">풀스택 개발자<br>바이브코딩 강사</p>
+      <p class="live">라이브 구현 — 2~4주차</p>
+    </div>
+    <div class="pillar-card">
+      <div class="role">공동 스터디장</div>
+      <p class="name">온어닷</p>
+      <p class="desc">AI 강사 / 웹디자이너<br>디자인온어닷 대표</p>
+      <p class="live">라이브 구현 — 1주차</p>
+    </div>
+  </div>
+  <div class="buddy-row">
+    <p class="blocklabel">버디</p>
+    <div>
+      <span class="bname">새록_</span>
+      <span class="bdesc"> · 스터디 진행 서포트 · Q&amp;A 및 실습 도움</span>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+2분. 두 스터디장 + 버디 새록_ 소개. 라이브 구현 담당이 주차별로 다름. 비-진행자는 채팅·DM 모니터링. 버디는 Q&A/실습 서포트.
+</aside>
+</section>
+
+<!-- S4. 스터디 특징 -->
+<section>
+<div class="slide" data-layout="grid">
+  <div class="page-tag">지피터스 22기 OT</div>
+  <h2>이 스터디는 <span class="accent">함께</span> 만듭니다</h2>
+  <p class="sub">강의가 아니라 — 매주 만들고, 단톡방에서 공유하고, 게시판에 흔적을 남기는 자리.</p>
+  <div class="grid-3">
+    <div class="card bar-left">
+      <p class="blocklabel">실전 중심</p>
+      <h3>듣지 말고 만드세요</h3>
+      <p class="card-desc">매주 실습 과제 — 한 줄이라도 실행한 사람만 다음 주 출발선에 섭니다.</p>
+    </div>
+    <div class="card bar-left">
+      <p class="blocklabel">커뮤니티</p>
+      <h3>내 시도가 출발점</h3>
+      <p class="card-desc">단톡방에 시도·실패·해결을 한 줄. 동료의 단서가 됩니다.</p>
+    </div>
+    <div class="card bar-left">
+      <p class="blocklabel">성장 기록</p>
+      <h3>주간 OT과제 + 게시판 발행</h3>
+      <p class="card-desc">매주 결과물을 커뮤니티에 남겨 포트폴리오로 누적됩니다.</p>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+2분. 지피터스 스터디 = 실전 + 커뮤니티 + 성장 기록. 매주 OT과제 → 커뮤니티 게시판 발행이 이 스터디의 약속.
+</aside>
+</section>
+
+<!-- S5. 멤버 자기소개 -->
+<section>
+<div class="slide" data-layout="left">
+  <div class="page-tag">지피터스 22기 OT</div>
+  <h2>자기소개</h2>
+  <p class="sub">1인당 60초 — 순서대로.</p>
+  <div style="width: 100%;">
+    <div class="qa-block">
+      <div class="qnum">1</div>
+      <div class="qbody">
+        <h3>이름</h3>
+      </div>
+    </div>
+    <div class="qa-block">
+      <div class="qnum">2</div>
+      <div class="qbody">
+        <h3>평소 자동화 사례</h3>
+      </div>
+    </div>
+    <div class="qa-block">
+      <div class="qnum">3</div>
+      <div class="qbody">
+        <h3>4주 후 본인이 부르고 싶은 도구</h3>
+      </div>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+1인 60초 엄수. 인원 ≤12명 Q1·Q2·Q3 / 13~16명 Q1·Q3 / 17명+ Q1·Q3 한 줄·Q2 채팅 병행.
+</aside>
+</section>
+
+<!-- S6. 사전 영상 시청 -->
+<section>
+<div class="slide" data-layout="left">
+  <div class="page-tag">사전 영상</div>
+  <h3 class="subhead">다 같이 시청 — 지피터스 AI스터디 온보딩 가이드</h3>
+  <div class="video-embed">
+    <iframe src="https://www.youtube.com/embed/rfVJVsRHb4A" title="Mastering Claude Code in 30min" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+<aside class="notes">
+약 30분. 다 같이 시청 후 STEP 1 사전 점검으로 진행. 시청 못 한 사람은 단톡방에 링크 공유.
+</aside>
+</section>
+
+<!-- S7. STEP 1 — 온보딩 가이드 + 사전 점검 -->
+<section>
+<div class="slide" data-layout="left">
+  <div class="page-tag">STEP 1</div>
+  <h2>AI스터디 <span class="accent">사전 점검</span></h2>
+  <p class="sub">본격 시작 전 — 4가지를 미리 점검합니다.</p>
+  <div class="check-list">
+    <div class="check-item">
+      <div class="check-num">1</div>
+      <div><h3>Claude Code 설치 — <code>claude --version</code> 동작 확인</h3></div>
+    </div>
+    <div class="check-item">
+      <div class="check-num">2</div>
+      <div><h3>계정 — 텔레그램, GitHub, Tailscale (2주차 전 가입)</h3></div>
+    </div>
+    <div class="check-item">
+      <div class="check-num">3</div>
+      <div><h3>HTTP 기초 — GET/POST · 요청-응답 흐름 (3주차 본격)</h3></div>
+    </div>
+    <div class="check-item">
+      <div class="check-num">4</div>
+      <div><h3>터미널 기본 — <code>cd</code> / <code>mkdir</code> / <code>ls</code></h3></div>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+3분. 4개 체크는 분포 진단. 채팅에 1~4 숫자로 미완료 표기. 미완료 항목은 본인 책임으로 사전 보강.
+</aside>
+</section>
+
+<!-- S6. 핵심 카피 — 기능 vs 인터페이스 -->
+<section>
+<div class="slide" data-layout="section-break">
+  <div class="page-tag">지피터스 22기 OT</div>
+  <p class="keymsg">기능 <span class="accent">vs</span> 인터페이스</p>
+  <p class="lead">같은 동작도 어디서 부를 수 있느냐가 차이</p>
+</div>
+<aside class="notes">
+2분. 이 한 줄이 4주 전체의 척추. 기능 = 무엇을 한다, 인터페이스 = 어디서 부른다. 강조 천천히.
+</aside>
+</section>
+
+<!-- S7. 4주 로드맵 = 인터페이스 4단 진화 -->
+<section>
+<div class="slide" data-layout="grid">
+  <div class="page-tag">지피터스 22기 OT</div>
+  <h2>4주 로드맵 — <span class="accent">인터페이스 4단 진화</span></h2>
+  <div class="grid-4">
+    <div class="stage">
+      <div class="num">1주차</div>
+      <div class="ttl">기능</div>
+      <div class="out">로컬 폴더</div>
+    </div>
+    <div class="arrow">▶</div>
+    <div class="stage">
+      <div class="num">2주차</div>
+      <div class="ttl">사용자 UI</div>
+      <div class="out">텔레그램 봇</div>
+    </div>
+    <div class="arrow">▶</div>
+    <div class="stage">
+      <div class="num">3주차</div>
+      <div class="ttl">시스템 UI</div>
+      <div class="out">API + Tailscale</div>
+    </div>
+    <div class="arrow">▶</div>
+    <div class="stage">
+      <div class="num">4주차</div>
+      <div class="ttl">표준 UI</div>
+      <div class="out">MCP 시연</div>
+    </div>
+  </div>
+  <p class="sub" style="text-align: center; width: 100%;">매주 도입부에 이 표를 다시 띄워 "오늘 우리는 어디 있는가"를 확인합니다.</p>
+</div>
+<aside class="notes">
+4분. 4단 진화 표가 4주 전체의 척추. 1주차 로컬 폴더, 2주차 텔레그램, 3주차 API, 4주차 MCP. 매주 도입부에 다시 등장 예고.
+</aside>
+</section>
+
+<!-- S8. 4주 후 손에 쥐는 것 -->
+<section>
+<div class="slide" data-layout="grid">
+  <div class="page-tag">지피터스 22기 OT</div>
+  <span class="section-meta">결과물</span>
+  <h2>4주 후 <span class="accent">손에 쥐는 것</span></h2>
+  <div class="grid-results-4">
+    <div class="result-card">
+      <div class="rnum">01 · 도구</div>
+      <div class="rttl">로컬 폴더</div>
+      <div class="rdesc">마크다운 + 프론트매터 개인 지식 저장소</div>
+    </div>
+    <div class="result-card">
+      <div class="rnum">02 · 도구</div>
+      <div class="rttl">텔레그램 봇</div>
+      <div class="rdesc">폰에서 던지면 폴더에 저장</div>
+    </div>
+    <div class="result-card">
+      <div class="rnum">03 · 도구</div>
+      <div class="rttl">로컬 API + Tailscale</div>
+      <div class="rdesc">외부에서 안전하게 호출 가능</div>
+    </div>
+    <div class="result-card">
+      <div class="rnum">04 · 도구</div>
+      <div class="rttl">MCP 시연 경험</div>
+      <div class="rdesc">Claude가 폴더를 표준으로 읽고 쓰는 모습</div>
+    </div>
+  </div>
+  <div class="hero-row elevate">
+    <div class="hero-num">05 · 사고법</div>
+    <div class="hero-body">
+      <p class="hero-ttl">인터페이스 사고법</p>
+      <p class="hero-desc">"어디서 부를지"부터 설계하는 시야 — 4주 후 남는 것의 정점</p>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+2분. 도구 4개 + 사고법 1개. 5번이 4주 후 남는 정점. hero-row로 시각적으로 격상해서 강조.
+</aside>
+</section>
+
+<!-- S10. 스터디장 시연 메타 — 1주차 폴더 구축 -->
+<section>
+<div class="slide" data-layout="grid">
+  <div class="page-tag">스터디장 시연</div>
+  <h2>1주차 라이브 — <span class="accent">로컬 폴더</span> 구축</h2>
+  <p class="sub">마크다운 + 프론트매터 기반 개인 지식 저장소. 진행: 온어닷.</p>
+  <div class="grid-2">
+    <div class="card bar-left">
+      <p class="blocklabel">주제</p>
+      <h3>인터페이스 4단 진화의 1단계 — 기능(폴더)</h3>
+      <p class="card-desc">2~4주차의 모든 인터페이스가 이 폴더를 호출합니다.</p>
+    </div>
+    <div class="card bar-left">
+      <p class="blocklabel">진행 · 자료</p>
+      <h3>온어닷 · <code>week1-slides.html</code></h3>
+      <p class="card-desc">시연 본문은 별도 슬라이드로 진행됩니다.</p>
+    </div>
+  </div>
+  <div class="week-mini">
+    <div class="stage">
+      <div class="num">01</div>
+      <div class="ttl">폴더</div>
+      <div class="out">+ Claude Code</div>
+    </div>
+    <div class="stage">
+      <div class="num">02</div>
+      <div class="ttl">첫 노트</div>
+      <div class="out">+ 프론트매터</div>
+    </div>
+    <div class="stage">
+      <div class="num">03</div>
+      <div class="ttl">인덱스 위키</div>
+      <div class="out">10개 키워드</div>
+    </div>
+    <div class="stage">
+      <div class="num">04</div>
+      <div class="ttl">백링크</div>
+      <div class="out">그래프</div>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+2분. 이 슬라이드 도달 시 별도 탭으로 week1-slides.html을 띄워 시연 진행. 시연 종료 후 OT 탭으로 돌아와 HANDS-ON으로 이동.
+</aside>
+</section>
+
+<!-- S11. HANDS-ON — 실습 시간 -->
+<section>
+<div class="slide" data-layout="center">
+  <div class="page-tag">HANDS-ON</div>
+  <p class="keymsg-md">시연 따라하기</p>
+  <p class="subhead">스터디장 안내에 따라 직접 만들어보세요</p>
+  <div class="example-pair">
+    <div class="card bar-left">
+      <p class="blocklabel">막힐 때</p>
+      <p>채팅창에 <strong>즉시</strong> 질문.</p>
+    </div>
+    <div class="card bar-left">
+      <p class="blocklabel">완료하면</p>
+      <p>스크린샷 1장 단톡방에 공유 — 다음 주 출발선.</p>
+    </div>
+  </div>
+</div>
+<aside class="notes">
+1분. 시연 직후 곧바로 실습. 채팅 질문 활성화. 막힌 사람 우선 도움. 완료자는 스크린샷 공유 권장.
+</aside>
+</section>
+
+<!-- S12. 1주차 OT과제 작성 안내 -->
+<section>
+<div class="slide" data-layout="left">
+  <div class="page-tag">1주차 OT과제</div>
+  <h2>OT과제 <span class="accent">작성 안내</span></h2>
+  <div class="grid-2">
+    <div class="job-card">
+      <div class="jtag">태그</div>
+      <p><code>22기 인터페이스개발</code> · <code>OT과제</code></p>
+    </div>
+    <div class="job-card">
+      <div class="jtag">제목</div>
+      <p>오늘 실습한 내용 (자유)</p>
+    </div>
+    <div class="job-card">
+      <div class="jtag">작성 위치</div>
+      <p>프로필 옆 <code>+</code> 버튼으로 사례 게시글 작성</p>
+    </div>
+    <div class="job-card">
+      <div class="jtag">마감</div>
+      <p><strong>5월 24일(일) 23:59</strong> <span style="color: var(--grey-dim); font-weight: 400;">(OT 과제에 한하여)</span></p>
+    </div>
+  </div>
+  <p class="blocklabel" style="margin-top: 4px;">작성 팁</p>
+  <ul class="closing-list">
+    <li>관심 있는 주제로 지식을 저장해보세요 — 첫 노트 1개로 시작.</li>
+  </ul>
+</div>
+<aside class="notes">
+2분. 과제는 학습 마무리이자 포트폴리오. 일요일 자정 엄수. 미작성 시 출석 인정 X (스터디 기준).
+</aside>
+</section>
+
+<!-- S13. OT과제 작성 4단계 -->
+<section>
+<div class="slide" data-layout="grid">
+  <div class="page-tag">OT과제 작성 4단계</div>
+  <h2>이 흐름으로 <span class="accent">정리</span>하면 충분합니다</h2>
+  <div class="grid-4">
+    <div class="stage">
+      <div class="num">1단계</div>
+      <div class="ttl">시작 전</div>
+      <div class="out">어떤 상태였나? 어떤 문제를 해결하고 싶었나?</div>
+    </div>
+    <div class="arrow">▶</div>
+    <div class="stage">
+      <div class="num">2단계</div>
+      <div class="ttl">실습 과정</div>
+      <div class="out">어떤 과정으로? 어려웠던 부분은?</div>
+    </div>
+    <div class="arrow">▶</div>
+    <div class="stage">
+      <div class="num">3단계</div>
+      <div class="ttl">결과물</div>
+      <div class="out">무엇을 만들었나? 스크린샷.</div>
+    </div>
+    <div class="arrow">▶</div>
+    <div class="stage">
+      <div class="num">4단계</div>
+      <div class="ttl">느낀 점</div>
+      <div class="out">인상깊었던 점, 다음 도전.</div>
+    </div>
+  </div>
+  <p class="sub" style="text-align: center; width: 100%;">이 구조는 매주 동일 — 4주 동안 반복하면 자연스럽게 학습 기록이 누적됩니다.</p>
+</div>
+<aside class="notes">
+2분. OT과제뿐 아니라 1~4주 모든 주차 과제에 동일하게 적용. 학습 기록의 표준 포맷.
+</aside>
+</section>
+
+<!-- S14. AI 온오프모임 -->
+<section>
+<div class="slide" data-layout="grid">
+  <div class="page-tag">AI 온오프모임</div>
+  <h2>5월 23일(토) · <span class="accent">함께</span> 만나는 시간</h2>
+  <p class="sub">스터디원들과 친해지고, 선배 기수의 AI 활용 사례로 영감을 받습니다.</p>
+  <div class="grid-3">
+    <div class="result-card">
+      <div class="rnum">01 · 스터디별 모임</div>
+      <div class="rttl">2시간 · 오프라인</div>
+      <div class="rdesc">개별 장소는 공지방 안내 예정.</div>
+    </div>
+    <div class="result-card">
+      <div class="rnum">02 · 전체 네트워킹</div>
+      <div class="rttl">선배 우수 사례 발표회</div>
+      <div class="rdesc">1시간 · 온오프라인 병행.</div>
+    </div>
+    <div class="result-card">
+      <div class="rnum">03 · 저녁식사</div>
+      <div class="rttl">희망자 한정</div>
+      <div class="rdesc">신청 폼은 공지방 링크 참고.</div>
+    </div>
+  </div>
+  <p class="sub">오프라인 참석은 선택 사항입니다.</p>
+</div>
+<aside class="notes">
+1분. 5/23(토) AI 온오프모임 안내. 시간/장소는 공지방. 신청 폼 링크 참고. 오프 참석은 선택.
+</aside>
+</section>
+
+<!-- S15. 클로징 + 운영 안내 -->
+<section>
+<div class="slide" data-layout="dark-cover" data-ghost="GO">
+  <span class="tag">CLOSING</span>
+  <h1>4주 뒤가<br><span class="accent">기대됩니다</span></h1>
+  <p class="lead">함께 성장하는 4주 — 다음 수업은 다음 주 같은 시간.</p>
+  <p class="subhead">스터디 채팅방 · OT과제(매주 일요일 23:59) · 온오프 5/23(토)</p>
+  <p class="sub">줌 링크 · 다시보기는 지피터스 사이트 AI스터디 란에서.</p>
+</div>
+<aside class="notes">
+1분. 마무리. 4주 함께 성장 메시지. 채팅방·과제·온오프 한 번 더 환기. 다음 수업 시간 재확인.
+</aside>
+</section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  backgroundTransition: 'none',
+  controls: true,
+  progress: true,
+  center: false,
+  width: 1280,
+  height: 720,
+  margin: 0
+});
+</script>
+</body>
+</html>

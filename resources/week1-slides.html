@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>지피터스 22기 1주차</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/white.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --link: #0000FF;
+  --grey-light: #F0F0F0;
+  --grey-mid: #CCCCCC;
+  --grey-dim: #888888;
+  --b-thin: 1px;
+  --b-thick: 3px;
+  --b-heavy: 5px;
+}
+
+.reveal {
+  font-family: "Work Sans", "Pretendard", sans-serif;
+  color: var(--black);
+  background: var(--white);
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+.reveal h1 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 88px;
+  line-height: 1.0;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal h2 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 60px;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.005em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal h3 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--black);
+  margin: 0;
+}
+.reveal p {
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--black);
+  margin: 0;
+}
+.reveal li { font-size: 22px; line-height: 1.6; color: var(--black); }
+
+.reveal .keymsg {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 100px;
+  line-height: 1.0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .keymsg-md {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .subhead {
+  font-family: "Work Sans", "Pretendard", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.4;
+  margin: 0;
+}
+.reveal .lead {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .sub {
+  font-size: 16px;
+  color: var(--grey-dim);
+  line-height: 1.5;
+  margin: 0;
+}
+.reveal .micro {
+  font-size: 12px;
+  color: var(--grey-dim);
+  margin: 0;
+}
+.reveal .num-big {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 88px;
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1;
+}
+
+.reveal code, .reveal pre code {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-weight: 400;
+}
+.reveal pre {
+  background: var(--grey-light);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 24px 32px;
+  box-shadow: none;
+  margin: 0;
+  min-width: 760px;
+  max-width: 920px;
+  align-self: stretch;
+  width: auto;
+}
+.reveal pre code {
+  font-size: 22px;
+  line-height: 1.6;
+  background: transparent;
+  padding: 0;
+  display: block;
+  white-space: pre;
+  color: var(--black);
+}
+.reveal .cmd-explain {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 18px;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .cmd-explain strong { color: var(--black); font-weight: 700; }
+
+.reveal .accent {
+  background: var(--black);
+  color: var(--white);
+  padding: 0 8px;
+  display: inline-block;
+}
+.reveal strong { color: var(--black); font-weight: 700; }
+
+.reveal .slide {
+  width: 100%;
+  height: 720px;
+  padding: 80px 96px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--white);
+}
+.reveal .slide[data-layout="title"]  { justify-content: center; align-items: flex-start; gap: 32px; }
+.reveal .slide[data-layout="center"] { justify-content: center; align-items: center; text-align: center; gap: 32px; }
+.reveal .slide[data-layout="left"]   { justify-content: flex-start; align-items: flex-start; padding-top: 80px; gap: 24px; }
+.reveal .slide[data-layout="grid"]   { justify-content: flex-start; align-items: flex-start; padding-top: 80px; gap: 28px; }
+
+.reveal .page-tag {
+  position: absolute;
+  top: 32px;
+  left: 96px;
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.reveal .tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 0;
+  font-family: "Work Sans", "Pretendard", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.reveal .micro-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 0;
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.reveal .section-meta {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  border-radius: 0;
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.reveal .blocklabel {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+}
+
+/* Cards */
+.reveal .card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 24px 28px;
+  text-align: left;
+}
+.reveal .card.soft { background: var(--grey-light); }
+.reveal .card.elevate { border-width: var(--b-heavy); box-shadow: none; }
+.reveal .card.bar-left { border-left: var(--b-heavy) solid var(--black); }
+.reveal .card.bar-left-soft {
+  background: var(--grey-light);
+  border-left: var(--b-heavy) solid var(--black);
+}
+.reveal .card.hero { padding: 28px 32px; }
+.reveal .card .card-desc {
+  font-size: 16px;
+  color: var(--black);
+  line-height: 1.5;
+  margin-top: 8px;
+  font-weight: 500;
+}
+/* qrow 안 qcard 압축 (S17f 중급 Q&A 한 슬라이드 3개) */
+.reveal .qrow.compact .qcard { padding: 16px 20px; }
+.reveal .qrow.compact .qcard h3 { font-size: 24px; }
+.reveal .qrow.compact .qcard p.lead { font-size: 18px; }
+
+/* Stage (4단 진화) */
+.reveal .stage {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 22px 18px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reveal .stage .num {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .stage .ttl {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--black);
+  letter-spacing: -0.005em;
+}
+.reveal .stage .out { font-size: 14px; color: var(--black); }
+.reveal .stage.now { background: var(--black); border-color: var(--black); }
+.reveal .stage.now * { color: var(--white) !important; }
+.reveal .stage.inactive {
+  border-color: var(--grey-mid);
+  background: var(--white);
+  opacity: 1;
+  filter: none;
+}
+.reveal .stage.inactive * { color: var(--grey-mid); }
+
+/* Grid */
+.reveal .grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 24px 1fr 24px 1fr 24px 1fr;
+  align-items: stretch;
+  width: 100%;
+}
+.reveal .grid-4 .arrow {
+  color: var(--black);
+  font-size: 20px;
+  align-self: center;
+  text-align: center;
+  font-weight: 900;
+}
+.reveal .grid-1 { display: grid; grid-template-columns: 1fr; gap: 16px; width: 100%; }
+.reveal .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; width: 100%; }
+.reveal .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; width: 100%; }
+
+/* QA block (OT 자기소개) */
+.reveal .qa-block {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-top: var(--b-thick) solid var(--black);
+  width: 100%;
+}
+.reveal .qa-block:first-of-type { border-top: 0; padding-top: 4px; }
+.reveal .qa-block .qnum {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--black);
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 56px;
+  text-align: left;
+}
+.reveal .qa-block .qbody { flex: 1; }
+.reveal .qa-block .qbody h3 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+.reveal .qa-block .qbody p { color: var(--black); font-size: 18px; margin: 0; }
+
+/* Check list — RawBlock 디바이더 스타일 */
+.reveal .check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  border-top: var(--b-thick) solid var(--black);
+  border-bottom: var(--b-thick) solid var(--black);
+}
+.reveal .slide[data-layout="left"] > .check-list { margin-top: -8px; }
+.reveal .check-item {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 16px 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--black);
+}
+.reveal .check-item:last-child { border-bottom: 0; }
+.reveal .check-item .check-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.reveal .check-item h3 { font-family: "Work Sans", "Pretendard", sans-serif; font-size: 22px; font-weight: 600; line-height: 1.3; }
+.reveal .check-item p { font-size: 22px; font-weight: 600; line-height: 1.3; }
+
+/* Pillar card (스터디장 소개) */
+.reveal .pillar-card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 32px 36px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.reveal .pillar-card .role {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .pillar-card .name {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--black);
+  margin: 0;
+}
+.reveal .pillar-card .desc { font-size: 16px; color: var(--black); line-height: 1.6; margin: 0; }
+.reveal .pillar-card .live {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--white);
+  background: var(--black);
+  font-weight: 700;
+  padding: 6px 12px;
+  display: inline-block;
+  margin-top: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+
+/* Result card (4주 후 결과물) */
+.reveal .result-card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 24px 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.reveal .result-card .rnum {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .result-card .rttl {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--black);
+}
+.reveal .result-card .rdesc { font-size: 14px; color: var(--black); line-height: 1.5; }
+
+.reveal .grid-results-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+/* Hero row — RawBlock 검정 inverted */
+.reveal .hero-row {
+  display: flex;
+  width: 100%;
+  background: var(--black);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 28px 32px;
+  align-items: center;
+  gap: 24px;
+}
+.reveal .hero-row * { color: var(--white); }
+.reveal .hero-row.elevate { border-width: var(--b-heavy); box-shadow: none; }
+.reveal .hero-row .hero-num {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+.reveal .hero-row .hero-body { flex: 1; text-align: left; }
+.reveal .hero-row .hero-ttl {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--white);
+  margin: 0 0 6px 0;
+}
+.reveal .hero-row .hero-desc { font-size: 16px; color: var(--white); line-height: 1.5; margin: 0; }
+
+/* Example pair */
+.reveal .example-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 720px;
+  max-width: 100%;
+}
+.reveal .example-pair .card p { font-size: 22px; line-height: 1.5; color: var(--black); }
+
+/* Job card */
+.reveal .job-card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 22px 22px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reveal .job-card .jtag {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .job-card p { font-size: 18px; line-height: 1.5; color: var(--black); }
+
+/* Week mini (1주차 예고 미니 스테이지) */
+.reveal .week-mini {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  width: 880px;
+  max-width: 100%;
+  border: var(--b-thick) solid var(--black);
+}
+.reveal .week-mini .stage {
+  border: 0;
+  border-right: var(--b-thick) solid var(--black);
+  padding: 18px 12px;
+}
+.reveal .week-mini .stage:last-child { border-right: 0; }
+.reveal .week-mini .stage .ttl { font-size: 18px; }
+.reveal .week-mini .stage .out { font-size: 12px; }
+
+/* Role row (W1) */
+.reveal .role-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+.reveal .role-card {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.reveal .role-card .rlabel {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.reveal .role-card p { font-size: 18px; color: var(--black); font-weight: 600; line-height: 1.45; }
+
+/* Timeline (W1) */
+.reveal .timeline {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  width: 100%;
+  border: var(--b-thick) solid var(--black);
+}
+.reveal .timeline .step {
+  background: var(--white);
+  border: 0;
+  border-right: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 12px 8px;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.reveal .timeline .step:last-child { border-right: 0; }
+.reveal .timeline .step .t {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.reveal .timeline .step .l {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 900;
+}
+
+/* Q&A card (W1) */
+.reveal .qrow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.reveal .qcard {
+  background: var(--white);
+  border: var(--b-thick) solid var(--black);
+  border-radius: 0;
+  padding: 28px 32px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  z-index: 1;
+}
+.reveal .qcard .qhead {
+  font-family: "Space Mono", "Pretendard", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--black);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+/* qcard 안 h3는 의도적으로 전역 h3(32px)를 40px로 재정의 — 카드 밖과 다른 건 버그 아님 */
+.reveal .qcard h3 {
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.reveal .qcard p.lead {
+  font-family: "Work Sans", "Pretendard", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Preview box (W1) */
+.reveal .preview-box { width: 100%; max-width: 880px; }
+.reveal .preview-box .pre-text { font-size: 22px; color: var(--black); line-height: 1.5; }
+
+.reveal .closing-list { padding-left: 20px; margin: 0; }
+
+/* === Visual devices === */
+.reveal .slide[data-layout="dark-cover"] {
+  background: var(--black);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+}
+.reveal .slide[data-layout="dark-cover"] *,
+.reveal .slide[data-layout="dark-cover"] h1,
+.reveal .slide[data-layout="dark-cover"] .lead,
+.reveal .slide[data-layout="dark-cover"] p,
+.reveal .slide[data-layout="dark-cover"] .subhead {
+  color: var(--white);
+}
+.reveal .slide[data-layout="dark-cover"] .accent {
+  background: var(--white);
+  color: var(--black);
+}
+.reveal .slide[data-layout="dark-cover"] .sub { color: rgba(255,255,255,0.6); }
+.reveal .slide[data-layout="dark-cover"] .tag {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+.reveal .slide[data-layout="dark-cover"] .page-tag { color: rgba(255,255,255,0.6); }
+.reveal .slide[data-layout="dark-cover"]::after {
+  content: attr(data-ghost);
+  position: absolute;
+  right: 64px;
+  bottom: 24px;
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 360px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.08);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Section break — 흰 배경 + 두꺼운 검정 좌측 바 */
+.reveal .slide[data-layout="section-break"] {
+  background: var(--white);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+.reveal .slide[data-layout="section-break"] .sub { font-size: 14px; }
+.reveal .slide[data-layout="section-break"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  background: var(--black);
+}
+
+/* QA ghost num — RawBlock 검정 거대 숫자 */
+.reveal .qa-ghost-num {
+  position: absolute;
+  right: 32px;
+  bottom: -40px;
+  font-family: "Archivo Black", "Pretendard", sans-serif;
+  font-size: 540px;
+  font-weight: 900;
+  color: var(--black);
+  opacity: 0.05;
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.reveal .slide.qa-bg {
+  background: var(--white);
+  box-shadow: inset 0 5px 0 var(--black);
+}
+
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<!-- S1. 표지 -->
+<section>
+  <div class="slide" data-layout="dark-cover" data-ghost="1">
+    <span class="tag">지피터스 22기 · 1주차</span>
+    <h1>1주차 — <span class="accent">Vault 구축</span></h1>
+    <p class="subhead">마크다운 + 프론트매터로 개인 지식 저장소 만들기</p>
+    <p class="sub">2026-05-20 (수) · 21:00–23:00</p>
+  </div>
+  <aside class="notes">
+    1주차 첫 슬라이드. "오늘 만드는 건 Vault(기능 계층)"를 단정으로 박고 넘어간다. 자기소개·OT 직후 라이브 진입 직전에 띄움.
+  </aside>
+</section>
+
+<!-- S2. 4단 진화 -->
+<section>
+  <div class="slide" data-layout="grid">
+    <div class="page-tag">지피터스 22기 · 1주차</div>
+    <h2>1주차 = <span class="accent">기능(Vault)</span></h2>
+    <div class="grid-4">
+      <div class="stage now">
+        <div class="num">1주차</div>
+        <div class="ttl">기능</div>
+        <div class="out">로컬 Vault</div>
+      </div>
+      <div class="arrow">▶</div>
+      <div class="stage inactive">
+        <div class="num">2주차</div>
+        <div class="ttl">사용자 UI</div>
+        <div class="out">텔레그램 봇</div>
+      </div>
+      <div class="arrow">▶</div>
+      <div class="stage inactive">
+        <div class="num">3주차</div>
+        <div class="ttl">시스템 UI</div>
+        <div class="out">API + Tailscale</div>
+      </div>
+      <div class="arrow">▶</div>
+      <div class="stage inactive">
+        <div class="num">4주차</div>
+        <div class="ttl">표준 UI</div>
+        <div class="out">MCP 시연</div>
+      </div>
+    </div>
+    <p class="subhead">이후 UI를 한 겹씩 추가.</p>
+  </div>
+  <aside class="notes">
+    인터페이스 4단 진화 표를 매주 도입부에 띄워 "오늘 우리 어디 있는가"를 학습자에게 짚어준다. 1주차는 기능 계층(Vault)만. 2~4주차에 인터페이스 한 겹씩 추가.
+  </aside>
+</section>
+
+<!-- S3. 라이브 1 도입 -->
+<section>
+  <div class="slide" data-layout="section-break">
+    <div class="page-tag">지피터스 22기 · 1주차 · 라이브 1</div>
+    <span class="tag">라이브 1</span>
+    <h1>위치감각 <span class="accent">익히기</span></h1>
+    <p class="lead">: Vault + Claude Code</p>
+    <p class="subhead">폴더를 만들고, Claude Code를 그 안에서 띄운다.</p>
+    <p class="sub">시연 후 단계별 따라치기. 질문은 채팅창.</p>
+  </div>
+  <aside class="notes">
+    학습자 단계: ① 폴더 생성 ② Claude Code 띄우기 ③ 첫 노트 + 프론트매터. 진행 순서는 시연 → 따라치기.
+  </aside>
+</section>
+
+<!-- S4. mkdir 컴맨드 풀이 -->
+<section>
+  <div class="slide" data-layout="center">
+    <div class="page-tag">지피터스 22기 · 1주차 · 라이브 1 — 시연</div>
+    <h3>① Vault 폴더 만들기</h3>
+    <pre><code>mkdir my-vault &amp;&amp; cd my-vault</code></pre>
+    <p class="cmd-explain"><strong><code>mkdir</code></strong>: 폴더 생성 &nbsp;/&nbsp; <strong><code>cd</code></strong>: 작업 디렉터리 이동 &nbsp;/&nbsp; <strong><code>&amp;&amp;</code></strong>: 앞 명령 성공 시 다음 실행</p>
+  </div>
+  <aside class="notes">
+    시연 후 학습자에게 `pwd` 결과를 채팅에 한 줄 붙이라고 요청. `/Users/홍길동/Desktop/my-vault` 같이 명확한 분만 다음 단계로. 터미널 기본기 부족한 분은 휴식 시간(55–65분)에 보조.
+  </aside>
+</section>
+
+<!-- S4b. Claude Code 켜기 -->
+<section>
+  <div class="slide" data-layout="center">
+    <div class="page-tag">지피터스 22기 · 1주차 · 라이브 1 — 시연</div>
+    <h3>② 그 폴더에서 Claude Code 켜기</h3>
+    <pre><code>claude</code></pre>
+    <p class="cmd-explain"><strong><code>claude</code></strong>: 현재 폴더에서 Claude Code 실행 &nbsp;/&nbsp; <strong>켠 자리</strong> = Claude가 vault로 인식하는 폴더</p>
+  </div>
+  <aside class="notes">
+    방금 만든 my-vault/ 폴더로 이동한 상태에서 `claude` 실행. 핵심 한 마디 — "어디서 켜느냐 = Claude가 어느 폴더를 vault로 인식하느냐". 다른 폴더에서 켜면 그 폴더가 vault가 됨. 학습자 화면 확인: 프롬프트 표시가 my-vault 안인지.
+  </aside>
+</section>
+
+<!-- S4c. 첫 노트 쓰기 -->
+<section>
+  <div class="slide" data-layout="center">
+    <div class="page-tag">지피터스 22기 · 1주차 · 라이브 1 — 시연</div>
+    <h3>③ 첫 노트 쓰기</h3>
+    <pre><code>Claude에게: "오늘 회의록 노트 하나 만들어줘"</code></pre>
+    <p class="subhead">이제 vault 안에 .md 파일을 쓴다 — 뭘 어떻게 써야 <span class="accent">LLM이 잘 읽을까?</span></p>
+  </div>
+  <aside class="notes">
+    Claude Code를 켰으니 첫 노트는 vim/에디터로 직접 만들기보다 Claude에게 시키는 게 자연스럽다. "회의록 노트 하나 만들어줘" 한 마디로 .md 파일 생성. 결과를 같이 본 다음 — "근데 어떤 식으로 써야 LLM이 잘 읽을까?"로 다음 슬라이드(마크다운 4가지)로 연결.
+  </aside>
+</section>
+
+<!-- S5. 마크다운 4가지 -->
+<section>
+  <div class="slide" data-layout="grid">
+    <div class="page-tag">지피터스 22기 · 1주차 · 라이브 1</div>
+    <h2>마크다운 요소 <span class="accent">4가지</span></h2>
+    <p class="sub">LLM이 잘 읽을 수 있도록 구성</p>
+    <div class="grid-2">
+      <div class="card bar-left">
+        <p class="blocklabel">01</p>
+        <h3>헤딩</h3>
+        <p class="card-desc">청크 단위로 자르는 가장 강한 신호<br>한 노트에 # 은 1번, 흐름은 ##</p>
+      </div>
+      <div class="card bar-left">
+        <p class="blocklabel">02</p>
+        <h3>리스트</h3>
+        <p class="card-desc">"별개 항목들" 신호 — 한 줄씩 추출 가능<br>회의 액션, 책 요약에 잘 맞음</p>
+      </div>
+      <div class="card bar-left">
+        <p class="blocklabel">03</p>
+        <h3>코드블럭</h3>
+        <p class="card-desc">명령어·JSON·프롬프트 보관용<br>"자연어로 해석 말라" 신호</p>
+      </div>
+      <div class="card bar-left">
+        <p class="blocklabel">04</p>
+        <h3>링크</h3>
+        <p class="card-desc">외부 [ ]( ): 출처 추적<br>내부 [[ ]]: 노트 간 관계 그래프</p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">5분. 헤딩·리스트·코드블럭·링크 — LLM 관점에서 한 줄씩. 중급은 알 가능성, 빠르게 짚고 넘어감.</aside>
+</section>
+
+
+<!-- S6. 프론트매터 기본 + 따옴표 함정 -->
+<section>
+  <div class="slide" data-layout="center">
+    <div class="page-tag">지피터스 22기 · 1주차 · 라이브 1 — 시연</div>
+    <h3>프론트매터 — 사람·코드가 같이 읽는 메타데이터</h3>
+    <pre><code>---
+title: 회의록 0520
+date: 2026-05-20
+tags: ["회의", "22기"]
+related: ["[[인덱스/22기]]"]
+---
+
+# 회의록 0520
+- 참석자: 김, 이, 박
+- 결정: 다음 주 데모는 라이브로</code></pre>
+    <p class="subhead">한 노트 = 프론트매터(메타) + 본문(마크다운). <span class="accent">2주차 봇</span>·<span class="accent">3주차 API</span>가 이걸 읽고 분류·검색.</p>
+  </div>
+  <aside class="notes">
+    라이브 함정: 따옴표 없는 `[["인덱스/22기"]]`는 YAML 플로우 시퀀스로 파싱돼 위키 링크가 안 살아남(`[ ["인덱스/22기"] ]` 1개 문자열 리스트의 리스트로 해석). 한 번 보여주고 → 따옴표 추가 → 살아나는 시연(2분). 한글·숫자 시작 토큰(`22기`)도 따옴표가 안전.
+  </aside>
+</section>
+
+<!-- S7. 프론트매터 표준화 (C) -->
+<section>
+  <div class="slide" data-layout="left">
+    <div class="page-tag">지피터스 22기 · 1주차 · 표준화</div>
+    <h2>프론트매터 <span class="accent">8필드</span></h2>
+    <p class="sub">단서가 많을수록이 아니라 — 적절할수록 좋다</p>
+    <pre><code>title: 회의록 0520
+aliases: ["주간미팅", "0520회의"]
+date: 2026-05-20
+type: log              # log / note / idea / spec / howto
+status: active         # draft / active / archived
+source: own            # own / book / web / talk
+tags: ["회의", "22기"]
+related: ["[[인덱스/22기]]"]</code></pre>
+    <p class="sub">자주 다른 값으로 채울 필드만. 항상 같으면 → CLAUDE.md 디폴트로</p>
+    <p class="sub" style="margin-top: 16px;"><strong>→ 노트 1개 채우는 법은 여기까지. 이제 노트들을 어떻게 묶을까?</strong></p>
+  </div>
+  <aside class="notes">12분 워크숍. 8필드 + LLM 관점 의미. 토큰 효율 관점. 학습자 자기 일에 4-6개 골라 채팅 공유. 마지막 한 줄로 다음 라이브 2 진입 호흡 한 박자.</aside>
+</section>
+
+
+<!-- S8. Vault 구성 패턴 — 라이브 2 준비 -->
+<section>
+  <div class="slide" data-layout="grid">
+    <div class="page-tag">지피터스 22기 · 1주차 · 라이브 2 — 준비</div>
+    <p class="sub">노트 1개 → 노트들 묶기로 한 단계 줌 아웃</p>
+    <h2>Vault <span class="accent">구성 패턴</span></h2>
+    <p class="sub">어떤 구조가 LLM에게 좋은 컨텍스트인가</p>
+    <div class="grid-3">
+      <div class="card">
+        <p class="blocklabel">a · 폴더</p>
+        <h3>계층형</h3>
+        <p class="card-desc">주제별 폴더에 나눠 담기<br>익숙하지만 분류 겹치면 곤란</p>
+      </div>
+      <div class="card">
+        <p class="blocklabel">b · 평면</p>
+        <h3>제텔카스텐</h3>
+        <p class="card-desc">폴더 대신 태그·링크로 관리<br>빠르지만 훑기 힘듦</p>
+      </div>
+      <div class="card bar-left-soft elevate">
+        <p class="blocklabel">c · 하이브리드</p>
+        <h3>인덱스 위키</h3>
+        <p class="card-desc">키워드별 목차 노트가 모든 노트를 연결<br><strong>오늘은 이걸로</strong></p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">10분. 3패턴 비교 후 하이브리드 선택. 다음 슬라이드부터 라이브 2 = 선택한 하이브리드를 실제로 만든다.</aside>
+</section>
+
+<!-- S9. 라이브 2 도입 + 백링크 -->
+<section>
+  <div class="slide" data-layout="section-break">
+    <div class="page-tag">지피터스 22기 · 1주차 · 라이브 2</div>
+    <span class="tag">라이브 2</span>
+    <h1>인덱스 위키 + <span class="accent">백링크</span></h1>
+    <p class="subhead">인덱스 위키 = 키워드별 목차 노트 (위키 분류 페이지처럼). 백링크 = 노트끼리 연결.</p>
+    <p class="sub">키워드 10개로 시작 — 이미 가진 폴더 이름이 힌트.</p>
+  </div>
+  <aside class="notes">
+    인덱스 키워드는 머릿속에서 자주 쓰는 분류 그대로. PC 폴더 이름이 가장 좋은 힌트. 10개 함께 정하는 라이브 워크숍 → 키워드별 더미 노트는 Claude가 한 번에 생성. 두 노트 연결(백링크) → 그래프 시각화. 마지막 10분: 각자 인덱스 키워드 10개 채팅창에 공유.
+  </aside>
+</section>
+
+
+<!-- S10. 카파시 인용 -->
+<section>
+  <div class="slide" data-layout="dark-cover" data-ghost="·">
+    <span class="tag">Andrej Karpathy</span>
+    <h1>"I want to write<br>notes that <span class="accent">LLMs can read</span>."</h1>
+    <p class="sub">사람과 LLM이 같은 파일을 읽는 시대</p>
+  </div>
+  <aside class="notes">1분. 카파시 인용 강하게. dark-cover로 시각 리듬 변화.</aside>
+</section>
+
+
+<!-- S11. 카파시 매핑 -->
+<section>
+  <div class="slide" data-layout="grid">
+    <div class="page-tag">지피터스 22기 · 1주차 · 카파시</div>
+    <h2>오늘 만든 것 = <span class="accent">LLM Wiki</span> 부품</h2>
+    <div class="grid-2">
+      <div class="card bar-left">
+        <p class="blocklabel">폴더 구성</p>
+        <p>LLM의 컨텍스트 베이스</p>
+      </div>
+      <div class="card bar-left">
+        <p class="blocklabel">마크다운</p>
+        <p>LLM과 사람이 함께 읽을 수 있는 포맷</p>
+      </div>
+      <div class="card bar-left">
+        <p class="blocklabel">프론트매터 8필드</p>
+        <p>LLM이 빠르게 찾을 수 있게 도와주는 키워드</p>
+      </div>
+      <div class="card bar-left">
+        <p class="blocklabel">백링크 + 인덱스</p>
+        <p>LLM이 보는 관계 그래프</p>
+      </div>
+    </div>
+    <p class="sub" style="text-align: center; width: 100%;">4주 후 — Claude가 직접 읽고 쓰는 자리 (MCP)</p>
+  </div>
+  <aside class="notes">3분. 매핑 + 4주 척추 한 줄. 다음 18분 슬래시가 비전을 실행하는 도구.</aside>
+</section>
+
+
+<!-- S11b. 자동화 섹션 도입 -->
+<section>
+  <div class="slide" data-layout="section-break">
+    <div class="page-tag">지피터스 22기 · 1주차 · 자동화</div>
+    <span class="tag">자동화</span>
+    <h1>같은 작업을 <span class="accent">한 줄 명령</span>으로</h1>
+    <p class="subhead">여기까지 vault 뼈대. 이제 손으로 한 일을 Claude에게 외워두기.</p>
+    <p class="sub">CLAUDE.md (규칙) + 슬래시 커맨드 3개 (/new-note · /index-add · /graph)</p>
+  </div>
+  <aside class="notes">
+    1차 마무리 신호 + 자동화 단계 도입. "지금까지는 매번 말로 지시했지만, 이제는 한 번 정의해두면 끝." 2주차 텔레그램 봇이 호출하는 게 바로 다음 3개 슬래시.
+  </aside>
+</section>
+
+
+<!-- S12. CLAUDE.md (B-1) -->
+<section>
+  <div class="slide" data-layout="center">
+    <div class="page-tag">지피터스 22기 · 1주차 · 자동화</div>
+    <span class="tag">B-1 · CLAUDE.md</span>
+    <h2>CLAUDE.md — <span class="accent">vault 사용 규칙</span></h2>
+    <pre><code># Vault Convention
+
+## 노트 명명
+- 일반: {date}-{slug}.md
+- 인덱스: index-{키워드}.md
+
+## 프론트매터 표준
+필수: title, date, tags, related
+권장: type, status, source, aliases</code></pre>
+    <p class="subhead">vault 폴더에 들어오면 Claude가 이 파일을 먼저 읽음 — 매번 규칙 설명 안 해도 됨</p>
+  </div>
+  <aside class="notes">3분. CLAUDE.md 작성 → 자유 명령에 컨벤션 자동 준수 시연.</aside>
+</section>
+
+
+<!-- S13. /new-note 슬래시 (B-2) -->
+<section>
+  <div class="slide" data-layout="center">
+    <div class="page-tag">지피터스 22기 · 1주차 · 자동화</div>
+    <span class="tag">B-2 · Slash Command</span>
+    <h2><span class="accent">/new-note</span> — 자주 쓰는 지시를 명령어로</h2>
+    <pre><code># .claude/commands/new-note.md
+---
+description: 새 노트 생성 (vault 컨벤션 준수)
+---
+다음 인자를 받아 새 노트를 생성하세요: $ARGUMENTS</code></pre>
+    <p class="subhead">채팅창에 <code>/new-note 회의록 0520</code> 한 줄 → CLAUDE.md 규칙대로 노트 자동 생성</p>
+  </div>
+  <aside class="notes">5분. /new-note 시연. 폰에서 부를 수 있는 인터페이스 = 2주차 봇이 호출할 명령 미리보기.</aside>
+</section>
+
+
+<!-- S14. /index-add + /graph (B-3) -->
+<section>
+  <div class="slide" data-layout="center">
+    <div class="page-tag">지피터스 22기 · 1주차 · 자동화</div>
+    <span class="tag">B-3 · Slash Command</span>
+    <h2><span class="accent">/index-add</span> + <span class="accent">/graph</span></h2>
+    <p class="subhead">키워드 10개 → 인덱스 노트 10개 한 번에 / 노트 간 [[ ]] 연결을 그래프 그림으로</p>
+    <p class="lead" style="margin-top: 24px;">2주차에는 같은 명령을 <span class="accent">텔레그램에서 호출</span> — 채널만 바뀜</p>
+  </div>
+  <aside class="notes">5분 + 2분. /index-add로 더미 노트 일괄 생성 (이전 ⑥ 워크숍 흡수). /graph로 mermaid 한 단어. 2주차 다리.</aside>
+</section>
+
+
+<!-- S15. 카파시 비전 회수 -->
+<section>
+  <div class="slide" data-layout="grid">
+    <div class="page-tag">지피터스 22기 · 1주차</div>
+    <h2>오늘 만든 게 — <span class="accent">씨앗</span></h2>
+    <div class="grid-4">
+      <div class="stage now">
+        <div class="num">1주차</div>
+        <div class="ttl">기능</div>
+        <div class="out">LLM Wiki<br>+ 자동화</div>
+      </div>
+      <div class="arrow">▶</div>
+      <div class="stage inactive">
+        <div class="num">2주차</div>
+        <div class="ttl">사용자 UI</div>
+        <div class="out">텔레그램 봇</div>
+      </div>
+      <div class="arrow">▶</div>
+      <div class="stage inactive">
+        <div class="num">3주차</div>
+        <div class="ttl">시스템 UI</div>
+        <div class="out">API + Tailscale</div>
+      </div>
+      <div class="arrow">▶</div>
+      <div class="stage inactive">
+        <div class="num">4주차</div>
+        <div class="ttl">표준 UI</div>
+        <div class="out">MCP 시연<br><strong>도착점</strong></div>
+      </div>
+    </div>
+    <p class="sub" style="text-align: center; width: 100%;">Claude가 이 vault를 직접 읽고 쓰는 자리 — 카파시 비전</p>
+  </div>
+  <aside class="notes">3분. 4단 진화 표 다시. 도착점 강조. 도입의 약속 회수.</aside>
+</section>
+
+
+<!-- S16a. Q&A 1/5 -->
+<section>
+  <div class="slide qa-bg" data-layout="left">
+    <div class="page-tag">지피터스 22기 · 1주차</div>
+    <div class="qa-ghost-num">1</div>
+    <span class="tag">Q&amp;A · 1/5</span>
+    <h2>오늘 정리하는 <span class="accent">5가지</span></h2>
+    <div class="qcard">
+      <div class="qhead">Q1</div>
+      <h3>프론트매터를 왜 굳이 쓰나요?</h3>
+      <p class="lead">사람과 코드가 같이 읽는 메타정보를 한 파일에 두는 가장 가벼운 방법.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    사람이 읽는 글(본문)과 코드가 읽는 메타정보(태그·날짜·관계)를 한 파일에 같이 두는 가장 가벼운 방법. 이게 있어야 2주차 봇·3주차 API가 노트를 분류·검색할 수 있다.
+  </aside>
+</section>
+
+<!-- S16b. Q&A 2/5 -->
+<section>
+  <div class="slide qa-bg" data-layout="left">
+    <div class="page-tag">지피터스 22기 · 1주차</div>
+    <div class="qa-ghost-num">2</div>
+    <span class="tag">Q&amp;A · 2/5</span>
+    <div class="qcard">
+      <div class="qhead">Q2</div>
+      <h3>인덱스 키워드 10개 어떻게 정하나요?</h3>
+      <p class="lead">이미 머릿속에서 자주 쓰는 분류 그대로 — <span class="accent">새로 만들지 마세요</span>.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    PC 폴더 이름이 가장 좋은 힌트. Documents·Desktop 폴더명, Notion 워크스페이스 분류, 자주 쓰는 슬랙 채널 이름을 떠올리도록 한 마디.
+  </aside>
+</section>
+
+<!-- S16c. Q&A 3/5 -->
+<section>
+  <div class="slide qa-bg" data-layout="left">
+    <div class="page-tag">지피터스 22기 · 1주차</div>
+    <div class="qa-ghost-num">3</div>
+    <span class="tag">Q&amp;A · 3/5</span>
+    <div class="qcard">
+      <div class="qhead">Q3</div>
+      <h3>결국 1주차에 한 게 뭐죠?</h3>
+      <p class="lead">Vault 구축. 2~4주차에 이 위에 <span class="accent">사용자 UI · 시스템 UI · 표준 UI</span>를 한 겹씩 추가.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    2주차 = 사용자 UI(텔레그램 봇), 3주차 = 시스템 UI(API + Tailscale), 4주차 = 표준 UI(MCP 시연). 4단 진화 표를 한 번 더 떠올리게 하는 슬라이드.
+  </aside>
+</section>
+
+<!-- S16d. Q&A 4/5 -->
+<section>
+  <div class="slide qa-bg" data-layout="left">
+    <div class="page-tag">지피터스 22기 · 1주차</div>
+    <div class="qa-ghost-num">4</div>
+    <span class="tag">Q&amp;A · 4/5</span>
+    <div class="qcard">
+      <div class="qhead">Q4</div>
+      <h3>기존 메모(Notion·옵시디언)는 어떻게 옮기나요?</h3>
+      <p class="lead">한 번에 다 옮기지 마세요. <span class="accent">새 것만 Vault에 쓰고</span>, 옛 것은 필요할 때 일부만.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    한꺼번에 마이그레이션 시도하면 한 주차에 끝나지 않고 학습 흐름이 막힘. Claude에게 "이 Notion 익스포트를 마크다운으로 정리해줘" 한 줄이 쉬운 시작점.
+  </aside>
+</section>
+
+<!-- S16e. Q&A 5/5 -->
+<section>
+  <div class="slide qa-bg" data-layout="left">
+    <div class="page-tag">지피터스 22기 · 1주차</div>
+    <div class="qa-ghost-num">5</div>
+    <span class="tag">Q&amp;A · 5/5</span>
+    <div class="qcard">
+      <div class="qhead">Q5</div>
+      <h3>Vault를 GitHub에 올려도 되나요?</h3>
+      <p class="lead">private 리포면 가능. 단, 프론트매터에 <span class="accent">비밀 키 적지 마세요</span>(.env로).</p>
+    </div>
+  </div>
+  <aside class="notes">
+    private 리포라면 백업·기기간 동기화 용도로 가능. 프론트매터에 API 키·토큰 같은 비밀값을 적으면 안 됨 — 실수로 public 전환 시 즉시 노출. 비밀값은 2주차 .env + .gitignore 한 묶음으로.
+  </aside>
+</section>
+
+<!-- S16f. Q&A 6 중급 -->
+<section>
+  <div class="slide qa-bg" data-layout="left">
+    <div class="page-tag">지피터스 22기 · 1주차</div>
+    <div class="qa-ghost-num">+</div>
+    <span class="tag">Q&amp;A · 중급 추가</span>
+    <h2>중급 자주 묻는 <span class="accent">3</span></h2>
+    <div class="qrow compact">
+      <div class="qcard">
+        <div class="qhead">Q6</div>
+        <h3>CLAUDE.md vs .cursorrules?</h3>
+        <p class="lead">CLAUDE.md = Claude Code 전용. 비슷한 컨셉 다른 도구.</p>
+      </div>
+      <div class="qcard">
+        <div class="qhead">Q7</div>
+        <h3>슬래시 커맨드 vs Skills?</h3>
+        <p class="lead">슬래시 = 짧은 명령. Skills = 더 큰 워크플로우 단위 (W2~).</p>
+      </div>
+      <div class="qcard">
+        <div class="qhead">Q8</div>
+        <h3>CLAUDE.md를 git에 올려도?</h3>
+        <p class="lead">OK. 팀 vault라면 권장.</p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">중급 학습자 추가 Q&A 3개 압축. 빠르게 넘어가도 OK.</aside>
+</section>
+
+
+<!-- S17. 다음 주 예고 -->
+<section>
+  <div class="slide" data-layout="center">
+    <div class="page-tag">지피터스 22기 · 1주차</div>
+    <span class="tag">다음 주 — 2주차</span>
+    <p class="keymsg">사용자 UI = <span class="accent">텔레그램 봇</span></p>
+    <p class="subhead">텔레그램 봇으로 Vault에 모바일 입력 채널 추가.</p>
+    <div class="card soft hero preview-box elevate">
+      <p class="blocklabel">사전 준비</p>
+      <p class="pre-text">BotFather에서 봇 1개 생성 / 토큰은 .env로 보관 (외부 노출 금지)</p>
+    </div>
+  </div>
+  <aside class="notes">
+    BotFather는 텔레그램 공식 봇 생성 봇. 5분이면 새 봇·토큰 발급. 토큰 노출 시 즉시 `/revoke`. 토큰 보관은 2주차에 다룰 .env + .gitignore.
+  </aside>
+</section>
+
+<!-- S18. 오늘 만든 6가지 -->
+<section>
+  <div class="slide" data-layout="left">
+    <div class="page-tag">지피터스 22기 · 1주차 · 마무리</div>
+    <h2>오늘 만든 <span class="accent">6가지</span></h2>
+    <div class="check-list">
+      <div class="check-item">
+        <div class="check-num">1</div>
+        <p>Vault 폴더 + Claude Code 위치</p>
+      </div>
+      <div class="check-item">
+        <div class="check-num">2</div>
+        <p>마크다운 4가지 + 프론트매터 8필드</p>
+      </div>
+      <div class="check-item">
+        <div class="check-num">3</div>
+        <p>백링크 그래프 (Claude / Obsidian)</p>
+      </div>
+      <div class="check-item">
+        <div class="check-num">4</div>
+        <p>Vault 디자인 — 하이브리드 인덱스 위키</p>
+      </div>
+      <div class="check-item">
+        <div class="check-num">5</div>
+        <p>CLAUDE.md — vault 컨벤션</p>
+      </div>
+      <div class="check-item">
+        <div class="check-num">6</div>
+        <p>슬래시 커맨드 — /new-note · /index-add · /graph</p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    오늘 만든 4가지를 한 번 짚고 넘어간다.
+  </aside>
+</section>
+
+<!-- S19. 이번주 해볼 내용 -->
+<section>
+  <div class="slide" data-layout="left">
+    <div class="page-tag">지피터스 22기 · 1주차 · 마무리</div>
+    <h2>이번주 <span class="accent">해볼 내용</span></h2>
+    <div class="check-list">
+      <div class="check-item">
+        <div class="check-num">1</div>
+        <p>인덱스 키워드 10개 단톡방에 공유</p>
+      </div>
+      <div class="check-item">
+        <div class="check-num">2</div>
+        <p>BotFather 봇 생성 (토큰은 외부 노출 금지)</p>
+      </div>
+      <div class="check-item">
+        <div class="check-num">3</div>
+        <p>질문은 단톡방</p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    학습자 한 명씩 인덱스 키워드 1개라도 채팅창에 적도록 — 단톡방 첫 인사 자리. 7일간 단톡방이 죽지 않게 BotFather 봇 생성 한 마디씩. 토큰은 외부 노출 금지.
+  </aside>
+</section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'none',
+  backgroundTransition: 'none',
+  controls: true,
+  progress: true,
+  center: false,
+  width: 1280,
+  height: 720,
+  margin: 0
+});
+</script>
+</body>
+</html>

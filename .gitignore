@@ -1,0 +1,22 @@
+# Build outputs
+public/
+.quartz-cache/
+
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Editor / IDE
+.obsidian/
+.vscode/
+.idea/
+
+# Logs / temp
+*.log
+*.tmp
+
+# Secrets
+.env
+.env.local
