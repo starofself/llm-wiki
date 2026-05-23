@@ -34,7 +34,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
-- [[2026-05-23-ai-digest]] — Claude Routines · Gemini 3.5 Flash · GPT-5.5 · 에이전트 메모리 논문 · Hermes v0.14
+- [[2026-05-23-ai-digest]] — Claude 원격제어 · Gemini 3.5 Flash · Karpathy LLM Wiki · 메모리 논문 · Hermes v0.14 · OpenClaw
 
 ## 🗒 작업 일지
 
