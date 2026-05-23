@@ -15,10 +15,15 @@ tags: ["22기", "vault"]
 
 ---
 
+## 🖥 빠른 접근 (Tailnet 내부만)
+
+- **[브라우저 터미널 → Claude Code](http://100.123.66.77:7681/)** — 새 탭에서 즉시 `cd ~/llm-wiki && claude` 가능
+
 ## 📖 시작하기
 
 - [[guide]] — **시스템 사용 설명서** (SSH, git push, 프론트매터 등)
 - [[remote-work]] — **노트북/핸드폰에서 맥미니 부리는 법** (Tailscale + SSH + Claude Code)
+- [[web-terminal]] — **브라우저 안 터미널** (ttyd 사용법)
 
 ## 📝 작성한 글
 
@@ -38,28 +43,22 @@ tags: ["22기", "vault"]
   - [x] 폴더 + CLAUDE.md
   - [x] 강의 자료 보관
   - [x] Git + GitHub repo
-  - [x] Quartz + GitHub Pages 자동 배포
+  - [x] Quartz + 자체 호스팅 (24/7)
   - [x] SSH + Tailscale 원격 접근
-  - [x] 인덱스 키워드 7개 + 허브 노트 (10개 중 7개)
+  - [x] 인덱스 키워드 10개
+  - [x] 브라우저 터미널 (ttyd)
   - [ ] 슬래시 커맨드 3개
 - [ ] **2주차** — 사용자 UI (텔레그램 봇)
 - [ ] **3주차** — 시스템 UI (API + Tailscale)
 - [ ] **4주차** — 표준 UI (MCP)
 
-## 🏷 인덱스 (키워드 허브)
+## 🏷 인덱스 키워드
 
-핵심 키워드별로 관련 노트를 모으는 인덱스. (10개 중 7개 작성, 3개 추가 예정)
-
-- [[obsidian|Obsidian]] — 노트를 쌓는 도구이자 vault의 기반
-- [[phone|핸드폰]] — 이 강의의 목표 인터페이스
-- [[remote|원격]] — 외부에서 맥미니 부리기 (Tailscale)
-- [[claude|Claude]] — 주력 에이전트 (Claude Code)
-- [[codex|Codex]] — OpenAI 코딩 에이전트
-- [[ssh|SSH]] — 원격 셸 접속
-- [[github|GitHub]] — 저장소 + 홈페이지 발행
+- [[obsidian]] · [[claude]] · [[codex]] · [[ssh]] · [[github]]
+- [[phone]] · [[remote]] · [[openclaw]] · [[hermes]] · [[gpters-22]]
 
 ## 🔗 외부 링크
 
-- 🐙 [GitHub repo](https://github.com/starofself/llm-wiki) — 소스/이슈
+- 🐙 [GitHub repo](https://github.com/starofself/llm-wiki) — 소스/이슈 (private)
 - 🏠 [기존 Hugo 사이트](https://github.com/starofself/starofself)
 - 📊 [OpenClaw Intelligence Hub](https://github.com/starofself/openclaw-intelligence-hub) — Next.js 브리핑 대시보드
