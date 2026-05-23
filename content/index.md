@@ -40,15 +40,23 @@ tags: ["22기", "vault"]
   - [x] Git + GitHub repo
   - [x] Quartz + GitHub Pages 자동 배포
   - [x] SSH + Tailscale 원격 접근
-  - [ ] 인덱스 키워드 10개 + 첫 노트
+  - [x] 인덱스 키워드 7개 + 허브 노트 (10개 중 7개)
   - [ ] 슬래시 커맨드 3개
 - [ ] **2주차** — 사용자 UI (텔레그램 봇)
 - [ ] **3주차** — 시스템 UI (API + Tailscale)
 - [ ] **4주차** — 표준 UI (MCP)
 
-## 🏷 인덱스 (작성 예정)
+## 🏷 인덱스 (키워드 허브)
 
-> 1주차 라이브 2 과제 — 키워드 10개 선정 후 인덱스 노트 10개 생성
+핵심 키워드별로 관련 노트를 모으는 인덱스. (10개 중 7개 작성, 3개 추가 예정)
+
+- [[obsidian|Obsidian]] — 노트를 쌓는 도구이자 vault의 기반
+- [[phone|핸드폰]] — 이 강의의 목표 인터페이스
+- [[remote|원격]] — 외부에서 맥미니 부리기 (Tailscale)
+- [[claude|Claude]] — 주력 에이전트 (Claude Code)
+- [[codex|Codex]] — OpenAI 코딩 에이전트
+- [[ssh|SSH]] — 원격 셸 접속
+- [[github|GitHub]] — 저장소 + 홈페이지 발행
 
 ## 🔗 외부 링크
 
