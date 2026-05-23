@@ -27,8 +27,12 @@ tags: ["22기", "vault"]
 
 ## 📝 작성한 글
 
-- [[2026-05-22-week1-review]] — [OT과제] 1주차 수강 후기 ([원문](https://www.gpters.org/nocode/post/interface-development-week-1-NCK9Vqj4khZxQGm))
+- [[2026-05-22-week1-review]] — [OT과제] 1주차 수강 후기 ([원문](https://www.gpters.org/nocode/post/interface-development-week-1-NCK9Vqj4khZxQGm)) · _오프라인 모임 후기 추가 (5/23)_
 - [[2026-05-19-pre-course-case-study]] — 수강 전 사례글 ([원문](https://www.gpters.org/nocode/post/taking-course-want-make-ixRjUq0FvAytqMX))
+
+## 🗒 작업 일지
+
+- [[2026-05-23-worklog]] — SSH 원격접속 + llm-wiki 구축 + 텔레그램 봇 연결 + 봇 점검
 
 ## 📚 강의 자료
 
