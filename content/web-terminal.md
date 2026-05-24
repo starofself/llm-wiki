@@ -18,11 +18,11 @@ related: ["[[guide]]", "[[remote-work]]", "[[ssh]]"]
 ## 접속
 
 ```
-http://100.123.66.77:7681/
+http://100.x.x.x:7681/
 ```
 
 - **사전 조건**: Tailscale 켜져 있고 같은 계정 로그인
-- **인증**: 없음 (Tailnet 내부만 접근 가능)
+- **인증**: 비밀번호 필요 (Tailnet 내부 전용)
 - **시작 디렉토리**: `~/llm-wiki/`
 
 ## 일상 흐름
@@ -43,8 +43,8 @@ nvim content/...      # 편집기
 
 ## 사이트 보기와 같이 쓰기
 
-탭 1: <http://100.123.66.77:8080/> — 사이트 (Quartz)
-탭 2: <http://100.123.66.77:7681/> — 터미널 (ttyd)
+탭 1: <http://100.x.x.x:8080/> — 사이트 (Quartz)
+탭 2: <http://100.x.x.x:7681/> — 터미널 (ttyd)
 
 작업 → 사이트 새로고침 (60초 후 자동 빌드 반영)
 
@@ -58,14 +58,14 @@ nvim content/...      # 편집기
 ## 보안 메모
 
 - **외부 인터넷에서는 접근 불가** (Tailnet 내부 통신만)
-- **인증 없음** → 디바이스 도난 시 즉시 터미널 접근 가능. 디바이스 비밀번호로 1차 보호 중요
+- **비밀번호 인증 적용** → 무단 접근 차단. Tailnet 내부에서만 도달
 - 강화하려면: `~/Library/LaunchAgents/com.starofself.ttyd.plist`에 `-c username:password` 옵션 추가 후 재로드
 
 ## 트러블슈팅
 
 ### 접속 안 됨
 1. Tailscale 켜져 있나? `tailscale status`로 macmini-star2-macmini 활성 확인
-2. 서버 상태: `ssh starofselfhigmail.com@100.123.66.77 'launchctl list | grep ttyd'`
+2. 서버 상태: `ssh mac-user@100.x.x.x 'launchctl list | grep ttyd'`
 3. 재시작: 맥미니에서 `launchctl kickstart -k gui/$(id -u)/com.starofself.ttyd`
 
 ### 한글 깨짐

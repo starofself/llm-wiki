@@ -22,7 +22,7 @@ related: ["[[guide]]", "[[index]]"]
  - 윈도우 노트북       Tailscale       - vault (~/llm-wiki/)
  - 아이폰/아이패드  ──────────────►   - Claude Code (CLI)
  - Z Fold                 SSH          - 24/7 켜져 있음
- - 친구 PC, 등                         - 100.123.66.77
+ - 친구 PC, 등                         - 100.x.x.x
 ```
 
 - **두뇌**: 맥미니에 있는 Claude Code
@@ -40,7 +40,7 @@ related: ["[[guide]]", "[[index]]"]
 
 ### 매일 사용
 ```powershell
-ssh starofselfhigmail.com@100.123.66.77
+ssh mac-user@100.x.x.x
 cd ~/llm-wiki
 claude
 ```
@@ -71,9 +71,9 @@ tmux attach -t work  # 다시 들어올 때
 1. App Store에서 Termius 설치
 2. Tailscale 앱 설치 + 로그인 (반드시 켜져 있어야 함)
 3. Termius에서 New Host:
-   - Hostname: `100.123.66.77`
+   - Hostname: `100.x.x.x`
    - Port: `22`
-   - Username: `starofselfhigmail.com`
+   - Username: `mac-user`
 4. Keys 탭에서 새 SSH key 생성 → 공개키를 맥미니에 등록 필요
    - 가장 쉬운 방법: 공개키를 메일/메모로 본인에게 보낸 뒤 맥미니에서 `echo '...' >> ~/.ssh/authorized_keys`
 5. Connect
@@ -101,7 +101,7 @@ claude
 pkg update && pkg install openssh
 ssh-keygen -t ed25519
 # 공개키 ~/.ssh/id_ed25519.pub를 맥미니에 등록
-ssh starofselfhigmail.com@100.123.66.77
+ssh mac-user@100.x.x.x
 ```
 
 Z Fold라면 키보드 + 큰 화면 활용 → 거의 노트북 수준 작업 가능.
@@ -142,7 +142,7 @@ Z Fold라면 키보드 + 큰 화면 활용 → 거의 노트북 수준 작업 �
 ## 자주 묻는 문제
 
 ### "Connection refused"
-- 맥미니 켜져 있나? Tailscale 앱에서 디바이스 목록 확인 → 100.123.66.77 보이는지
+- 맥미니 켜져 있나? Tailscale 앱에서 디바이스 목록 확인 → 100.x.x.x 보이는지
 - 맥미니 SSH 서비스: 맥미니에서 `sudo systemsetup -getremotelogin` → On 확인
 
 ### "Permission denied (publickey)"

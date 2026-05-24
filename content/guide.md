@@ -33,12 +33,12 @@ https://starofself.github.io/llm-wiki/
 
 **윈도우 PC에서**:
 ```bash
-ssh starofselfhigmail.com@100.123.66.77
+ssh mac-user@100.x.x.x
 ```
 
 **핸드폰에서** (Termius / Blink Shell / Prompt 3 등 SSH 앱):
-- Host: `100.123.66.77`
-- User: `starofselfhigmail.com`
+- Host: `100.x.x.x`
+- User: `mac-user`
 - Auth: SSH key (윈도우 키를 핸드폰으로 옮기거나, 핸드폰 키를 따로 등록)
 
 **접속 후 첫 명령**:
@@ -139,7 +139,7 @@ push 전에 디자인/링크 확인할 때 사용.
 
 ### 5-3. 윈도우 PC에서 작업
 
-- `ssh starofselfhigmail.com@100.123.66.77`
+- `ssh mac-user@100.x.x.x`
 - 그 안에서 `tmux` 또는 `screen` 띄워두면 세션 유지됨
 - Claude Code도 SSH 안에서 그대로 실행
 
@@ -171,7 +171,7 @@ push 전에 디자인/링크 확인할 때 사용.
 ## 7. 문제 해결
 
 ### SSH 접속이 안 됨
-1. 맥미니 켜져 있는지 (Tailscale 디바이스 목록에서 100.123.66.77 보이는지)
+1. 맥미니 켜져 있는지 (Tailscale 디바이스 목록에서 100.x.x.x 보이는지)
 2. 윈도우 → 맥미니 핑: `tailscale ping macmini-star2-macmini`
 3. 맥미니 SSH 서비스 상태: 맥미니에서 `sudo systemsetup -getremotelogin` → `On` 확인
 4. SSH key 등록 상태: 맥미니에서 `cat ~/.ssh/authorized_keys` → 윈도우 키 보이는지

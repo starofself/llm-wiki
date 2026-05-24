@@ -17,7 +17,7 @@ tags: ["22기", "vault"]
 
 ## 🖥 빠른 접근 (Tailnet 내부만)
 
-- **[브라우저 터미널 → Claude Code](http://100.123.66.77:7681/)** — 새 탭에서 즉시 `cd ~/llm-wiki && claude` 가능
+- **[브라우저 터미널 → Claude Code](http://100.x.x.x:7681/)** — 새 탭에서 즉시 `cd ~/llm-wiki && claude` 가능
 
 ## 📖 시작하기
 

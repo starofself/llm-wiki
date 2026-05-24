@@ -12,8 +12,8 @@ type: index
 
 ## 이 환경의 SSH 구성
 - 맥미니 **원격 로그인 ON** (시스템 설정 → 공유).
-- [[remote|Tailscale]] IP `100.123.66.77` 포트 22로 접속.
-- 접속: `ssh starofselfhigmail.com@100.123.66.77`
+- [[remote|Tailscale]] IP `100.x.x.x` 포트 22로 접속.
+- 접속: `ssh mac-user@100.x.x.x`
 - **키 인증** 등록 → 비밀번호 없이 자동 접속.
 
 ## 키 인증 (비번 없는 접속)

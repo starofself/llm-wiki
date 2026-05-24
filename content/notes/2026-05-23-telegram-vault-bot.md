@@ -71,8 +71,8 @@ aliases: ["claude 브리지", "텔레그램 봇", "폰 터미널"]
 ```ini
 TELEGRAM_BOT_TOKEN=...             # BotFather 토큰
 TELEGRAM_ALLOWED_USERS=123456789   # 허용 텔레그램 user id (쉼표로 여러 명)
-CLAUDE_BIN=/Users/starofselfhigmail.com/.local/bin/claude
-WORK_DIR=/Users/starofselfhigmail.com    # claude 기본 작업 폴더 (/cd 로 변경)
+CLAUDE_BIN=/Users/mac-user/.local/bin/claude
+WORK_DIR=/Users/mac-user    # claude 기본 작업 폴더 (/cd 로 변경)
 PERMISSION_MODE=bypassPermissions        # default/acceptEdits/plan/bypassPermissions
 CLAUDE_MODEL=                             # 비우면 기본 모델
 CLAUDE_TIMEOUT=600                        # 한 작업 최대 초
