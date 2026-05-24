@@ -34,6 +34,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-05-24-ai-digest]] — Claude 커넥터·새헌법 · Antigravity 한도 9배 · ChatGPT 메모리소스 · qmd 로컬검색 · OpenClaw 5.24-beta
 - [[2026-05-23-ai-digest]] — Claude 원격제어 · Gemini 3.5 Flash · Karpathy LLM Wiki · 메모리 논문 · Hermes v0.14 · OpenClaw
 
 ## 🗒 작업 일지
