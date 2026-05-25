@@ -24,6 +24,7 @@ tags: ["22기", "vault"]
 - [[guide]] — **시스템 사용 설명서** (SSH, git push, 프론트매터 등)
 - [[remote-work]] — **노트북/핸드폰에서 맥미니 부리는 법** (Tailscale + SSH + Claude Code)
 - [[web-terminal]] — **브라우저 안 터미널** (ttyd 사용법)
+- [[curation/index|LLM-WIKI 반영 후보 큐]] — 웹/영상/HTML 자료를 많이 참고하되, 본문에 반영할 것만 선별하는 트리
 
 ## 📝 작성한 글
 
@@ -34,6 +35,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-05-25-ai-digest]] — Claude 에이전트 미터링(6/15) · Google AI Ultra $100 · ChatGPT 재무 · A-MAC 입수게이트 논문 · OpenClaw 탭백승인
 - [[2026-05-24-ai-digest]] — Claude 커넥터·새헌법 · Antigravity 한도 9배 · ChatGPT 메모리소스 · qmd 로컬검색 · OpenClaw 5.24-beta
 - [[2026-05-23-ai-digest]] — Claude 원격제어 · Gemini 3.5 Flash · Karpathy LLM Wiki · 메모리 논문 · Hermes v0.14 · OpenClaw
 
@@ -47,6 +49,7 @@ tags: ["22기", "vault"]
 - [[2026-05-20-week1-lecture-chat]] — 1주차 본강의 채팅 로그
 - [OT 슬라이드 (HTML)](resources/ot-slides-v2.html)
 - [[2026-05-17-practice-session-antigravity]] — 실습세션 (안티그래비티 설치)
+- [[2026-05-25-html-vs-markdown-llm-signals]] — HTML 태그가 Markdown보다 LLM에게 더 명확한 시그널을 주는 이유와 Obsidian의 역할 재정의
 
 ## 🗓 진행 현황
 
@@ -66,7 +69,7 @@ tags: ["22기", "vault"]
 ## 🏷 인덱스 키워드
 
 - [[obsidian]] · [[claude]] · [[codex]] · [[ssh]] · [[github]]
-- [[phone]] · [[remote]] · [[openclaw]] · [[hermes]] · [[gpters-22]]
+- [[phone]] · [[remote]] · [[openclaw]] · [[hermes]] · [[gpters-22]] · [[html]]
 
 ## 🔗 외부 링크
 

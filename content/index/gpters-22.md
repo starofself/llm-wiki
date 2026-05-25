@@ -29,6 +29,7 @@ related: ["[[index]]", "[[guide]]"]
 - [[2026-05-20-week1-lecture-chat]] — 1주차 본강의 채팅 로그
 - [OT 슬라이드 (HTML)](../resources/ot-slides-v2.html)
 - [[2026-05-17-practice-session-antigravity]] — 실습세션 채팅 로그
+- [[2026-05-25-html-vs-markdown-llm-signals]] — HTML vs Markdown, LLM 시그널, Obsidian의 역할 재정의
 
 ## 강의가 만드는 시스템
 강의 4주 흐름이 곧 본인 작업환경(맥미니 중심)을 완성하는 과정:

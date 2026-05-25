@@ -18,8 +18,11 @@ type: index
 ## 관련 노트
 - [[guide]] — 프론트매터 규칙, 노트 작성법
 - [[remote-work]] — 핸드폰/노트북에서 같은 vault 접근
+- [[html]] — Markdown vault 위에 얹는 인터페이스/렌더링 레이어
+- [[2026-05-25-html-vs-markdown-llm-signals]] — “옵시디언 이제 필요없을까요?”에 대한 판단 메모
 
 ## 핵심 메모
 - 노트 명명: `{날짜}-{슬러그}.md`
 - 프론트매터 필수 4개: `title / date / tags / related`
 - 노트 간 연결은 `[[위키링크]]`로 — 그래프 뷰로 지식 연결 시각화
+- HTML 시대에도 Obsidian/Markdown은 장기 보관용 원장으로 유효하다. 다만 복잡한 판단·비교·보고는 HTML 산출물로 별도 렌더링하는 편이 좋다.
