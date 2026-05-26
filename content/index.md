@@ -40,6 +40,10 @@ tags: ["22기", "vault"]
 - [[2026-05-24-ai-digest]] — Claude 커넥터·새헌법 · Antigravity 한도 9배 · ChatGPT 메모리소스 · qmd 로컬검색 · OpenClaw 5.24-beta
 - [[2026-05-23-ai-digest]] — Claude 원격제어 · Gemini 3.5 Flash · Karpathy LLM Wiki · 메모리 논문 · Hermes v0.14 · OpenClaw
 
+## 🔎 리서치/산업 해석
+
+- [[2026-05-27-hashed-ai-agent-economy-deep-research]] — 해시드 김서준 인터뷰 기반 AI 에이전트 경제·VC 재정의·Web3 신원/결제 인프라 딥리서치
+
 ## 🗒 작업 일지
 
 - [[2026-05-23-worklog]] — SSH 원격접속 + llm-wiki 구축 + 텔레그램 봇 연결 + 봇 점검
