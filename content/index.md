@@ -35,6 +35,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-05-29-ai-digest]] — Opus 4.8·Dynamic Workflows·Fast Mode 3×저렴 · Antigravity 한도 9× · Codex 0.135 Goal Mode · R²-Mem 외부경험저장소 · Karpathy LLM Wiki 무브먼트 · OpenClaw 5.27 보안
 - [[2026-05-28-ai-digest]] — Claude 보안플러그인·SpaceX Colossus · Antigravity 2.0 UI패치·Gemini 9× · Codex 자가개선 세무에이전트 · 메모리 어드미션컨트롤 · LLM Wiki SaaS ROI · Hermes x_search·MS Teams · OpenClaw /models 4100×
 - [[2026-05-27-ai-digest]] — Claude v2.1.152·disallowed-tools·광고없음 · Antigravity CLI 6/18종료 · Codex 온프렘(Dell) · AgeMem 입수제어 · Obsidian 공식스킬 · Hermes PyPI·로컬프록시 · OpenClaw 5.26
 - [[2026-05-26-ai-digest]] — Anthropic 컴플라이언스 28종·Compliance API · Antigravity 2.0 UI정정 · GPT-5.5/Codex 온프렘 · Obsidian 공식 Claude 스킬 · Hermes v0.14 로컬프록시
