@@ -28,6 +28,7 @@ tags: ["22기", "vault"]
 
 ## 📝 작성한 글
 
+- [[2026-05-30-week2-review]] — **[2주차] 인터페이스개발 수강 후기** · _텔레그램 봇 + 윈도우 노트북에서 SSH·ttyd로 맥미니 부리기 + 헤르메스/클로드/코덱스 병렬_
 - [[2026-05-22-week1-review]] — [OT과제] 1주차 수강 후기 ([원문](https://www.gpters.org/nocode/post/interface-development-week-1-NCK9Vqj4khZxQGm)) · _오프라인 모임 후기 추가 (5/23)_
 - [[2026-05-19-pre-course-case-study]] — 수강 전 사례글 ([원문](https://www.gpters.org/nocode/post/taking-course-want-make-ixRjUq0FvAytqMX))
 
@@ -71,7 +72,13 @@ tags: ["22기", "vault"]
   - [x] 인덱스 키워드 10개
   - [x] 브라우저 터미널 (ttyd)
   - [ ] 슬래시 커맨드 3개
-- [ ] **2주차** — 사용자 UI (텔레그램 봇)
+- [x] **2주차** — 사용자 UI (텔레그램 봇) ✅
+  - [x] BotFather 봇 생성 + 토큰
+  - [x] 텔레그램 ↔ Claude Code 브리지 (launchd 24/7)
+  - [x] 사진/파일 자동 저장 (`~/gpters-photos`, 22개 누적)
+  - [x] 멀티에이전트 디스패처 (`~/ai-agents/dispatch.sh`, `parallel.sh`)
+  - [x] 윈도우 노트북 → 맥미니 SSH/ttyd 워크플로 확립
+  - [x] 후기 발행 ([[2026-05-30-week2-review]])
 - [ ] **3주차** — 시스템 UI (API + Tailscale)
 - [ ] **4주차** — 표준 UI (MCP)
 
