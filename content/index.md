@@ -45,9 +45,6 @@ tags: ["22기", "vault"]
 
 ## 🔎 리서치/산업 해석
 
-- [[2026-05-30-auto-next-bottleneck-investment-research]] — 삼성증권 자동차 하반기 전망: Physical AI/로봇 행동 데이터·열관리 병목과 현대차그룹 투자전략
-- [[2026-05-30-solar-equipment-investment-research]] — 미래에셋증권 글로벌 태양광 장비: HJT·페로브스카이트 탠덤 장비 사이클과 한국 장비주 투자전략
-- [[2026-05-30-esg-multiple-escape-investment-research]] — 미래에셋증권 ESG 전략: 코리아 디스카운트 해소, 주주환원, 거버넌스 기반 멀티플 리레이팅
 - [[2026-05-27-hashed-ai-agent-economy-deep-research]] — 해시드 김서준 인터뷰 기반 AI 에이전트 경제·VC 재정의·Web3 신원/결제 인프라 딥리서치
 
 ## 🗒 작업 일지
