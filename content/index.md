@@ -28,7 +28,7 @@ tags: ["22기", "vault"]
 
 ## 📝 작성한 글
 
-- [[2026-05-30-week2-review]] — **[2주차] 인터페이스개발 수강 후기** · _텔레그램 봇 + 윈도우 노트북에서 SSH·ttyd로 맥미니 부리기 + 헤르메스/클로드/코덱스 병렬_
+- [[2026-05-30-week2-review]] — **[2주차] 인터페이스개발 수강 후기** ([원문](https://www.gpters.org/nocode/post/2juca-inteopeiseugaebal---2juca-sugang-hugi-telregeuraem-bos-windou-iRX9ptY4UdOrKDm)) · _텔레그램 봇 + 윈도우 노트북에서 SSH·ttyd로 맥미니 부리기 + 헤르메스/클로드/코덱스 병렬_
 - [[2026-05-22-week1-review]] — [OT과제] 1주차 수강 후기 ([원문](https://www.gpters.org/nocode/post/interface-development-week-1-NCK9Vqj4khZxQGm)) · _오프라인 모임 후기 추가 (5/23)_
 - [[2026-05-19-pre-course-case-study]] — 수강 전 사례글 ([원문](https://www.gpters.org/nocode/post/taking-course-want-make-ixRjUq0FvAytqMX))
 

@@ -11,6 +11,8 @@ related: ["[[index]]", "[[2026-05-22-week1-review]]", "[[2026-05-23-telegram-vau
 
 # 지피터스 22기 2주차 수강 후기
 
+> 📎 원문: [지피터스 2주차 후기](https://www.gpters.org/nocode/post/2juca-inteopeiseugaebal---2juca-sugang-hugi-telregeuraem-bos-windou-iRX9ptY4UdOrKDm)
+
 안녕하세요. 냐안의별입니다.
 
 토요일 오후 3시, 카페 창가였습니다. 아메리카노 얼음이 쨍그랑 한 번 울리고, 폰 화면 위로 햇빛이 비스듬히 떨어졌어요. 80페이지짜리 증권사 PDF 링크를 복사해 텔레그램 입력창에 붙이고 — 엄지로 send. 잠금화면을 내리고 책을 폈습니다.
