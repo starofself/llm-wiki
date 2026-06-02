@@ -36,6 +36,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-06-02-ai-digest]] — Claude v2.1.160 셸/빌드설정 쓰기가드·6/15 과금분리 · Gemini CLI 6/18종료 · GPT-4.5 6/27은퇴·5.4 mini · 기억주권(LTM보안) · LLM Wiki 유지비0 · Hermes v0.15.2·Brainworm방어 · OpenClaw 6.1 알파/베타
 - [[2026-06-01-ai-digest]] — Claude v2.1.159 인프라패스·OPUS_4_6_FAST_MODE_OVERRIDE 6/1제거·도쿄 6/5-6 · Antigravity CLI 전체공개 D-17 · GPT-4.5 D-26 · MemCog associative graph · Starter Kit v4 · Hermes v0.15.1 hotfix · OpenClaw 5.28 stable 정정
 - [[2026-05-31-ai-digest]] — Claude v2.1.158 Dynamic Workflows 공식·보안플러그인 30%↓ · GPT-5.5 Instant 채팅인라인블록·Canvas폐지·o3 8/26종료 · R²-Mem 2층메모리 · Why Obsidian Won · **Hermes v0.15 -76%·MCP Catalog·OpenHands·ntfy**
 - [[2026-05-30-ai-digest]] — Claude Auto mode Bedrock/Vertex · .claude/skills 자동로드 · Codex Windows 컴퓨터사용·메모리 versioned · GEM 4-operator 논문 · kepano 공식 Obsidian 스킬 · OpenClaw 5.29-alpha
