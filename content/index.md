@@ -36,6 +36,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-06-06-ai-digest]] — Claude 6/5대규모장애복구·v2.1.165 · 재귀적자기개선보고서(코드80%자가작성·글로벌pause촉구) · Gemini CLI 6/18종료 D-12 · GPT Lockdown Mode 전계정·dreaming메모리·GPT-4.5 6/27은퇴 D-21 · 기억주권(LTM보안)Mnemonic Sovereignty · PKM AgentSkill인코딩 · Hermes Desktop v0.15.2 · OpenClaw 6.2 플러그인외부화(Tokenjuice·Copilot)
 - [[2026-06-05-ai-digest]] — Claude v2.1.163 버전가드레일·WebFetch권한픽스·6/15과금분리 D-10 · Project Glasswing 150조직/15개국·Claude Security 2100패치 · Gemini CLI 6/18종료 D-13 · GPT-Rosalind·ChatGPT Sites·GPT-4.5 6/27은퇴 D-22 · SSGM 메모리거버넌스·선택적망각 · PKM 캡처파이프라인병목 · Hermes Desktop v0.15.2 · OpenClaw 6.2 Skill Workshop
 - [[2026-06-04-ai-digest]] — Claude v2.1.161/162 병렬툴호출·OTel·6/15과금분리 D-11 · Antigravity CLI 이관 D-14 · GPT-5.6 6월루머·GPT-4.5 6/27은퇴 · AgeMem 메모리=툴액션 · PKM 3-아키텍처 수렴 · Hermes Desktop 6/2 네이티브GUI · OpenClaw 스킬보안(SkillSpector·HF데이터셋)
 - [[2026-06-03-ai-digest]] — Claude 6/2 대규모장애(서브에이전트 무한증식)→복구·IPO신청·Opus 4.8·Glasswing 15개국 · Gemini CLI 6/18종료 D-15 · GPT-5.5 Instant 기본·canvas폐지·GPT-4.5 6/27은퇴 · Admission Control 메모리 쓰기게이팅 · LLM Wiki 플러그인 · Hermes v0.15.2(6월無) · OpenClaw 6.1 알파/베타
