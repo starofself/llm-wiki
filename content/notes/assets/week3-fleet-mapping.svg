@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="arrm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="550" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">🎯 하네스 9 부품 ↔ 우리 함대 매핑</text>
+  <text x="550" y="60" text-anchor="middle" font-size="13" fill="#64748b">발표 핵심 슬라이드 — 각 부품에 무엇이 들어가는가</text>
+
+  <!-- Headers -->
+  <rect x="30" y="85" width="350" height="40" rx="6" fill="#1e293b"/>
+  <text x="205" y="111" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">하네스 부품 (보편)</text>
+
+  <rect x="430" y="85" width="100" height="40" rx="6" fill="#1e293b"/>
+  <text x="480" y="111" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">매핑</text>
+
+  <rect x="580" y="85" width="490" height="40" rx="6" fill="#1e293b"/>
+  <text x="825" y="111" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">우리 함대 구현</text>
+
+  <!-- Row 1: 입력 큐 -->
+  <g>
+    <rect x="30" y="135" width="350" height="65" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="50" y="160" font-size="13" font-weight="700" fill="#78350f">① 입력 큐 (Input Queue)</text>
+    <text x="50" y="180" font-size="11" fill="#451a03">어떤 이벤트가 작업을 시작시키는가?</text>
+    <text x="50" y="195" font-size="10" fill="#78350f" font-style="italic">"우선순위·중복방지·빈 큐 처리"</text>
+
+    <line x1="430" y1="167" x2="575" y2="167" stroke="#16a34a" stroke-width="2" marker-end="url(#arrm)"/>
+    <text x="480" y="160" text-anchor="middle" font-size="10" fill="#16a34a">Day 2</text>
+
+    <rect x="580" y="135" width="490" height="65" rx="6" fill="#ecfccb" stroke="#65a30d" stroke-width="1.5"/>
+    <text x="600" y="160" font-size="13" font-weight="700" fill="#365314">🗂️ Obsidian 칸반 5컬럼 + 텔레그램 봇</text>
+    <text x="600" y="180" font-size="11" fill="#365314">‼️선장·📥백로그·🔄진행중·🧪검토중·✅완료 (정본=맥1, shanks 단독편집)</text>
+    <text x="600" y="195" font-size="10" fill="#65a30d" font-style="italic">→ git 충돌 0건 (단일 정본·단일 작성자)</text>
+  </g>
+
+  <!-- Row 2: 작업 분해기 -->
+  <g>
+    <rect x="30" y="210" width="350" height="65" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="50" y="235" font-size="13" font-weight="700" fill="#1e3a8a">② 작업 분해기 (Decomposer)</text>
+    <text x="50" y="255" font-size="11" fill="#1e3a8a">큰 요청 → 작은 task + 완료 조건</text>
+    <text x="50" y="270" font-size="10" fill="#2563eb" font-style="italic">"완료 조건 없는 task는 task가 아님"</text>
+
+    <line x1="430" y1="242" x2="575" y2="242" stroke="#16a34a" stroke-width="2" marker-end="url(#arrm)"/>
+    <text x="480" y="235" text-anchor="middle" font-size="10" fill="#16a34a">Day 1</text>
+
+    <rect x="580" y="210" width="490" height="65" rx="6" fill="#ecfccb" stroke="#65a30d" stroke-width="1.5"/>
+    <text x="600" y="235" font-size="13" font-weight="700" fill="#365314">⚔️ shanks (조정자) — 카드 위임 + inbox 라우팅</text>
+    <text x="600" y="255" font-size="11" fill="#365314">카드에 `@담당 + 완료조건` 없으면 거부. 봇별 inbox/&lt;봇&gt;.md에 자동 위임</text>
+    <text x="600" y="270" font-size="10" fill="#65a30d" font-style="italic">→ 16종 카드 5봇 라운드로빈 분배 (Bio Day 6 실증)</text>
+  </g>
+
+  <!-- Row 3: 컨텍스트 로더 -->
+  <g>
+    <rect x="30" y="285" width="350" height="65" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="50" y="310" font-size="13" font-weight="700" fill="#14532d">③ 컨텍스트 로더 (Context Loader)</text>
+    <text x="50" y="330" font-size="11" fill="#14532d">CLAUDE.md · Skill · subagent · 검색</text>
+    <text x="50" y="345" font-size="10" fill="#16a34a" font-style="italic">"컨텍스트는 공짜가 아니다"</text>
+
+    <line x1="430" y1="317" x2="575" y2="317" stroke="#16a34a" stroke-width="2" marker-end="url(#arrm)"/>
+    <text x="480" y="310" text-anchor="middle" font-size="10" fill="#16a34a">Day 6~7</text>
+
+    <rect x="580" y="285" width="490" height="65" rx="6" fill="#ecfccb" stroke="#65a30d" stroke-width="1.5"/>
+    <text x="600" y="310" font-size="13" font-weight="700" fill="#365314">🛠️ MCP 4 서버 19 도구 + CLAUDE.md + Skill 공용</text>
+    <text x="600" y="330" font-size="11" fill="#365314">search_notes(0.4초) · get_quote · get_sec_filings — grep 40초 → 1.4초 (≈28×)</text>
+    <text x="600" y="345" font-size="10" fill="#65a30d" font-style="italic">→ fleet-skills/ symlink로 5봇 공용 (한 번 작성 → 5봇 사용)</text>
+  </g>
+
+  <!-- Row 4: 권한 샌드박스 -->
+  <g>
+    <rect x="30" y="360" width="350" height="65" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="50" y="385" font-size="13" font-weight="700" fill="#7f1d1d">④ 권한 샌드박스 (Sandbox)</text>
+    <text x="50" y="405" font-size="11" fill="#7f1d1d">아무거나 지우거나 배포 못하게</text>
+    <text x="50" y="420" font-size="10" fill="#dc2626" font-style="italic">"없으면 사고도 자동화"</text>
+
+    <line x1="430" y1="392" x2="575" y2="392" stroke="#16a34a" stroke-width="2" marker-end="url(#arrm)"/>
+    <text x="480" y="385" text-anchor="middle" font-size="10" fill="#16a34a">Day 3</text>
+
+    <rect x="580" y="360" width="490" height="65" rx="6" fill="#ecfccb" stroke="#65a30d" stroke-width="1.5"/>
+    <text x="600" y="385" font-size="13" font-weight="700" fill="#365314">🛡️ bypassPermissions + permissions.deny + MCP _AgentInbox만 쓰기</text>
+    <text x="600" y="405" font-size="11" fill="#365314">deny: ~/.ssh/** · **/.env · Bash(rm -rf*) · git push --force</text>
+    <text x="600" y="420" font-size="10" fill="#65a30d" font-style="italic">→ 봇이 기존 딥리서치 노트 덮어쓰기 불가능 (구조적 안전)</text>
+  </g>
+
+  <!-- Row 5: 실행 루프 -->
+  <g>
+    <rect x="30" y="435" width="350" height="65" rx="6" fill="#fae8ff" stroke="#a21caf" stroke-width="1.5"/>
+    <text x="50" y="460" font-size="13" font-weight="700" fill="#581c87">⑤ 실행 루프 (Execution Loop)</text>
+    <text x="50" y="480" font-size="11" fill="#581c87">계획→구현→검증→실패시 재시도</text>
+    <text x="50" y="495" font-size="10" fill="#a21caf" font-style="italic">"사람 대신 도는 핵심"</text>
+
+    <line x1="430" y1="467" x2="575" y2="467" stroke="#16a34a" stroke-width="2" marker-end="url(#arrm)"/>
+    <text x="480" y="460" text-anchor="middle" font-size="10" fill="#16a34a">Day 1·3</text>
+
+    <rect x="580" y="435" width="490" height="65" rx="6" fill="#ecfccb" stroke="#65a30d" stroke-width="1.5"/>
+    <text x="600" y="460" font-size="13" font-weight="700" fill="#365314">🔄 agent-bus (GitHub repo) + bus-autosync (cron 2분)</text>
+    <text x="600" y="480" font-size="11" fill="#365314">inbox/&lt;봇&gt;.md · feed/&lt;봇&gt;.md — `bus-post`/`bus-read`로 모든 소통</text>
+    <text x="600" y="495" font-size="10" fill="#65a30d" font-style="italic">→ 봇 간 평균 지연 수시간 → 2분 (≈120×)</text>
+  </g>
+
+  <!-- Row 6: 검증 게이트 -->
+  <g>
+    <rect x="30" y="510" width="350" height="65" rx="6" fill="#fce7f3" stroke="#db2777" stroke-width="1.5"/>
+    <text x="50" y="535" font-size="13" font-weight="700" fill="#831843">⑥ 검증 게이트 (Verification Gate)</text>
+    <text x="50" y="555" font-size="11" fill="#831843">test·lint·build·screenshot·PR review</text>
+    <text x="50" y="570" font-size="10" fill="#db2777" font-style="italic">"잘 된 것 같아요 ≠ 통과"</text>
+
+    <line x1="430" y1="542" x2="575" y2="542" stroke="#16a34a" stroke-width="2" marker-end="url(#arrm)"/>
+    <text x="480" y="535" text-anchor="middle" font-size="10" fill="#16a34a">Day 5</text>
+
+    <rect x="580" y="510" width="490" height="65" rx="6" fill="#ecfccb" stroke="#65a30d" stroke-width="1.5"/>
+    <text x="600" y="535" font-size="13" font-weight="700" fill="#365314">✅ Bio-as-SW 5체크 + v2 6대섹션 + 카드 완료조건 필수</text>
+    <text x="600" y="555" font-size="11" fill="#365314">①약물표 ②deep dive ③경쟁 ④캡테이블 ⑤벤더 ⑥peer ⑦창업자 — 다 통과해야 ✅</text>
+    <text x="600" y="570" font-size="10" fill="#65a30d" font-style="italic">→ 게이트 통과 못한 카드는 자동 "검토중" 컬럼으로 반려</text>
+  </g>
+
+  <!-- Row 7: 독립 리뷰어 -->
+  <g>
+    <rect x="30" y="585" width="350" height="65" rx="6" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1.5"/>
+    <text x="50" y="610" font-size="13" font-weight="700" fill="#312e81">⑦ 독립 리뷰어 (Independent Reviewer)</text>
+    <text x="50" y="630" font-size="11" fill="#312e81">fresh context로 spec/quality 검수</text>
+    <text x="50" y="645" font-size="10" fill="#4f46e5" font-style="italic">"자기 평가는 관대해진다"</text>
+
+    <line x1="430" y1="617" x2="575" y2="617" stroke="#16a34a" stroke-width="2" marker-end="url(#arrm)"/>
+    <text x="480" y="610" text-anchor="middle" font-size="10" fill="#16a34a">Day 6</text>
+
+    <rect x="580" y="585" width="490" height="65" rx="6" fill="#ecfccb" stroke="#65a30d" stroke-width="1.5"/>
+    <text x="600" y="610" font-size="13" font-weight="700" fill="#365314">🍖 luffy (별도 봇·완전 fresh context) — 매트릭스 v1.1 확장</text>
+    <text x="600" y="630" font-size="11" fill="#365314">shandi가 작성한 8 종목 노트 → luffy가 ⑧ 노정석 렌즈 섹션만 읽고 통합</text>
+    <text x="600" y="645" font-size="10" fill="#65a30d" font-style="italic">→ 정량표·한국 3종·곡괭이 ETF 바스켓 3종 추가 (구조적 객관성)</text>
+  </g>
+
+  <!-- Row 8: 증거 저장소 -->
+  <g>
+    <rect x="30" y="660" width="350" height="55" rx="6" fill="#ecfeff" stroke="#0891b2" stroke-width="1.5"/>
+    <text x="50" y="685" font-size="13" font-weight="700" fill="#164e63">⑧ 증거 저장소 (Evidence Trail)</text>
+    <text x="50" y="703" font-size="11" fill="#164e63">"했어요"는 증거 아님 → 명령·로그 다 남기기</text>
+
+    <line x1="430" y1="687" x2="575" y2="687" stroke="#16a34a" stroke-width="2" marker-end="url(#arrm)"/>
+    <text x="480" y="680" text-anchor="middle" font-size="10" fill="#16a34a">Day 1·5</text>
+
+    <rect x="580" y="660" width="490" height="55" rx="6" fill="#ecfccb" stroke="#65a30d" stroke-width="1.5"/>
+    <text x="600" y="685" font-size="13" font-weight="700" fill="#365314">📚 Obsidian vault + feed/&lt;봇&gt;.md + 카드ID 인용 형식</text>
+    <text x="600" y="703" font-size="11" fill="#365314">"✅ [카드 제목 정확 인용] 완료 — 위치: &lt;전체 경로&gt;" 룰 v1.2 강제</text>
+  </g>
+
+  <!-- Row 9: 사람 알림 -->
+  <g>
+    <rect x="30" y="725" width="350" height="55" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+    <text x="50" y="750" font-size="13" font-weight="700" fill="#7c2d12">⑨ 사람 알림 (Human-in-the-loop)</text>
+    <text x="50" y="768" font-size="11" fill="#7c2d12">모두 보지 않음, 꼭 봐야 할 것만</text>
+
+    <line x1="430" y1="752" x2="575" y2="752" stroke="#16a34a" stroke-width="2" marker-end="url(#arrm)"/>
+    <text x="480" y="745" text-anchor="middle" font-size="10" fill="#16a34a">Day 3</text>
+
+    <rect x="580" y="725" width="490" height="55" rx="6" fill="#ecfccb" stroke="#65a30d" stroke-width="1.5"/>
+    <text x="600" y="750" font-size="13" font-weight="700" fill="#365314">🔔 3중 방어: UserPromptSubmit hook + bus-autosync 텔레그램 + Daily launchd</text>
+    <text x="600" y="768" font-size="11" fill="#365314">99% × 99% × 99% = 99.9999% — 5시간 묵음 사고 재발 0건</text>
+  </g>
+</svg>

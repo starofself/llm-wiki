@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="arj" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">🌱 왜 시작하게 됐나 — 한 주의 여정</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#64748b">"답답함" → "기사 한 편" → "사고 한 번" → "결심" → "구축" → "변화"</text>
+
+  <!-- Stage 1: 답답함 -->
+  <g>
+    <circle cx="100" cy="170" r="45" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="100" y="170" text-anchor="middle" font-size="28">😤</text>
+    <text x="100" y="195" text-anchor="middle" font-size="20" fill="#dc2626" font-weight="700">·</text>
+  </g>
+  <text x="100" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">① 답답함</text>
+  <text x="100" y="265" text-anchor="middle" font-size="11" fill="#7f1d1d">(2주차 끝)</text>
+  <rect x="20" y="285" width="160" height="120" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="100" y="307" text-anchor="middle" font-size="11" fill="#7f1d1d" font-weight="700">텔봇 1대로 일하지만…</text>
+  <text x="100" y="328" text-anchor="middle" font-size="10" fill="#991b1b">• 봇 1대 한계</text>
+  <text x="100" y="345" text-anchor="middle" font-size="10" fill="#991b1b">• 텔레그램 스크롤 지옥</text>
+  <text x="100" y="362" text-anchor="middle" font-size="10" fill="#991b1b">• grep 매번 40초</text>
+  <text x="100" y="379" text-anchor="middle" font-size="10" fill="#991b1b">• "다음은 뭐지?"</text>
+  <text x="100" y="396" text-anchor="middle" font-size="10" fill="#dc2626" font-style="italic">막연한 답답함</text>
+
+  <line x1="180" y1="170" x2="210" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#arj)"/>
+
+  <!-- Stage 2: 기사 한 편 -->
+  <g>
+    <circle cx="280" cy="170" r="45" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+    <text x="280" y="178" text-anchor="middle" font-size="28">📰</text>
+  </g>
+  <text x="280" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">② 강의 교재 + 기사</text>
+  <text x="280" y="265" text-anchor="middle" font-size="11" fill="#78350f">(트리거 #1)</text>
+  <rect x="200" y="285" width="160" height="120" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="280" y="305" text-anchor="middle" font-size="11" fill="#78350f" font-weight="700">⭐ 22기 강의 MCP·API</text>
+  <text x="280" y="320" text-anchor="middle" font-size="11" fill="#78350f" font-weight="700">교재 (3~4주차 예고)</text>
+  <text x="280" y="340" text-anchor="middle" font-size="9" font-style="italic" fill="#713f12">+ Boris Cherny 기사</text>
+  <text x="280" y="358" text-anchor="middle" font-size="10" fill="#854d0e">• MCP=USB-C 비유</text>
+  <text x="280" y="374" text-anchor="middle" font-size="10" fill="#854d0e">• API vs MCP 차이</text>
+  <text x="280" y="395" text-anchor="middle" font-size="10" fill="#ca8a04" font-style="italic">"개념 → 직접 만들자"</text>
+
+  <line x1="360" y1="170" x2="390" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#arj)"/>
+
+  <!-- Stage 3: 사고 한 번 -->
+  <g>
+    <circle cx="460" cy="170" r="45" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="460" y="178" text-anchor="middle" font-size="28">💥</text>
+  </g>
+  <text x="460" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">③ 사고 한 번</text>
+  <text x="460" y="265" text-anchor="middle" font-size="11" fill="#7f1d1d">(트리거 #2)</text>
+  <rect x="380" y="285" width="160" height="120" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="460" y="307" text-anchor="middle" font-size="11" fill="#7f1d1d" font-weight="700">5시간 묵음 사고</text>
+  <text x="460" y="328" text-anchor="middle" font-size="10" fill="#991b1b">07:39 메시지 발송</text>
+  <text x="460" y="345" text-anchor="middle" font-size="10" fill="#991b1b">12:00 비로소 확인</text>
+  <text x="460" y="362" text-anchor="middle" font-size="10" fill="#991b1b">→ 4시간 21분 지연</text>
+  <text x="460" y="379" text-anchor="middle" font-size="10" fill="#991b1b">"룰북 ≠ 실행"</text>
+  <text x="460" y="396" text-anchor="middle" font-size="10" fill="#dc2626" font-style="italic">결심한 순간</text>
+
+  <line x1="540" y1="170" x2="570" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#arj)"/>
+
+  <!-- Stage 4: 결심 -->
+  <g>
+    <circle cx="640" cy="170" r="45" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="640" y="178" text-anchor="middle" font-size="28">💡</text>
+  </g>
+  <text x="640" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">④ 결심</text>
+  <text x="640" y="265" text-anchor="middle" font-size="11" fill="#1e3a8a">(시작)</text>
+  <rect x="560" y="285" width="160" height="120" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="640" y="307" text-anchor="middle" font-size="11" fill="#1e3a8a" font-weight="700">"하네스를 박자"</text>
+  <text x="640" y="328" text-anchor="middle" font-size="10" fill="#1e40af">• 봇 5대 모집</text>
+  <text x="640" y="345" text-anchor="middle" font-size="10" fill="#1e40af">• 칸반 정본 1곳</text>
+  <text x="640" y="362" text-anchor="middle" font-size="10" fill="#1e40af">• 시스템이 강제하는</text>
+  <text x="640" y="378" text-anchor="middle" font-size="10" fill="#1e40af">  3중 방어 깔자</text>
+  <text x="640" y="395" text-anchor="middle" font-size="10" fill="#2563eb" font-style="italic">청사진 그림</text>
+
+  <line x1="720" y1="170" x2="750" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#arj)"/>
+
+  <!-- Stage 5: 구축 -->
+  <g>
+    <circle cx="820" cy="170" r="45" fill="#fae8ff" stroke="#a21caf" stroke-width="3"/>
+    <text x="820" y="178" text-anchor="middle" font-size="28">🔨</text>
+  </g>
+  <text x="820" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#581c87">⑤ 구축</text>
+  <text x="820" y="265" text-anchor="middle" font-size="11" fill="#581c87">(Day 1~7)</text>
+  <rect x="740" y="285" width="160" height="120" rx="8" fill="#fdf4ff" stroke="#a21caf" stroke-width="1.5"/>
+  <text x="820" y="307" text-anchor="middle" font-size="11" fill="#581c87" font-weight="700">한 겹씩 박기</text>
+  <text x="820" y="324" text-anchor="middle" font-size="9" fill="#6b21a8">Day 1: agent-bus</text>
+  <text x="820" y="339" text-anchor="middle" font-size="9" fill="#6b21a8">Day 2: 칸반 정본</text>
+  <text x="820" y="354" text-anchor="middle" font-size="9" fill="#6b21a8">Day 3: 3중 방어</text>
+  <text x="820" y="369" text-anchor="middle" font-size="9" fill="#6b21a8">Day 5: touch 룰</text>
+  <text x="820" y="384" text-anchor="middle" font-size="9" fill="#6b21a8">Day 6: fleet-skills</text>
+  <text x="820" y="399" text-anchor="middle" font-size="9" fill="#a21caf" font-style="italic">Day 7: MCP 4×19</text>
+
+  <line x1="900" y1="170" x2="930" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#arj)"/>
+
+  <!-- Stage 6: 변화 -->
+  <g>
+    <circle cx="1000" cy="170" r="45" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="1000" y="178" text-anchor="middle" font-size="28">🌳</text>
+  </g>
+  <text x="1000" y="245" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">⑥ 변화</text>
+  <text x="1000" y="265" text-anchor="middle" font-size="11" fill="#14532d">(지금·6/7)</text>
+  <rect x="920" y="285" width="160" height="120" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="1000" y="307" text-anchor="middle" font-size="11" fill="#14532d" font-weight="700">5봇 자율 운영</text>
+  <text x="1000" y="324" text-anchor="middle" font-size="10" fill="#15803d">• 15 종목 노트</text>
+  <text x="1000" y="339" text-anchor="middle" font-size="10" fill="#15803d">• 노정석 매트릭스</text>
+  <text x="1000" y="354" text-anchor="middle" font-size="10" fill="#15803d">• 매크로 5건 딥리서치</text>
+  <text x="1000" y="369" text-anchor="middle" font-size="10" fill="#15803d">• 학습카드 4건</text>
+  <text x="1000" y="384" text-anchor="middle" font-size="10" fill="#15803d">• MCP 4서버 19툴</text>
+  <text x="1000" y="399" text-anchor="middle" font-size="10" fill="#16a34a" font-style="italic">"하루에" — 6/7</text>
+
+  <!-- Bottom: emotional journey -->
+  <rect x="40" y="430" width="1120" height="55" rx="10" fill="#1e293b"/>
+  <text x="600" y="455" text-anchor="middle" font-size="13" fill="#f8fafc" font-weight="700">감정의 변화 — 청중과 가장 잘 공감되는 부분</text>
+  <text x="600" y="475" text-anchor="middle" font-size="12" fill="#cbd5e1" font-style="italic">
+    "답답함 (혼자라 한계)" → "흥분 (저 사람처럼 되고 싶다)" → "분노 (왜 안 됐지)" → "확신 (이렇게 하면 되겠다)" → "끈기 (한 겹씩)" → "감격 (이게 진짜 되네)"
+  </text>
+
+  <!-- Quote -->
+  <rect x="40" y="500" width="1120" height="100" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="600" y="528" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">📣 발표에서 청중에게 던질 한 줄</text>
+  <text x="600" y="558" text-anchor="middle" font-size="13" fill="#78350f">
+    "여러분도 한 주 안에 *답답함 → 변화* 까지 갈 수 있습니다. 출발점은 *기사 한 편* 이나 *사고 한 번* 이면 충분해요."
+  </text>
+  <text x="600" y="582" text-anchor="middle" font-size="11" fill="#854d0e" font-style="italic">
+    "변화는 어느 한 순간이 아니라, 그 순간들이 *연결되어* 옵니다. 그 연결을 알아보는 게 절반."
+  </text>
+</svg>

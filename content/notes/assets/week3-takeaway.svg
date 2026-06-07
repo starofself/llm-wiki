@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif">
+  <!-- Title -->
+  <text x="550" y="40" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">🎁 여러분이 가져갈 3 가지</text>
+  <text x="550" y="65" text-anchor="middle" font-size="13" fill="#64748b">발표 끝에 청중이 머리에 담아 가실 한 줄·한 도구·한 행동</text>
+
+  <!-- Takeaway 1 -->
+  <g>
+    <rect x="40" y="110" width="340" height="500" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+    <rect x="40" y="110" width="340" height="60" rx="14" fill="#f59e0b"/>
+    <text x="210" y="148" text-anchor="middle" font-size="28" font-weight="700" fill="#fff">①</text>
+
+    <text x="210" y="200" text-anchor="middle" font-size="18" font-weight="700" fill="#78350f">💭 *생각의 전환*</text>
+    <text x="210" y="225" text-anchor="middle" font-size="13" fill="#78350f">한 줄 — *AI를 보는 시각*</text>
+
+    <line x1="80" y1="245" x2="340" y2="245" stroke="#f59e0b" stroke-width="0.5"/>
+
+    <text x="210" y="280" text-anchor="middle" font-size="16" font-weight="700" fill="#78350f">"바이브 → 루프"</text>
+
+    <g font-size="12" fill="#78350f">
+      <text x="60" y="320">기존: *"AI에게 잘 시켜야 한다"*</text>
+      <text x="60" y="345">→ 프롬프트 엔지니어링</text>
+
+      <text x="60" y="385" font-weight="700">전환: *"AI가 *스스로* 잘 일할</text>
+      <text x="60" y="403" font-weight="700">     *구조*를 짜야 한다"*</text>
+      <text x="60" y="425">→ 하네스 엔지니어링</text>
+    </g>
+
+    <rect x="60" y="450" width="300" height="120" rx="8" fill="#fff" stroke="#f59e0b"/>
+    <text x="210" y="475" text-anchor="middle" font-size="11" font-weight="700" fill="#78350f">💡 발표 직후 청중의 생각 변화</text>
+    <text x="210" y="500" text-anchor="middle" font-size="11" fill="#854d0e" font-style="italic">"내가 그동안 AI한테</text>
+    <text x="210" y="518" text-anchor="middle" font-size="11" fill="#854d0e" font-style="italic">*프롬프트*만 잘 짜려고 했는데..."</text>
+    <text x="210" y="540" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700">"이제는 *루프*를 짜야겠다"</text>
+    <text x="210" y="560" text-anchor="middle" font-size="10" fill="#78350f">→ Boris Cherny 영상 4편 추천</text>
+  </g>
+
+  <!-- Takeaway 2 -->
+  <g>
+    <rect x="395" y="110" width="340" height="500" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <rect x="395" y="110" width="340" height="60" rx="14" fill="#2563eb"/>
+    <text x="565" y="148" text-anchor="middle" font-size="28" font-weight="700" fill="#fff">②</text>
+
+    <text x="565" y="200" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">🛠 *손에 잡히는 도구*</text>
+    <text x="565" y="225" text-anchor="middle" font-size="13" fill="#1e3a8a">한 도구 — *오늘 밤 깔 수 있는*</text>
+
+    <line x1="435" y1="245" x2="695" y2="245" stroke="#2563eb" stroke-width="0.5"/>
+
+    <text x="565" y="280" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">"옵시디언 Kanban + cron 2분"</text>
+
+    <g font-size="12" fill="#1e3a8a">
+      <text x="415" y="320" font-weight="700">⭐ 가장 가성비 높은 30분:</text>
+      <text x="415" y="345">1. 옵시디언 Kanban 플러그인 설치</text>
+      <text x="415" y="365">2. 5 컬럼 마크다운 한 장 만들기</text>
+      <text x="415" y="385">3. cron `*/2` autosync 한 줄</text>
+      <text x="415" y="410" font-style="italic" fill="#2563eb">→ 봇 1대만 있어도 즉시 효과</text>
+    </g>
+
+    <rect x="415" y="440" width="300" height="120" rx="8" fill="#fff" stroke="#2563eb"/>
+    <text x="565" y="465" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a8a">🚀 30분 후 청중의 변화</text>
+    <text x="565" y="490" text-anchor="middle" font-size="11" fill="#2563eb" font-style="italic">"내가 어디까지 했는지</text>
+    <text x="565" y="508" text-anchor="middle" font-size="11" fill="#2563eb" font-style="italic">텔레그램 스크롤 안 해도</text>
+    <text x="565" y="525" text-anchor="middle" font-size="11" fill="#2563eb" font-style="italic">한 화면에 다 보이네!"</text>
+    <text x="565" y="548" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="700">→ 가장 즉시적인 ROI</text>
+    <text x="565" y="568" text-anchor="middle" font-size="10" fill="#1e3a8a">(MCP는 그 다음 주에)</text>
+  </g>
+
+  <!-- Takeaway 3 -->
+  <g>
+    <rect x="750" y="110" width="310" height="500" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <rect x="750" y="110" width="310" height="60" rx="14" fill="#16a34a"/>
+    <text x="905" y="148" text-anchor="middle" font-size="28" font-weight="700" fill="#fff">③</text>
+
+    <text x="905" y="200" text-anchor="middle" font-size="18" font-weight="700" fill="#14532d">🎯 *한 줄 행동*</text>
+    <text x="905" y="225" text-anchor="middle" font-size="13" fill="#14532d">한 행동 — *이번 주 안에*</text>
+
+    <line x1="770" y1="245" x2="1040" y2="245" stroke="#16a34a" stroke-width="0.5"/>
+
+    <text x="905" y="280" text-anchor="middle" font-size="16" font-weight="700" fill="#14532d">"내 봇·작업에</text>
+    <text x="905" y="300" text-anchor="middle" font-size="16" font-weight="700" fill="#14532d">*완료 조건*을 박자"</text>
+
+    <g font-size="12" fill="#14532d">
+      <text x="770" y="340" font-weight="700">📋 이번 주에 한 가지만:</text>
+      <text x="770" y="362">기존 카드/Todo에 *완료 조건* 추가</text>
+      <text x="770" y="385">예: "봇 개선해줘" ❌</text>
+      <text x="770" y="405">→ "텔레그램 봇 멘션 처리에서</text>
+      <text x="770" y="423">  슬래시 아닌 질문은 AI 플로우로,</text>
+      <text x="770" y="441">  완료조건: unit test 3개 pass" ✅</text>
+    </g>
+
+    <rect x="770" y="470" width="270" height="120" rx="8" fill="#fff" stroke="#16a34a"/>
+    <text x="905" y="495" text-anchor="middle" font-size="11" font-weight="700" fill="#14532d">🌱 일주일 후 청중의 결과</text>
+    <text x="905" y="520" text-anchor="middle" font-size="11" fill="#16a34a" font-style="italic">"AI가 '잘 된 것 같아요'</text>
+    <text x="905" y="538" text-anchor="middle" font-size="11" fill="#16a34a" font-style="italic">로 끝나지 않고,</text>
+    <text x="905" y="556" text-anchor="middle" font-size="11" fill="#16a34a" font-style="italic">*증거*를 같이 가져옴"</text>
+    <text x="905" y="578" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700">→ AI 응답 품질 즉시 ↑</text>
+  </g>
+
+  <!-- Bottom: Summary -->
+  <rect x="40" y="630" width="1020" height="55" rx="10" fill="#1e293b"/>
+  <text x="550" y="657" text-anchor="middle" font-size="14" font-weight="700" fill="#fbbf24">🎁 한 줄로: "프롬프트 → 루프" · "옵시디언 칸반 30분" · "완료 조건 한 줄"</text>
+  <text x="550" y="675" text-anchor="middle" font-size="11" fill="#cbd5e1" font-style="italic">셋 다 하시면 1주차에 바로 체감, 4주 안에 본인만의 하네스 완성</text>
+</svg>

@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 900" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif">
+  <!-- Title -->
+  <text x="650" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">📚 vault에 실제 떨어진 산출물 — 한 주 결산</text>
+  <text x="650" y="60" text-anchor="middle" font-size="13" fill="#64748b">"말로만 좋다는 게 아니라, 진짜로 이만큼 떨어졌습니다" — 발표용 증거</text>
+
+  <!-- Big count summary -->
+  <rect x="40" y="85" width="1220" height="80" rx="10" fill="#1e293b"/>
+  <text x="650" y="118" text-anchor="middle" font-size="14" fill="#cbd5e1" font-weight="700">📊 한 주 산출물 카운트 (실측, 2026-06-07 기준)</text>
+  <g font-size="14" fill="#f8fafc" text-anchor="middle">
+    <text x="120" y="148"><tspan font-size="22" font-weight="700" fill="#fbbf24">15</tspan> Bio 종목</text>
+    <text x="270" y="148"><tspan font-size="22" font-weight="700" fill="#fbbf24">13</tspan> Bio 종합</text>
+    <text x="420" y="148"><tspan font-size="22" font-weight="700" fill="#fbbf24">5</tspan> 매크로</text>
+    <text x="540" y="148"><tspan font-size="22" font-weight="700" fill="#fbbf24">4</tspan> 학습카드</text>
+    <text x="680" y="148"><tspan font-size="22" font-weight="700" fill="#fbbf24">10</tspan> 함대룰</text>
+    <text x="820" y="148"><tspan font-size="22" font-weight="700" fill="#fbbf24">4</tspan> MCP서버</text>
+    <text x="950" y="148"><tspan font-size="22" font-weight="700" fill="#fbbf24">5</tspan> Skill</text>
+    <text x="1080" y="148"><tspan font-size="22" font-weight="700" fill="#fbbf24">3</tspan> 룰북 갱신</text>
+    <text x="1210" y="148"><tspan font-size="22" font-weight="700" fill="#fbbf24">∑59</tspan></text>
+  </g>
+
+  <!-- Left: Bio companies tree -->
+  <g>
+    <rect x="40" y="190" width="400" height="380" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+    <text x="240" y="215" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">🧬 Bio-as-Software 15 종목 노트</text>
+    <text x="240" y="232" text-anchor="middle" font-size="10" fill="#78350f" font-style="italic">~/Documents/Starofself/Research/Themes/Bio/companies/</text>
+
+    <g font-size="11" fill="#713f12">
+      <text x="60" y="260">📁 companies/</text>
+      <text x="80" y="278">├── 2026-06-07_Recursion_RXRX_딥리서치.md <tspan fill="#dc2626" font-weight="700">(91KB)</tspan></text>
+      <text x="80" y="294">├── 2026-06-07_Insilico_Medicine_딥리서치.md <tspan fill="#dc2626" font-weight="700">(81KB)</tspan></text>
+      <text x="80" y="310">├── 2026-06-07_Schrodinger_SDGR_딥리서치.md <tspan fill="#dc2626" font-weight="700">(89KB)</tspan></text>
+      <text x="80" y="326">├── 2026-06-07_Tempus_TEM_딥리서치.md <tspan fill="#dc2626" font-weight="700">(77KB)</tspan></text>
+      <text x="80" y="342">├── 2026-06-07_Insitro_딥리서치.md <tspan fill="#dc2626" font-weight="700">(65KB)</tspan></text>
+      <text x="80" y="358">├── 2026-06-07_Absci_ABSI_딥리서치.md <tspan fill="#dc2626" font-weight="700">(63KB)</tspan></text>
+      <text x="80" y="374">├── 2026-06-07_Retro_Biosciences_딥리서치.md <tspan fill="#dc2626" font-weight="700">(49KB)</tspan></text>
+      <text x="80" y="390">├── 2026-06-07_Illumina_ILMN_딥리서치.md <tspan fill="#dc2626" font-weight="700">(33KB)</tspan></text>
+      <text x="80" y="406">├── 2026-06-07_Isomorphic_Labs_딥리서치.md</text>
+      <text x="80" y="422">├── 2026-06-07_신테카바이오_226330_딥리서치.md</text>
+      <text x="80" y="438">├── 2026-06-07_Chai_Discovery_딥리서치.md</text>
+      <text x="80" y="454">├── 2026-06-07_AbCellera_ABCL_딥리서치.md</text>
+      <text x="80" y="470">├── 2026-06-07_Xaira_Therapeutics_딥리서치.md</text>
+      <text x="80" y="486">├── 2026-06-07_Relay_Therapeutics_RLAY_딥리서치.md</text>
+      <text x="80" y="502">└── 2026-06-07_Life_Biosciences_딥리서치.md</text>
+    </g>
+
+    <line x1="60" y1="520" x2="420" y2="520" stroke="#ca8a04" stroke-width="0.5"/>
+    <text x="240" y="540" text-anchor="middle" font-size="11" font-weight="700" fill="#78350f">평균 50KB · 1,500줄 · v2 6대섹션 표준</text>
+    <text x="240" y="558" text-anchor="middle" font-size="10" fill="#854d0e" font-style="italic">~750KB · ≈ 22,500 줄 · 5봇 분담</text>
+  </g>
+
+  <!-- Center: Macro + Bio comprehensive -->
+  <g>
+    <rect x="460" y="190" width="400" height="380" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="660" y="215" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">🌍 매크로·종합 리서치 18 건</text>
+    <text x="660" y="232" text-anchor="middle" font-size="10" fill="#1e40af" font-style="italic">Research/Themes/Macro/ + Research/Themes/Bio/</text>
+
+    <g font-size="11" fill="#1e3a8a">
+      <text x="480" y="260">📁 Themes/Macro/ (5건)</text>
+      <text x="500" y="278">├── 메리츠_황수욱_Atom→Bit→Token 딥리서치</text>
+      <text x="500" y="294">├── 삼성_이경자_글로벌부동산_부실정리</text>
+      <text x="500" y="310">├── 한투_김도하_바이오플랫폼</text>
+      <text x="500" y="326">├── KB_이은택_2H26_전략</text>
+      <text x="500" y="342">└── 기타 2건</text>
+
+      <text x="480" y="370">📁 Themes/Bio/ 종합 (13건)</text>
+      <text x="500" y="388">├── _Bio-as-Software_프로젝트_마스터.md ⭐</text>
+      <text x="500" y="404">├── _노정석_종합투자판단_매트릭스.md ⭐⭐</text>
+      <text x="500" y="420">├── _피투자기업×유사테마×장비파이프라인_3단큐</text>
+      <text x="500" y="436">├── AGI×바이오×장비_3단투자프레임</text>
+      <text x="500" y="452">├── AI신약_1세대실패와개화타이밍_산업리포트</text>
+      <text x="500" y="468">├── NVIDIA_BioNeMo_생태계_컴퓨트_곡괭이</text>
+      <text x="500" y="484">├── Tempus_Insilico_Absci_Insitro_v2_QA검수</text>
+      <text x="500" y="500">└── ... (6건 추가)</text>
+    </g>
+
+    <line x1="480" y1="520" x2="840" y2="520" stroke="#2563eb" stroke-width="0.5"/>
+    <text x="660" y="540" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a8a">노정석 8 렌즈 + 곡괭이 ETF 바스켓 3종 완성</text>
+    <text x="660" y="558" text-anchor="middle" font-size="10" fill="#2563eb" font-style="italic">"직접 산다는 없음 — 곡괭이 ③ 먼저"</text>
+  </g>
+
+  <!-- Right: Infrastructure -->
+  <g>
+    <rect x="880" y="190" width="380" height="380" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="1070" y="215" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">⚙️ 함대 인프라 22 건</text>
+    <text x="1070" y="232" text-anchor="middle" font-size="10" fill="#15803d" font-style="italic">agent-bus + ~/mcp-servers + ~/fleet-skills</text>
+
+    <g font-size="10" fill="#14532d">
+      <text x="900" y="258">📁 agent-bus/knowledge/ (10건)</text>
+      <text x="910" y="274">├── fleet-conventions.md</text>
+      <text x="910" y="288">├── fleet-kanban.md ⭐</text>
+      <text x="910" y="302">├── fleet-bus-autosync.md</text>
+      <text x="910" y="316">├── fleet-mcp-tools.md ⭐</text>
+      <text x="910" y="330">├── memory-governance.md</text>
+      <text x="910" y="344">└── ... (5건)</text>
+
+      <text x="900" y="370">📁 ~/mcp-servers/ (4서버)</text>
+      <text x="910" y="386">├── agent-bus-mcp (4 tool)</text>
+      <text x="910" y="400">├── obsidian-vault-mcp (5 tool)</text>
+      <text x="910" y="414">├── research-api-mcp (4 tool)</text>
+      <text x="910" y="428">└── repo-helper-mcp (6 tool)</text>
+
+      <text x="900" y="454">📁 ~/fleet-skills/ (5 Skill)</text>
+      <text x="910" y="470">├── obsidian-sweep</text>
+      <text x="910" y="484">├── deep-research</text>
+      <text x="910" y="498">├── agent-bus-digest</text>
+      <text x="910" y="512">├── ticker-note</text>
+    </g>
+
+    <line x1="900" y1="525" x2="1240" y2="525" stroke="#16a34a" stroke-width="0.5"/>
+    <text x="1070" y="545" text-anchor="middle" font-size="11" font-weight="700" fill="#14532d">19 MCP tool · 5 Skill 공유 · 룰 v1.3</text>
+    <text x="1070" y="558" text-anchor="middle" font-size="10" fill="#16a34a" font-style="italic">한 번 깔면 5봇 모두 사용</text>
+  </g>
+
+  <!-- Bottom row: 학습카드 + 룰북 + 자동화 -->
+  <g>
+    <rect x="40" y="590" width="400" height="220" rx="10" fill="#fae8ff" stroke="#a21caf" stroke-width="2"/>
+    <text x="240" y="615" text-anchor="middle" font-size="14" font-weight="700" fill="#581c87">🎓 학습 카드 4건 (LLM-Wiki Daily)</text>
+    <g font-size="11" fill="#581c87">
+      <text x="60" y="640">📁 Operations/Agents/Shandi/Learning/</text>
+      <text x="80" y="660">├── Mnemonic_Sovereignty.md (메모리 주권)</text>
+      <text x="80" y="678">├── Anthropic_RSI_보고서.md (재귀자기개선)</text>
+      <text x="80" y="696">├── SSGM.md (시그널·상황·목표·메트릭)</text>
+      <text x="80" y="714">└── ericmjl_PKM_5_Skill_패턴.md (PKM 5 패턴)</text>
+    </g>
+    <text x="240" y="750" text-anchor="middle" font-size="11" font-weight="700" fill="#581c87">launchd 03:00 KST 자동 발행 → vault</text>
+    <text x="240" y="768" text-anchor="middle" font-size="10" fill="#a21caf" font-style="italic">"아침에 일어나면 학습 카드 한 장 떨어져 있음"</text>
+    <text x="240" y="790" text-anchor="middle" font-size="10" fill="#581c87">→ 처음으로 *시간 비대칭* (자는 동안 학습 분담)</text>
+  </g>
+
+  <g>
+    <rect x="460" y="590" width="400" height="220" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+    <text x="660" y="615" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">💼 투자 인프라 3 건 갱신</text>
+    <g font-size="11" fill="#7f1d1d">
+      <text x="480" y="640">📁 Research/Portfolio/</text>
+      <text x="500" y="660">├── 매매룰북.md (v1.0 → v1.2)</text>
+      <text x="500" y="678">│   └── 룰 H 거시 트리거 + 룰 I frontmatter 큐화</text>
+      <text x="500" y="696">├── 포트폴리오_대시보드.md (NEW)</text>
+      <text x="500" y="714">│   └── Dataview 11 쿼리 자동 집계</text>
+      <text x="500" y="732">└── 보유종목_공시리서치/</text>
+      <text x="500" y="750">    └── 5종목 frontmatter Properties 통일</text>
+    </g>
+    <text x="660" y="780" text-anchor="middle" font-size="11" font-weight="700" fill="#7f1d1d">KBI메탈·인바디·아시아경제·아남전자·이녹스</text>
+    <text x="660" y="798" text-anchor="middle" font-size="10" fill="#dc2626" font-style="italic">"보고만 하던 노트가 *데이터*가 됨"</text>
+  </g>
+
+  <g>
+    <rect x="880" y="590" width="380" height="220" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+    <text x="1070" y="615" text-anchor="middle" font-size="14" font-weight="700" fill="#7c2d12">🤖 자동화 5 건 (cron·launchd·hook)</text>
+    <g font-size="11" fill="#7c2d12">
+      <text x="900" y="640">├── cron: bus-autosync (2분, 양쪽 맥)</text>
+      <text x="900" y="658">├── launchd: shandi-daily (03:00 KST)</text>
+      <text x="900" y="676">├── hook: UserPromptSubmit → bus-check</text>
+      <text x="900" y="694">├── cron: bus-autosync 텔레그램 push</text>
+      <text x="900" y="712">└── E03 봇 패치: URL/PDF 자동 다운로드</text>
+    </g>
+    <text x="1070" y="745" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">3중 방어 = hook · cron · launchd</text>
+    <text x="1070" y="763" text-anchor="middle" font-size="10" fill="#ea580c" font-style="italic">99% × 99% × 99% = 99.9999%</text>
+    <text x="1070" y="785" text-anchor="middle" font-size="10" fill="#7c2d12">→ 5시간 묵음 사고 재발 0건</text>
+  </g>
+
+  <!-- Bottom emphasis -->
+  <rect x="40" y="830" width="1220" height="55" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="650" y="855" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">"제가 직접 작성한 건 1할도 안 됩니다. 나머지 9할은 5봇이 카드 던지면 알아서 떨어진 것들이에요."</text>
+  <text x="650" y="875" text-anchor="middle" font-size="11" fill="#16a34a" font-style="italic">— 발표 시 강조: "사람의 일은 *카드 한 줄* + *마지막 한 줄 검토*. 나머지는 하네스."</text>
+</svg>

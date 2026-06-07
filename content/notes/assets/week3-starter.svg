@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="ars" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">⏱ 4시간 스타터 키트 — 5봇 하네스 부리기</text>
+  <text x="500" y="58" text-anchor="middle" font-size="13" fill="#64748b">처음 하면 일주일 걸리는 길을, 반나절로 줄이는 6 단계</text>
+
+  <!-- Timeline -->
+  <line x1="100" y1="100" x2="900" y2="100" stroke="#cbd5e1" stroke-width="3"/>
+  <g font-size="10" fill="#64748b" text-anchor="middle">
+    <line x1="100" y1="95" x2="100" y2="115" stroke="#94a3b8" stroke-width="2"/>
+    <text x="100" y="85">0:00</text>
+    <line x1="225" y1="95" x2="225" y2="115" stroke="#94a3b8" stroke-width="2"/>
+    <text x="225" y="85">0:10</text>
+    <line x1="350" y1="95" x2="350" y2="115" stroke="#94a3b8" stroke-width="2"/>
+    <text x="350" y="85">0:20</text>
+    <line x1="475" y1="95" x2="475" y2="115" stroke="#94a3b8" stroke-width="2"/>
+    <text x="475" y="85">0:30</text>
+    <line x1="600" y1="95" x2="600" y2="115" stroke="#94a3b8" stroke-width="2"/>
+    <text x="600" y="85">1:00</text>
+    <line x1="725" y1="95" x2="725" y2="115" stroke="#94a3b8" stroke-width="2"/>
+    <text x="725" y="85">1:10</text>
+    <line x1="900" y1="95" x2="900" y2="115" stroke="#94a3b8" stroke-width="2"/>
+    <text x="900" y="85">4:00</text>
+  </g>
+
+  <!-- Step 1 -->
+  <g>
+    <circle cx="100" cy="100" r="22" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+    <text x="100" y="106" text-anchor="middle" font-size="16" font-weight="700" fill="#78350f">1</text>
+    <rect x="40" y="140" width="170" height="120" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+    <text x="125" y="165" text-anchor="middle" font-size="13" font-weight="700" fill="#713f12">GitHub repo</text>
+    <line x1="55" y1="172" x2="195" y2="172" stroke="#ca8a04" stroke-width="0.3"/>
+    <text x="125" y="190" text-anchor="middle" font-size="10" fill="#713f12">gh repo create</text>
+    <text x="125" y="205" text-anchor="middle" font-size="10" fill="#713f12">agent-bus --private</text>
+    <text x="125" y="220" text-anchor="middle" font-size="10" fill="#713f12">→ 양쪽 맥 clone</text>
+    <text x="125" y="245" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">⏱ 10분</text>
+  </g>
+
+  <!-- Step 2 -->
+  <g>
+    <circle cx="225" cy="100" r="22" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+    <text x="225" y="106" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">2</text>
+    <rect x="160" y="280" width="170" height="120" rx="10" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="245" y="305" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">bus-post 스크립트</text>
+    <line x1="175" y1="312" x2="315" y2="312" stroke="#2563eb" stroke-width="0.3"/>
+    <text x="245" y="330" text-anchor="middle" font-size="10" fill="#1e3a8a">~/agent-bus/bin/</text>
+    <text x="245" y="345" text-anchor="middle" font-size="10" fill="#1e3a8a">bus-post · bus-read</text>
+    <text x="245" y="360" text-anchor="middle" font-size="10" fill="#1e3a8a">→ chmod +x</text>
+    <text x="245" y="385" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">⏱ 10분</text>
+  </g>
+
+  <!-- Step 3 -->
+  <g>
+    <circle cx="350" cy="100" r="22" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="350" y="106" text-anchor="middle" font-size="16" font-weight="700" fill="#14532d">3</text>
+    <rect x="290" y="140" width="170" height="120" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="375" y="165" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">⭐ autosync cron</text>
+    <line x1="305" y1="172" x2="445" y2="172" stroke="#16a34a" stroke-width="0.3"/>
+    <text x="375" y="190" text-anchor="middle" font-size="10" fill="#14532d">*/2 * * * *</text>
+    <text x="375" y="205" text-anchor="middle" font-size="10" fill="#14532d">bus-autosync</text>
+    <text x="375" y="220" text-anchor="middle" font-size="10" font-weight="700" fill="#dc2626">⚠ 양쪽 맥 다!</text>
+    <text x="375" y="245" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">⏱ 10분 (ROI 최대)</text>
+  </g>
+
+  <!-- Step 4 -->
+  <g>
+    <circle cx="475" cy="100" r="22" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
+    <text x="475" y="106" text-anchor="middle" font-size="16" font-weight="700" fill="#7f1d1d">4</text>
+    <rect x="410" y="280" width="170" height="120" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="495" y="305" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">옵시디언 칸반</text>
+    <line x1="425" y1="312" x2="565" y2="312" stroke="#dc2626" stroke-width="0.3"/>
+    <text x="495" y="330" text-anchor="middle" font-size="10" fill="#7f1d1d">Kanban 플러그인</text>
+    <text x="495" y="345" text-anchor="middle" font-size="10" fill="#7f1d1d">5컬럼 + 카드 형식</text>
+    <text x="495" y="360" text-anchor="middle" font-size="10" fill="#7f1d1d">@담당 필수</text>
+    <text x="495" y="385" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">⏱ 30분</text>
+  </g>
+
+  <!-- Step 5 -->
+  <g>
+    <circle cx="600" cy="100" r="22" fill="#fae8ff" stroke="#a21caf" stroke-width="3"/>
+    <text x="600" y="106" text-anchor="middle" font-size="16" font-weight="700" fill="#581c87">5</text>
+    <rect x="540" y="140" width="170" height="120" rx="10" fill="#fdf4ff" stroke="#a21caf" stroke-width="1.5"/>
+    <text x="625" y="165" text-anchor="middle" font-size="13" font-weight="700" fill="#581c87">UserPromptSubmit</text>
+    <text x="625" y="183" text-anchor="middle" font-size="13" font-weight="700" fill="#581c87">hook</text>
+    <line x1="555" y1="190" x2="695" y2="190" stroke="#a21caf" stroke-width="0.3"/>
+    <text x="625" y="210" text-anchor="middle" font-size="10" fill="#581c87">.claude/settings.json</text>
+    <text x="625" y="225" text-anchor="middle" font-size="10" fill="#581c87">→ bus-check</text>
+    <text x="625" y="245" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">⏱ 10분</text>
+  </g>
+
+  <!-- Step 6 -->
+  <g>
+    <circle cx="725" cy="100" r="22" fill="#fce7f3" stroke="#db2777" stroke-width="3"/>
+    <text x="725" y="106" text-anchor="middle" font-size="16" font-weight="700" fill="#831843">6</text>
+    <rect x="660" y="280" width="290" height="180" rx="10" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5"/>
+    <text x="805" y="305" text-anchor="middle" font-size="13" font-weight="700" fill="#831843">MCP 1~2개부터 (천천히)</text>
+    <line x1="675" y1="312" x2="935" y2="312" stroke="#db2777" stroke-width="0.3"/>
+    <text x="805" y="332" text-anchor="middle" font-size="10" fill="#831843">먼저 agent-bus MCP만 (~150줄)</text>
+    <text x="805" y="349" text-anchor="middle" font-size="10" fill="#831843">→ 잘 돌면 obsidian 추가</text>
+    <text x="805" y="366" text-anchor="middle" font-size="10" fill="#831843">→ 그 다음 research → repo</text>
+    <text x="805" y="385" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="700">⚠ 4개 한 번에 깔지 말 것</text>
+    <text x="805" y="400" text-anchor="middle" font-size="10" fill="#831843" font-style="italic">(디버깅 지옥)</text>
+    <text x="805" y="425" text-anchor="middle" font-size="10" font-weight="700" fill="#16a34a">⏱ ~3시간</text>
+    <text x="805" y="445" text-anchor="middle" font-size="9" fill="#831843" font-style="italic">완료 시 → 5봇이 도구로 일함</text>
+  </g>
+
+  <!-- Bottom: ROI ranking -->
+  <g>
+    <rect x="40" y="480" width="910" height="65" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+    <text x="495" y="503" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">🎯 ROI 순위 — 30분만 투자할 수 있다면</text>
+    <text x="495" y="525" text-anchor="middle" font-size="12" fill="#0f172a">
+      <tspan font-weight="700" fill="#16a34a">🥇 Step 3 (autosync)</tspan> — 봇 간 침묵 70% 사라짐 ·
+      <tspan font-weight="700" fill="#ca8a04">🥈 Step 1+2 (repo+post)</tspan> — 봇 소통 채널 ·
+      <tspan font-weight="700" fill="#db2777">🥉 Step 6 (MCP)</tspan> — 가속기
+    </text>
+    <text x="495" y="540" text-anchor="middle" font-size="10" fill="#64748b" font-style="italic">"MCP는 그 다음 가속기 — autosync 없이 MCP만 깔면 봇이 따로 놂"</text>
+  </g>
+</svg>

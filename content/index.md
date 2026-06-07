@@ -28,6 +28,7 @@ tags: ["22기", "vault"]
 
 ## 📝 작성한 글
 
+- [[2026-06-07-week3-review]] — **[3주차] 인터페이스개발 수강 후기** · _칸반보드 + agent-bus + MCP 4서버 19툴 + 3중 방어 — 5봇 함대 인프라 만들기 전후 비교 (일 처리량 4배)_
 - [[2026-05-30-week2-review]] — **[2주차] 인터페이스개발 수강 후기** ([원문](https://www.gpters.org/nocode/post/2juca-inteopeiseugaebal---2juca-sugang-hugi-telregeuraem-bos-windou-iRX9ptY4UdOrKDm)) · _텔레그램 봇 + 윈도우 노트북에서 SSH·ttyd로 맥미니 부리기 + 헤르메스/클로드/코덱스 병렬_
 - [[2026-05-22-week1-review]] — [OT과제] 1주차 수강 후기 ([원문](https://www.gpters.org/nocode/post/interface-development-week-1-NCK9Vqj4khZxQGm)) · _오프라인 모임 후기 추가 (5/23)_
 - [[2026-05-19-pre-course-case-study]] — 수강 전 사례글 ([원문](https://www.gpters.org/nocode/post/taking-course-want-make-ixRjUq0FvAytqMX))
@@ -36,6 +37,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-06-07-ai-digest]] — Claude SpaceX딜 한도2배·Opus 4.8·ultracode·Fast모드Opus4.8 · Gemini CLI 6/18종료 D-11 · GPT-5.5 canvas폐지·dreaming메모리·GPT-4.5 6/27은퇴 D-20 · 메모리서베이3종(반성적자기개선·기억주권6단계) · PKM 위키=함대공유메모리레이어 · Hermes Desktop v0.15.2 단일코어 · OpenClaw 6.2 Skill Workshop·operator install policy
 - [[2026-06-06-ai-digest]] — Claude 6/5대규모장애복구·v2.1.165 · 재귀적자기개선보고서(코드80%자가작성·글로벌pause촉구) · Gemini CLI 6/18종료 D-12 · GPT Lockdown Mode 전계정·dreaming메모리·GPT-4.5 6/27은퇴 D-21 · 기억주권(LTM보안)Mnemonic Sovereignty · PKM AgentSkill인코딩 · Hermes Desktop v0.15.2 · OpenClaw 6.2 플러그인외부화(Tokenjuice·Copilot)
 - [[2026-06-05-ai-digest]] — Claude v2.1.163 버전가드레일·WebFetch권한픽스·6/15과금분리 D-10 · Project Glasswing 150조직/15개국·Claude Security 2100패치 · Gemini CLI 6/18종료 D-13 · GPT-Rosalind·ChatGPT Sites·GPT-4.5 6/27은퇴 D-22 · SSGM 메모리거버넌스·선택적망각 · PKM 캡처파이프라인병목 · Hermes Desktop v0.15.2 · OpenClaw 6.2 Skill Workshop
 - [[2026-06-04-ai-digest]] — Claude v2.1.161/162 병렬툴호출·OTel·6/15과금분리 D-11 · Antigravity CLI 이관 D-14 · GPT-5.6 6월루머·GPT-4.5 6/27은퇴 · AgeMem 메모리=툴액션 · PKM 3-아키텍처 수렴 · Hermes Desktop 6/2 네이티브GUI · OpenClaw 스킬보안(SkillSpector·HF데이터셋)
@@ -86,7 +88,13 @@ tags: ["22기", "vault"]
   - [x] 멀티에이전트 디스패처 (`~/ai-agents/dispatch.sh`, `parallel.sh`)
   - [x] 윈도우 노트북 → 맥미니 SSH/ttyd 워크플로 확립
   - [x] 후기 발행 ([[2026-05-30-week2-review]])
-- [ ] **3주차** — 시스템 UI (API + Tailscale)
+- [x] **3주차** — 시스템 UI (칸반 + agent-bus + MCP) ✅
+  - [x] `agent-bus` GitHub repo + 2분 자동 sync
+  - [x] 옵시디언 칸반 5컬럼 (정본=맥1, 단일 작성자)
+  - [x] UserPromptSubmit hook + launchd Daily 3중 방어
+  - [x] MCP 4 서버 19 tool (agent-bus·obsidian·research·repo)
+  - [x] `fleet-skills/` 공통 디렉터리 (Claude symlink + Hermes external_dirs)
+  - [x] 후기 발행 ([[2026-06-07-week3-review]])
 - [ ] **4주차** — 표준 UI (MCP)
 
 ## 🏷 인덱스 키워드

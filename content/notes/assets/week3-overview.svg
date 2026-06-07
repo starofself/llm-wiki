@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <linearGradient id="gradKanban" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="550" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">[3주차] 인터페이스개발 — 한눈에 보기</text>
+  <text x="550" y="60" text-anchor="middle" font-size="13" fill="#64748b">텔레그램 봇 1대 → 5봇 함대 하네스 (Boris Cherny "I write loops" + 노정석 Bio-as-Software)</text>
+
+  <!-- User -->
+  <g>
+    <rect x="40" y="100" width="140" height="60" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="110" y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">냐안의별 (선장)</text>
+    <text x="110" y="148" text-anchor="middle" font-size="11" fill="#1e40af">폰·노트북·맥미니</text>
+  </g>
+  <line x1="180" y1="130" x2="240" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Kanban -->
+  <g>
+    <rect x="245" y="90" width="610" height="160" rx="12" fill="url(#gradKanban)" stroke="#f59e0b" stroke-width="2"/>
+    <text x="550" y="115" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">🗂️ 옵시디언 칸반 (정본=맥1, shanks 단일 편집)</text>
+
+    <!-- 5 columns -->
+    <g font-size="10" fill="#78350f">
+      <rect x="260" y="135" width="110" height="100" rx="6" fill="#fee2e2" stroke="#ef4444"/>
+      <text x="315" y="155" text-anchor="middle" font-weight="700">‼️ 선장 직접지시</text>
+      <text x="315" y="180" text-anchor="middle" font-size="9">최우선</text>
+
+      <rect x="375" y="135" width="110" height="100" rx="6" fill="#fef9c3" stroke="#eab308"/>
+      <text x="430" y="155" text-anchor="middle" font-weight="700">📥 백로그</text>
+      <text x="430" y="180" text-anchor="middle" font-size="9">대기</text>
+
+      <rect x="490" y="135" width="110" height="100" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+      <text x="545" y="155" text-anchor="middle" font-weight="700">🔄 진행중</text>
+      <text x="545" y="180" text-anchor="middle" font-size="9">작업</text>
+
+      <rect x="605" y="135" width="110" height="100" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+      <text x="660" y="155" text-anchor="middle" font-weight="700">🧪 검토중</text>
+      <text x="660" y="180" text-anchor="middle" font-size="9">선장 결정</text>
+
+      <rect x="720" y="135" width="120" height="100" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+      <text x="780" y="155" text-anchor="middle" font-weight="700">✅ 완료</text>
+      <text x="780" y="180" text-anchor="middle" font-size="9">끝</text>
+    </g>
+  </g>
+
+  <!-- 5 bots -->
+  <g>
+    <text x="100" y="300" font-size="14" font-weight="700" fill="#0f172a">👥 5봇 함대</text>
+
+    <g>
+      <rect x="40" y="320" width="170" height="50" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+      <text x="125" y="340" text-anchor="middle" font-size="12" font-weight="700">⚔️ shanks (맥1)</text>
+      <text x="125" y="358" text-anchor="middle" font-size="10" fill="#7f1d1d">조정자·칸반 단독편집</text>
+    </g>
+
+    <g>
+      <rect x="40" y="380" width="170" height="50" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="125" y="400" text-anchor="middle" font-size="12" font-weight="700">🪼 shandi (맥1)</text>
+      <text x="125" y="418" text-anchor="middle" font-size="10" fill="#1e40af">리서치 큐레이터</text>
+    </g>
+
+    <g>
+      <rect x="40" y="440" width="170" height="50" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="125" y="460" text-anchor="middle" font-size="12" font-weight="700">🍖 luffy (맥1)</text>
+      <text x="125" y="478" text-anchor="middle" font-size="10" fill="#9a3412">PKM·독립 리뷰어</text>
+    </g>
+
+    <g>
+      <rect x="40" y="500" width="170" height="50" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+      <text x="125" y="520" text-anchor="middle" font-size="12" font-weight="700">🍊 nami (맥2/Hermes)</text>
+      <text x="125" y="538" text-anchor="middle" font-size="10" fill="#854d0e">브리핑·시장모니터</text>
+    </g>
+
+    <g>
+      <rect x="40" y="560" width="170" height="50" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+      <text x="125" y="580" text-anchor="middle" font-size="12" font-weight="700">⚒️ yamato (맥2)</text>
+      <text x="125" y="598" text-anchor="middle" font-size="10" fill="#5b21b6">실행·인프라픽스</text>
+    </g>
+  </g>
+
+  <!-- MCP 4 servers -->
+  <g>
+    <text x="465" y="300" font-size="14" font-weight="700" fill="#0f172a">🛠️ MCP 4 서버 · 19 도구 (공용)</text>
+    <rect x="280" y="320" width="420" height="140" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+
+    <g font-size="11">
+      <rect x="295" y="335" width="190" height="55" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+      <text x="390" y="354" text-anchor="middle" font-weight="700">agent-bus (4 tool)</text>
+      <text x="390" y="372" text-anchor="middle" font-size="10">bus_post · read · search · status</text>
+
+      <rect x="495" y="335" width="190" height="55" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+      <text x="590" y="354" text-anchor="middle" font-weight="700">obsidian (5 tool)</text>
+      <text x="590" y="372" text-anchor="middle" font-size="10">search_notes · read · create...</text>
+
+      <rect x="295" y="395" width="190" height="55" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+      <text x="390" y="414" text-anchor="middle" font-weight="700">research (4 tool)</text>
+      <text x="390" y="432" text-anchor="middle" font-size="10">get_quote · get_sec_filings...</text>
+
+      <rect x="495" y="395" width="190" height="55" rx="6" fill="#dcfce7" stroke="#22c55e"/>
+      <text x="590" y="414" text-anchor="middle" font-weight="700">repo (6 tool, 맥1)</text>
+      <text x="590" y="432" text-anchor="middle" font-size="10">list_repos · git_log · find_todos</text>
+    </g>
+  </g>
+
+  <!-- agent-bus + autosync -->
+  <g>
+    <text x="900" y="300" font-size="14" font-weight="700" fill="#0f172a">🔄 신경망</text>
+    <rect x="760" y="320" width="300" height="140" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+    <text x="910" y="345" text-anchor="middle" font-size="13" font-weight="700" fill="#7f1d1d">agent-bus (GitHub repo)</text>
+    <text x="910" y="365" text-anchor="middle" font-size="11" fill="#991b1b">inbox/ · feed/ · knowledge/ · STATE.md</text>
+
+    <rect x="780" y="380" width="260" height="30" rx="6" fill="#fee2e2" stroke="#ef4444"/>
+    <text x="910" y="400" text-anchor="middle" font-size="11" font-weight="700">⏰ bus-autosync (cron 2분)</text>
+
+    <rect x="780" y="420" width="260" height="30" rx="6" fill="#fee2e2" stroke="#ef4444"/>
+    <text x="910" y="440" text-anchor="middle" font-size="11" font-weight="700">🪝 UserPromptSubmit hook</text>
+  </g>
+
+  <!-- Bottom: 9-part Harness -->
+  <g>
+    <rect x="280" y="490" width="780" height="110" rx="10" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+    <text x="670" y="515" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">⚙️ 하네스 9 부품 (Boris Cherny "I write loops")</text>
+
+    <g font-size="10" fill="#0f172a" text-anchor="middle">
+      <text x="320" y="545">①입력큐</text>
+      <text x="320" y="560" font-size="9" fill="#64748b">칸반</text>
+      <text x="395" y="545">②분해기</text>
+      <text x="395" y="560" font-size="9" fill="#64748b">shanks</text>
+      <text x="470" y="545">③컨텍스트</text>
+      <text x="470" y="560" font-size="9" fill="#64748b">MCP</text>
+      <text x="555" y="545">④샌드박스</text>
+      <text x="555" y="560" font-size="9" fill="#64748b">deny+inbox</text>
+      <text x="640" y="545">⑤실행루프</text>
+      <text x="640" y="560" font-size="9" fill="#64748b">agent-bus</text>
+      <text x="725" y="545">⑥게이트</text>
+      <text x="725" y="560" font-size="9" fill="#64748b">5체크+v2</text>
+      <text x="810" y="545">⑦독립리뷰</text>
+      <text x="810" y="560" font-size="9" fill="#64748b">luffy</text>
+      <text x="895" y="545">⑧증거</text>
+      <text x="895" y="560" font-size="9" fill="#64748b">vault+feed</text>
+      <text x="980" y="545">⑨알림</text>
+      <text x="980" y="560" font-size="9" fill="#64748b">3중방어</text>
+    </g>
+
+    <text x="670" y="590" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">"두뇌를 늘리지 말고, 두뇌끼리 잇어라"</text>
+  </g>
+</svg>

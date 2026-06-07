@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 950" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="650" y="35" text-anchor="middle" font-size="24" font-weight="700" fill="#0f172a">🔄 실제 작업 플로우 — 전후 비교 (같은 일, 다른 구조)</text>
+  <text x="650" y="60" text-anchor="middle" font-size="13" fill="#64748b">텔레그램 봇 1대 (2주차 끝) vs 5봇 하네스 (3주차 끝) — 5가지 대표 작업으로 비교</text>
+
+  <!-- Column headers -->
+  <rect x="30" y="85" width="610" height="45" rx="8" fill="#7f1d1d"/>
+  <text x="335" y="115" text-anchor="middle" font-size="16" font-weight="700" fill="#fee2e2">❌ 만들기 전 (텔레그램 봇 1대만)</text>
+
+  <rect x="660" y="85" width="610" height="45" rx="8" fill="#14532d"/>
+  <text x="965" y="115" text-anchor="middle" font-size="16" font-weight="700" fill="#dcfce7">✅ 만들기 후 (5봇 하네스)</text>
+
+  <!-- ============== CASE 1: 종목 1건 딥리서치 ============== -->
+  <text x="30" y="160" font-size="14" font-weight="700" fill="#0f172a">🔬 CASE 1 — 종목 1건 딥리서치 ("Recursion 분석해줘")</text>
+
+  <!-- BEFORE -->
+  <g>
+    <rect x="30" y="170" width="610" height="115" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+
+    <rect x="45" y="185" width="100" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="95" y="206" text-anchor="middle" font-size="11" fill="#7f1d1d">📱 폰: 명령</text>
+    <line x1="148" y1="201" x2="173" y2="201" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="175" y="185" width="120" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="235" y="206" text-anchor="middle" font-size="11" fill="#7f1d1d">🤖 텔봇: claude -p</text>
+    <line x1="298" y1="201" x2="323" y2="201" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="325" y="185" width="135" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="392" y="206" text-anchor="middle" font-size="11" fill="#7f1d1d">⏳ Claude: 30분~2시간</text>
+    <line x1="463" y1="201" x2="488" y2="201" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="490" y="185" width="135" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="557" y="206" text-anchor="middle" font-size="11" fill="#7f1d1d">📝 vault에 노트 1장</text>
+
+    <text x="335" y="245" text-anchor="middle" font-size="11" fill="#7f1d1d">⏱ 총 30분~2시간 · 1봇 단일 처리 · 사람이 30분마다 진행상황 확인</text>
+    <text x="335" y="265" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700">⚠️ 게이트 없음 — "완성됐다"고 하면 끝 (검증 부재)</text>
+  </g>
+
+  <!-- AFTER -->
+  <g>
+    <rect x="660" y="170" width="610" height="115" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+
+    <rect x="675" y="185" width="90" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="720" y="206" text-anchor="middle" font-size="10" fill="#14532d">📱 카드 1줄</text>
+    <line x1="768" y1="201" x2="788" y2="201" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="790" y="185" width="90" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="835" y="206" text-anchor="middle" font-size="10" fill="#14532d">⚔️ shanks 위임</text>
+    <line x1="883" y1="201" x2="903" y2="201" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="905" y="185" width="90" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="950" y="206" text-anchor="middle" font-size="10" fill="#14532d">🪼 shandi MCP</text>
+    <line x1="998" y1="201" x2="1018" y2="201" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="1020" y="185" width="100" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1070" y="206" text-anchor="middle" font-size="10" fill="#14532d">✅ 6대섹션 검증</text>
+    <line x1="1123" y1="201" x2="1143" y2="201" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="1145" y="185" width="115" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1202" y="206" text-anchor="middle" font-size="10" fill="#14532d">🔔 텔레그램 push</text>
+
+    <text x="965" y="245" text-anchor="middle" font-size="11" fill="#14532d">⏱ 총 5분 · MCP 도구로 자동 조회 · Bio-as-SW 5체크 + v2 6대섹션 게이트</text>
+    <text x="965" y="265" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="700">⭐ 배수: ~24× (2시간 → 5분) + 자동 검증 + 카드ID 보고</text>
+  </g>
+
+  <!-- ============== CASE 2: 이전 노트 검색 ============== -->
+  <text x="30" y="315" font-size="14" font-weight="700" fill="#0f172a">🔍 CASE 2 — 이전 노트 검색 ("RXRX 경쟁사 뭐였지?")</text>
+
+  <!-- BEFORE -->
+  <g>
+    <rect x="30" y="325" width="610" height="115" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+
+    <rect x="45" y="340" width="115" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="102" y="361" text-anchor="middle" font-size="11" fill="#7f1d1d">💬 사람: 질문</text>
+    <line x1="163" y1="356" x2="188" y2="356" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="190" y="340" width="115" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="247" y="361" text-anchor="middle" font-size="11" fill="#7f1d1d">🤖 Claude grep</text>
+    <line x1="308" y1="356" x2="333" y2="356" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="335" y="340" width="115" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="392" y="361" text-anchor="middle" font-size="11" fill="#7f1d1d">📂 3개 파일 Read</text>
+    <line x1="453" y1="356" x2="478" y2="356" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="480" y="340" width="145" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="552" y="361" text-anchor="middle" font-size="11" fill="#7f1d1d">📝 컨텍스트 정리 답변</text>
+
+    <text x="335" y="400" text-anchor="middle" font-size="11" fill="#7f1d1d">⏱ 총 40초 (grep 5초 + Read 30초 + 답변 5초)</text>
+    <text x="335" y="420" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700">⚠️ 같은 질문 던질 때마다 매번 처음부터 grep 다시</text>
+  </g>
+
+  <!-- AFTER -->
+  <g>
+    <rect x="660" y="325" width="610" height="115" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+
+    <rect x="675" y="340" width="180" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="765" y="361" text-anchor="middle" font-size="11" fill="#14532d">💬 사람: 같은 질문</text>
+    <line x1="858" y1="356" x2="888" y2="356" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="890" y="340" width="220" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1000" y="361" text-anchor="middle" font-size="11" fill="#14532d">🛠️ MCP search_notes("RXRX 경쟁사")</text>
+    <line x1="1113" y1="356" x2="1138" y2="356" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="1140" y="340" width="120" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1200" y="361" text-anchor="middle" font-size="11" fill="#14532d">📝 즉시 답변</text>
+
+    <text x="965" y="400" text-anchor="middle" font-size="11" fill="#14532d">⏱ 총 1.4초 (search_notes 0.4초 + 답변 1초) · 인덱스 캐시</text>
+    <text x="965" y="420" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="700">⭐ 배수: ~28× (40초 → 1.4초) · 대화의 결 자체가 달라짐</text>
+  </g>
+
+  <!-- ============== CASE 3: 주가/SEC 조회 ============== -->
+  <text x="30" y="470" font-size="14" font-weight="700" fill="#0f172a">💹 CASE 3 — 주가·SEC 공시 조회 ("신테카 226330 현황")</text>
+
+  <!-- BEFORE -->
+  <g>
+    <rect x="30" y="480" width="610" height="115" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+
+    <rect x="45" y="495" width="120" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="105" y="516" text-anchor="middle" font-size="11" fill="#7f1d1d">🌐 네이버 금융</text>
+    <line x1="168" y1="511" x2="193" y2="511" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="195" y="495" width="120" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="255" y="516" text-anchor="middle" font-size="11" fill="#7f1d1d">📋 복붙</text>
+    <line x1="318" y1="511" x2="343" y2="511" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="345" y="495" width="135" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="412" y="516" text-anchor="middle" font-size="11" fill="#7f1d1d">🌐 DART 검색</text>
+    <line x1="483" y1="511" x2="508" y2="511" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="510" y="495" width="120" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="570" y="516" text-anchor="middle" font-size="11" fill="#7f1d1d">📝 노트 입력</text>
+
+    <text x="335" y="555" text-anchor="middle" font-size="11" fill="#7f1d1d">⏱ 총 5~10분 · 브라우저 탭 3개 + 복붙 반복</text>
+    <text x="335" y="575" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700">⚠️ 출처 끊김 · 데이터 신선도 불명 · 인용 어려움</text>
+  </g>
+
+  <!-- AFTER -->
+  <g>
+    <rect x="660" y="480" width="610" height="115" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+
+    <rect x="675" y="495" width="280" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="815" y="516" text-anchor="middle" font-size="11" fill="#14532d">🛠️ MCP get_quote("226330.KS") + get_sec_filings</text>
+    <line x1="958" y1="511" x2="988" y2="511" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="990" y="495" width="130" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1055" y="516" text-anchor="middle" font-size="11" fill="#14532d">⚙️ 자동 표 변환</text>
+    <line x1="1123" y1="511" x2="1148" y2="511" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="1150" y="495" width="110" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1205" y="516" text-anchor="middle" font-size="11" fill="#14532d">📝 노트 삽입</text>
+
+    <text x="965" y="555" text-anchor="middle" font-size="11" fill="#14532d">⏱ 총 1~2초 (15분 캐시) · 자동 표 변환 + 출처 각주</text>
+    <text x="965" y="575" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="700">⭐ 배수: ~300× (10분 → 2초) + 데이터 신선도 명시</text>
+  </g>
+
+  <!-- ============== CASE 4: 16종 매트릭스 ============== -->
+  <text x="30" y="625" font-size="14" font-weight="700" fill="#0f172a">🧭 CASE 4 — 16 종목 종합 매트릭스 (노정석 Bio-as-SW)</text>
+
+  <!-- BEFORE -->
+  <g>
+    <rect x="30" y="635" width="610" height="115" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+
+    <rect x="45" y="650" width="115" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="102" y="671" text-anchor="middle" font-size="11" fill="#7f1d1d">🌅 Day 1: 5종</text>
+    <line x1="163" y1="666" x2="188" y2="666" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="190" y="650" width="115" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="247" y="671" text-anchor="middle" font-size="11" fill="#7f1d1d">🌅 Day 2: 5종</text>
+    <line x1="308" y1="666" x2="333" y2="666" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="335" y="650" width="115" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="392" y="671" text-anchor="middle" font-size="11" fill="#7f1d1d">🌅 Day 3: 6종</text>
+    <line x1="453" y1="666" x2="478" y2="666" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="480" y="650" width="145" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="552" y="671" text-anchor="middle" font-size="11" fill="#7f1d1d">📊 Day 4: 사람 통합</text>
+
+    <text x="335" y="710" text-anchor="middle" font-size="11" fill="#7f1d1d">⏱ 총 ~4일 · 1봇 직렬 처리 · 사람이 매일 진행 체크</text>
+    <text x="335" y="730" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700">⚠️ 노트 형식 일관성 부족 · 같은 잣대 비교 어려움</text>
+  </g>
+
+  <!-- AFTER -->
+  <g>
+    <rect x="660" y="635" width="610" height="115" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+
+    <rect x="675" y="650" width="135" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="742" y="671" text-anchor="middle" font-size="11" fill="#14532d">📥 카드 16장 (06:30)</text>
+    <line x1="813" y1="666" x2="833" y2="666" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="835" y="650" width="155" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="912" y="671" text-anchor="middle" font-size="11" fill="#14532d">🔄 4봇 병렬 (06:33~)</text>
+    <line x1="993" y1="666" x2="1013" y2="666" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="1015" y="650" width="130" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1080" y="671" text-anchor="middle" font-size="11" fill="#14532d">🍖 luffy 통합 (11:00)</text>
+    <line x1="1148" y1="666" x2="1168" y2="666" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="1170" y="650" width="90" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1215" y="671" text-anchor="middle" font-size="11" fill="#14532d">✅ 12:30</text>
+
+    <text x="965" y="710" text-anchor="middle" font-size="11" fill="#14532d">⏱ 총 6시간 · 4봇 병렬 + luffy 독립 리뷰어 매트릭스 통합</text>
+    <text x="965" y="730" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="700">⭐ 배수: ~16× (96시간 → 6시간) + 동일 형식 + 정량 비교표</text>
+  </g>
+
+  <!-- ============== CASE 5: 봇 간 메시지 ============== -->
+  <text x="30" y="780" font-size="14" font-weight="700" fill="#0f172a">📨 CASE 5 — 봇 간 메시지 전달 ("야마토에게 작업 위임")</text>
+
+  <!-- BEFORE -->
+  <g>
+    <rect x="30" y="790" width="610" height="115" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+
+    <rect x="45" y="805" width="115" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="102" y="826" text-anchor="middle" font-size="11" fill="#7f1d1d">💬 사람: 야마토</text>
+    <line x1="163" y1="821" x2="188" y2="821" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="190" y="805" width="115" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="247" y="826" text-anchor="middle" font-size="11" fill="#7f1d1d">🛜 ssh 맥2</text>
+    <line x1="308" y1="821" x2="333" y2="821" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="335" y="805" width="115" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="392" y="826" text-anchor="middle" font-size="11" fill="#7f1d1d">✏️ 수동 명령</text>
+    <line x1="453" y1="821" x2="478" y2="821" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arb)"/>
+
+    <rect x="480" y="805" width="145" height="32" rx="5" fill="#fee2e2" stroke="#dc2626"/>
+    <text x="552" y="826" text-anchor="middle" font-size="11" fill="#7f1d1d">📋 사람이 결과 복붙</text>
+
+    <text x="335" y="865" text-anchor="middle" font-size="11" fill="#7f1d1d">⏱ 사람 개입 매번 · 봇끼리 메시지 *불가*</text>
+    <text x="335" y="885" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700">🚨 5시간 묵음 사고의 근본 원인 = 이 구조</text>
+  </g>
+
+  <!-- AFTER -->
+  <g>
+    <rect x="660" y="790" width="610" height="115" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+
+    <rect x="675" y="805" width="160" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="755" y="826" text-anchor="middle" font-size="11" fill="#14532d">⚔️ bus-post yamato</text>
+    <line x1="838" y1="821" x2="863" y2="821" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="865" y="805" width="135" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="932" y="826" text-anchor="middle" font-size="11" fill="#14532d">⏰ autosync 2분</text>
+    <line x1="1003" y1="821" x2="1028" y2="821" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="1030" y="805" width="120" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1090" y="826" text-anchor="middle" font-size="11" fill="#14532d">🔔 텔레그램 push</text>
+    <line x1="1153" y1="821" x2="1178" y2="821" stroke="#16a34a" stroke-width="1.5" marker-end="url(#arg)"/>
+
+    <rect x="1180" y="805" width="80" height="32" rx="5" fill="#dcfce7" stroke="#16a34a"/>
+    <text x="1220" y="826" text-anchor="middle" font-size="11" fill="#14532d">⚒️ 착수</text>
+
+    <text x="965" y="865" text-anchor="middle" font-size="11" fill="#14532d">⏱ ~2분 자동 · 사람 개입 0 · 3중 방어로 묵음 사고 0건</text>
+    <text x="965" y="885" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="700">⭐ 배수: ~∞ (불가능 → 가능) · 봇끼리 *직접* 소통</text>
+  </g>
+
+  <!-- Bottom summary -->
+  <g>
+    <rect x="30" y="920" width="1240" height="20" rx="6" fill="#1e293b"/>
+    <text x="650" y="935" text-anchor="middle" font-size="11" fill="#f8fafc" font-weight="700">📊 종합 배수: 일평균 처리량 ~5건 → ~15건 (3×) · 사람 개입 시간 -80% · 노트 형식 일관성 +100% · 5시간 묵음 사고 -100%</text>
+  </g>
+</svg>
