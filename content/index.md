@@ -37,6 +37,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-06-08-ai-digest]] — Anthropic IPO S-1제출(6/1)·6/15과금개편 D-7·Managed Agents셀프호스트샌드박스·Claude Security/Glasswing150조직 · Gemini 3.5 Flash쿼터리셋·신변종·CLI종료 D-10 · GPT-5.5응답재튜닝·메모리합성·GPT-4.5 6/27은퇴 D-19 · 메모리거버넌스(SSGM·Anatomy실증) · PKM 3아키텍처·로컬모델스택(Llama3.2·nomic) · Hermes Desktop원격백엔드·젠슨GTC · OpenClaw 6.5 채널세이프티·Parallel웹검색
 - [[2026-06-07-ai-digest]] — Claude SpaceX딜 한도2배·Opus 4.8·ultracode·Fast모드Opus4.8 · Gemini CLI 6/18종료 D-11 · GPT-5.5 canvas폐지·dreaming메모리·GPT-4.5 6/27은퇴 D-20 · 메모리서베이3종(반성적자기개선·기억주권6단계) · PKM 위키=함대공유메모리레이어 · Hermes Desktop v0.15.2 단일코어 · OpenClaw 6.2 Skill Workshop·operator install policy
 - [[2026-06-06-ai-digest]] — Claude 6/5대규모장애복구·v2.1.165 · 재귀적자기개선보고서(코드80%자가작성·글로벌pause촉구) · Gemini CLI 6/18종료 D-12 · GPT Lockdown Mode 전계정·dreaming메모리·GPT-4.5 6/27은퇴 D-21 · 기억주권(LTM보안)Mnemonic Sovereignty · PKM AgentSkill인코딩 · Hermes Desktop v0.15.2 · OpenClaw 6.2 플러그인외부화(Tokenjuice·Copilot)
 - [[2026-06-05-ai-digest]] — Claude v2.1.163 버전가드레일·WebFetch권한픽스·6/15과금분리 D-10 · Project Glasswing 150조직/15개국·Claude Security 2100패치 · Gemini CLI 6/18종료 D-13 · GPT-Rosalind·ChatGPT Sites·GPT-4.5 6/27은퇴 D-22 · SSGM 메모리거버넌스·선택적망각 · PKM 캡처파이프라인병목 · Hermes Desktop v0.15.2 · OpenClaw 6.2 Skill Workshop
