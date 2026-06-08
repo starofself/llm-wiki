@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif">
+  <defs>
+    <marker id="lc-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="lc-fail" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="lc-deep" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">🔁 작업 한 사이클 — 8단계 + 품질 게이트 + 딥리서치 recursion</text>
+  <text x="600" y="58" text-anchor="middle" font-size="13" fill="#64748b">실패하면 자동 반복, 성공하면 사용자 검토 → 다음 단계 깊이로</text>
+
+  <!-- Center: 사용자 (모든 시작점) -->
+  <g>
+    <circle cx="600" cy="400" r="65" fill="#fef3c7" stroke="#f59e0b" stroke-width="3"/>
+    <text x="600" y="395" text-anchor="middle" font-size="32">👤</text>
+    <text x="600" y="425" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">냐안의별</text>
+    <text x="600" y="442" text-anchor="middle" font-size="10" fill="#92400e">(선장 = 사용자)</text>
+  </g>
+
+  <!-- 8 단계 시계방향 -->
+
+  <!-- ① 카드 올림 (12시) -->
+  <g>
+    <rect x="510" y="100" width="180" height="80" rx="10" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+    <text x="600" y="123" text-anchor="middle" font-size="14" font-weight="700" fill="#713f12">① 카드 올림</text>
+    <text x="600" y="143" text-anchor="middle" font-size="10" fill="#854d0e">옵시디언 칸반에</text>
+    <text x="600" y="158" text-anchor="middle" font-size="10" fill="#854d0e">@담당 + 완료조건</text>
+    <text x="600" y="173" text-anchor="middle" font-size="9" fill="#854d0e" font-style="italic">한 줄로</text>
+  </g>
+  <line x1="600" y1="180" x2="600" y2="330" stroke="#475569" stroke-width="2" marker-end="url(#lc-arr)"/>
+
+  <!-- ② 자동 알림 (2시) -->
+  <g>
+    <rect x="850" y="180" width="180" height="80" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <text x="940" y="203" text-anchor="middle" font-size="14" font-weight="700" fill="#1e3a8a">② 자동 알림</text>
+    <text x="940" y="223" text-anchor="middle" font-size="10" fill="#1e40af">cron 2분 → 텔레그램</text>
+    <text x="940" y="238" text-anchor="middle" font-size="10" fill="#1e40af">담당봇에게 push</text>
+    <text x="940" y="253" text-anchor="middle" font-size="9" fill="#2563eb" font-style="italic">"새 카드 도착"</text>
+  </g>
+  <path d="M 670 165 Q 800 165 855 220" fill="none" stroke="#475569" stroke-width="2" marker-end="url(#lc-arr)"/>
+
+  <!-- ③ "마무리해줘" (3시) -->
+  <g>
+    <rect x="970" y="320" width="180" height="80" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+    <text x="1060" y="343" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">③ 한 마디 지시</text>
+    <text x="1060" y="363" text-anchor="middle" font-size="10" fill="#854d0e">사용자→봇</text>
+    <text x="1060" y="378" text-anchor="middle" font-size="10" fill="#854d0e">"칸반의 니 업무</text>
+    <text x="1060" y="393" text-anchor="middle" font-size="9" fill="#92400e" font-style="italic">마무리해줘"</text>
+  </g>
+  <line x1="940" y1="260" x2="1010" y2="320" stroke="#475569" stroke-width="2" marker-end="url(#lc-arr)"/>
+
+  <!-- ④ 봇 작업 (5시) -->
+  <g>
+    <rect x="870" y="460" width="180" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <text x="960" y="483" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">④ 봇 작업</text>
+    <text x="960" y="503" text-anchor="middle" font-size="10" fill="#15803d">MCP 도구로 자동</text>
+    <text x="960" y="518" text-anchor="middle" font-size="10" fill="#15803d">search·get·create</text>
+    <text x="960" y="533" text-anchor="middle" font-size="10" fill="#15803d">v3.1 8섹션 노트</text>
+    <text x="960" y="550" text-anchor="middle" font-size="9" fill="#16a34a" font-style="italic">차례대로 카드 처리</text>
+  </g>
+  <line x1="1060" y1="400" x2="970" y2="465" stroke="#475569" stroke-width="2" marker-end="url(#lc-arr)"/>
+
+  <!-- ⑤ 품질 체크 (6시) -->
+  <g>
+    <rect x="510" y="610" width="180" height="100" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="3"/>
+    <text x="600" y="633" text-anchor="middle" font-size="14" font-weight="700" fill="#831843">⑤ 품질 체크</text>
+    <text x="600" y="653" text-anchor="middle" font-size="10" fill="#9d174d">v3.1 8섹션 게이트</text>
+    <text x="600" y="668" text-anchor="middle" font-size="10" fill="#9d174d">완료조건 충족?</text>
+    <text x="600" y="688" text-anchor="middle" font-size="11" font-weight="700" fill="#db2777">PASS? FAIL?</text>
+  </g>
+  <line x1="870" y1="540" x2="700" y2="640" stroke="#475569" stroke-width="2" marker-end="url(#lc-arr)"/>
+
+  <!-- ⑥ FAILED 분기 (7시) — 빨강 / 자동 반복 -->
+  <g>
+    <rect x="190" y="610" width="200" height="100" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="290" y="633" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">⑥ FAILED</text>
+    <text x="290" y="653" text-anchor="middle" font-size="10" fill="#991b1b">검토중 컬럼으로</text>
+    <text x="290" y="668" text-anchor="middle" font-size="10" fill="#991b1b">→ 봇 자동 재시도</text>
+    <text x="290" y="685" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">완료될 때까지</text>
+    <text x="290" y="703" text-anchor="middle" font-size="9" fill="#7f1d1d" font-style="italic">루프 반복</text>
+  </g>
+  <!-- FAIL arrow -->
+  <line x1="510" y1="680" x2="400" y2="680" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#lc-fail)"/>
+  <text x="455" y="670" text-anchor="middle" font-size="11" fill="#dc2626" font-weight="700">FAIL</text>
+  <!-- 재시도 화살표 (back to ④) -->
+  <path d="M 290 610 Q 290 480 870 480" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#lc-fail)"/>
+  <text x="280" y="540" text-anchor="middle" font-size="10" fill="#dc2626" font-style="italic">자동 재시도</text>
+
+  <!-- ⑦ 완료 + 사용자 검토 (9시) -->
+  <g>
+    <rect x="60" y="360" width="180" height="100" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+    <text x="150" y="383" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">⑦ ✅ 완료 + 검토</text>
+    <text x="150" y="403" text-anchor="middle" font-size="10" fill="#15803d">완료 컬럼 이동</text>
+    <text x="150" y="418" text-anchor="middle" font-size="10" fill="#15803d">사용자가 쭉 봄</text>
+    <text x="150" y="435" text-anchor="middle" font-size="11" font-weight="700" fill="#16a34a">"어, 이건 왜?"</text>
+    <text x="150" y="452" text-anchor="middle" font-size="9" fill="#14532d" font-style="italic">새 호기심 발화</text>
+  </g>
+  <!-- PASS arrow from ⑤ -->
+  <path d="M 510 660 Q 350 600 240 460" fill="none" stroke="#16a34a" stroke-width="2" marker-end="url(#lc-arr)"/>
+  <text x="370" y="555" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="700">PASS</text>
+
+  <!-- ⑧ 딥리서치 recursion (10시) -->
+  <g>
+    <rect x="180" y="180" width="200" height="100" rx="10" fill="#f3e8ff" stroke="#7c3aed" stroke-width="3"/>
+    <text x="280" y="203" text-anchor="middle" font-size="14" font-weight="700" fill="#581c87">⑧ 딥리서치 recursion</text>
+    <text x="280" y="223" text-anchor="middle" font-size="10" fill="#6b21a8">"더 파줘" 한 마디</text>
+    <text x="280" y="238" text-anchor="middle" font-size="10" fill="#6b21a8">→ 새 카드 자동 추가</text>
+    <text x="280" y="258" text-anchor="middle" font-size="11" font-weight="700" fill="#7c3aed">한 단계 더 깊이</text>
+    <text x="280" y="275" text-anchor="middle" font-size="9" fill="#581c87" font-style="italic">두 단계, 세 단계...</text>
+  </g>
+  <line x1="200" y1="370" x2="240" y2="285" stroke="#7c3aed" stroke-width="2" marker-end="url(#lc-deep)"/>
+
+  <!-- recursion arrow back to ① (다시 카드 올림) -->
+  <path d="M 380 200 Q 460 130 510 140" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#lc-deep)"/>
+  <text x="450" y="155" text-anchor="middle" font-size="11" fill="#7c3aed" font-weight="700">↻ 새 사이클 시작</text>
+
+  <!-- 사용자 ↔ ③ 직접 라인 (사용자가 봇에게 한 마디) -->
+  <path d="M 660 380 Q 850 350 970 360" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="800" y="345" text-anchor="middle" font-size="10" fill="#f59e0b" font-style="italic">사용자 직접 지시</text>
+
+  <!-- 사용자 ↔ ⑦ 직접 라인 (사용자가 검토) -->
+  <path d="M 540 410 Q 380 410 240 410" fill="none" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="380" y="400" text-anchor="middle" font-size="10" fill="#16a34a" font-style="italic">사용자 검토</text>
+
+  <!-- 사용자 ↔ ⑧ 직접 라인 (사용자가 딥리서치 지시) -->
+  <path d="M 555 360 Q 420 290 380 270" fill="none" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="440" y="310" text-anchor="middle" font-size="10" fill="#7c3aed" font-style="italic">사용자 "더 파줘"</text>
+
+  <!-- 범례 -->
+  <rect x="60" y="730" width="1080" height="55" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="80" y="752" font-size="12" font-weight="700" fill="#0f172a">📊 핵심 한 줄</text>
+  <text x="80" y="772" font-size="11" fill="#0f172a">사용자 입력 = <tspan font-weight="700" fill="#f59e0b">한 마디</tspan> (카드 올림 + "마무리해줘" + "더 파줘") · 봇이 ② ④ ⑤ ⑥ 자동 처리 · <tspan font-weight="700" fill="#7c3aed">한 사이클이 두 단계, 세 단계 더 깊이로 자연스럽게 이어짐</tspan></text>
+</svg>

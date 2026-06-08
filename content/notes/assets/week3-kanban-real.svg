@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif">
+  <!-- Background = 옵시디언 다크 톤 -->
+  <rect width="1400" height="800" fill="#1e1e2e"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="1400" height="50" fill="#181825"/>
+  <text x="20" y="32" font-size="14" font-weight="700" fill="#cdd6f4">📁 Starofself / 00_Indexes / 🗂️ 함대 작업 칸반.md  (Obsidian Kanban)</text>
+  <text x="1380" y="32" text-anchor="end" font-size="11" fill="#6c7086">2026-06-08 19:50 KST</text>
+
+  <!-- 5 column headers -->
+  <g font-size="14" font-weight="700" text-anchor="middle">
+    <rect x="20"   y="70" width="265" height="40" rx="6" fill="#f38ba8"/>
+    <text x="152.5" y="95" fill="#1e1e2e">‼️ 선장 직접지시</text>
+
+    <rect x="295"  y="70" width="265" height="40" rx="6" fill="#f9e2af"/>
+    <text x="427.5" y="95" fill="#1e1e2e">📥 백로그</text>
+
+    <rect x="570"  y="70" width="265" height="40" rx="6" fill="#89b4fa"/>
+    <text x="702.5" y="95" fill="#1e1e2e">🔄 진행중</text>
+
+    <rect x="845"  y="70" width="265" height="40" rx="6" fill="#cba6f7"/>
+    <text x="977.5" y="95" fill="#1e1e2e">🧪 검토중 (선장 결정 대기)</text>
+
+    <rect x="1120" y="70" width="265" height="40" rx="6" fill="#a6e3a1"/>
+    <text x="1252.5" y="95" fill="#1e1e2e">✅ 완료</text>
+  </g>
+
+  <!-- Column 1: ‼️ 선장 직접지시 -->
+  <g>
+    <rect x="20" y="120" width="265" height="660" rx="6" fill="#313244"/>
+    <text x="152.5" y="400" text-anchor="middle" font-size="13" fill="#6c7086" font-style="italic">(현재 비어있음 —</text>
+    <text x="152.5" y="420" text-anchor="middle" font-size="13" fill="#6c7086" font-style="italic">모든 직접지시 처리됨)</text>
+  </g>
+
+  <!-- Column 2: 📥 백로그 -->
+  <g>
+    <rect x="295" y="120" width="265" height="660" rx="6" fill="#313244"/>
+
+    <!-- Card 1 -->
+    <rect x="305" y="130" width="245" height="100" rx="5" fill="#45475a"/>
+    <text x="315" y="150" font-size="11" font-weight="700" fill="#f9e2af">🚢 SHIP-002</text>
+    <text x="315" y="168" font-size="10" fill="#cdd6f4">한국 조선5사 OpenDART</text>
+    <text x="315" y="183" font-size="10" fill="#cdd6f4">10년 수주DB 추가 가공</text>
+    <text x="315" y="203" font-size="10" fill="#89dceb">#Shipbuilding #Orderbook</text>
+    <text x="315" y="220" font-size="10" font-weight="700" fill="#a6e3a1">@luffy</text>
+
+    <!-- Card 2 -->
+    <rect x="305" y="240" width="245" height="100" rx="5" fill="#45475a"/>
+    <text x="315" y="260" font-size="11" font-weight="700" fill="#f9e2af">🔥 MEM-IP-001</text>
+    <text x="315" y="278" font-size="10" fill="#cdd6f4">SRAM compiler/IP/EDA</text>
+    <text x="315" y="293" font-size="10" fill="#cdd6f4">picks-and-shovels</text>
+    <text x="315" y="313" font-size="10" fill="#89dceb">#EDA #SRAM #IP</text>
+    <text x="315" y="330" font-size="10" font-weight="700" fill="#a6e3a1">@yamato</text>
+
+    <!-- Card 3 -->
+    <rect x="305" y="350" width="245" height="100" rx="5" fill="#45475a"/>
+    <text x="315" y="370" font-size="11" font-weight="700" fill="#f9e2af">🛠️ vault-sweep MCP</text>
+    <text x="315" y="388" font-size="10" fill="#cdd6f4">죽은링크·고아노트</text>
+    <text x="315" y="403" font-size="10" fill="#cdd6f4">+ Quartz 발행</text>
+    <text x="315" y="423" font-size="10" fill="#89dceb">#MCP</text>
+    <text x="315" y="440" font-size="10" font-weight="700" fill="#a6e3a1">@shandi  ⭐ NEW</text>
+
+    <text x="427.5" y="490" text-anchor="middle" font-size="10" fill="#6c7086" font-style="italic">+ 3 카드 더…</text>
+  </g>
+
+  <!-- Column 3: 🔄 진행중 -->
+  <g>
+    <rect x="570" y="120" width="265" height="660" rx="6" fill="#313244"/>
+
+    <!-- Card 1 — 현재 작업 중 -->
+    <rect x="580" y="130" width="245" height="110" rx="5" fill="#1e66f5" stroke="#89b4fa" stroke-width="2"/>
+    <text x="590" y="150" font-size="11" font-weight="700" fill="#bac2de">🔧 vault-sweep v0.2</text>
+    <text x="590" y="168" font-size="10" fill="#cdd6f4">publish_to_wiki 이미지경로</text>
+    <text x="590" y="183" font-size="10" fill="#cdd6f4">변환 + touch + Quartz 빌드</text>
+    <text x="590" y="200" font-size="9" fill="#cdd6f4" font-style="italic">완료조건: 7도구 + 구문통과</text>
+    <text x="590" y="218" font-size="10" fill="#89dceb">#MCP</text>
+    <text x="590" y="232" font-size="10" font-weight="700" fill="#a6e3a1">@shandi  🔄 14:00~</text>
+
+    <!-- Card 2 -->
+    <rect x="580" y="250" width="245" height="90" rx="5" fill="#45475a"/>
+    <text x="590" y="270" font-size="11" font-weight="700" fill="#f9e2af">🇰🇷 파로스아이바이오</text>
+    <text x="590" y="288" font-size="10" fill="#cdd6f4">388870 케미버스 플랫폼</text>
+    <text x="590" y="303" font-size="10" fill="#cdd6f4">노정석 렌즈 검증</text>
+    <text x="590" y="323" font-size="10" font-weight="700" fill="#a6e3a1">@shandi</text>
+
+    <text x="702.5" y="380" text-anchor="middle" font-size="10" fill="#6c7086" font-style="italic">+ 다른 봇 진행 카드</text>
+  </g>
+
+  <!-- Column 4: 🧪 검토중 -->
+  <g>
+    <rect x="845" y="120" width="265" height="660" rx="6" fill="#313244"/>
+    <text x="977.5" y="380" text-anchor="middle" font-size="12" fill="#6c7086" font-style="italic">(현재 비어있음)</text>
+    <text x="977.5" y="402" text-anchor="middle" font-size="11" fill="#cba6f7">FAILED 카드 또는</text>
+    <text x="977.5" y="420" text-anchor="middle" font-size="11" fill="#cba6f7">선장 결정 대기 카드가</text>
+    <text x="977.5" y="438" text-anchor="middle" font-size="11" fill="#cba6f7">여기로 옴</text>
+  </g>
+
+  <!-- Column 5: ✅ 완료 -->
+  <g>
+    <rect x="1120" y="120" width="265" height="660" rx="6" fill="#313244"/>
+
+    <rect x="1130" y="130" width="245" height="85" rx="5" fill="#40a02b" stroke="#a6e3a1" stroke-width="1.5"/>
+    <text x="1140" y="150" font-size="11" font-weight="700" fill="#fff">✅ CATHODE-001</text>
+    <text x="1140" y="168" font-size="10" fill="#cdd6f4">한국 양극재 4사 NCM/LFP/LMFP</text>
+    <text x="1140" y="186" font-size="10" font-weight="700" fill="#a6e3a1">@shandi  6/7 18:50</text>
+    <text x="1140" y="202" font-size="9" fill="#fab387">📄 v3.1 8섹션 14.8KB</text>
+
+    <rect x="1130" y="225" width="245" height="85" rx="5" fill="#40a02b" stroke="#a6e3a1" stroke-width="1.5"/>
+    <text x="1140" y="245" font-size="11" font-weight="700" fill="#fff">✅ ANODE-001</text>
+    <text x="1140" y="263" font-size="10" fill="#cdd6f4">비중국 흑연 6사 공급망</text>
+    <text x="1140" y="281" font-size="10" font-weight="700" fill="#a6e3a1">@shandi  6/7 19:00</text>
+    <text x="1140" y="297" font-size="9" fill="#fab387">📄 v3.1 8섹션 16KB</text>
+
+    <rect x="1130" y="320" width="245" height="85" rx="5" fill="#40a02b" stroke="#a6e3a1" stroke-width="1.5"/>
+    <text x="1140" y="340" font-size="11" font-weight="700" fill="#fff">✅ 신테카바이오</text>
+    <text x="1140" y="358" font-size="10" fill="#cdd6f4">226330 한국 AI신약 검증</text>
+    <text x="1140" y="376" font-size="10" font-weight="700" fill="#a6e3a1">@shandi  6/7 15:45</text>
+    <text x="1140" y="392" font-size="9" fill="#fab387">📄 QA통과</text>
+
+    <rect x="1130" y="415" width="245" height="85" rx="5" fill="#40a02b" stroke="#a6e3a1" stroke-width="1.5"/>
+    <text x="1140" y="435" font-size="11" font-weight="700" fill="#fff">✅ Retro Biosciences</text>
+    <text x="1140" y="453" font-size="10" fill="#cdd6f4">RTR-242 autophagy</text>
+    <text x="1140" y="471" font-size="10" font-weight="700" fill="#a6e3a1">@shandi  6/7</text>
+    <text x="1140" y="487" font-size="9" fill="#fab387">📄 §3.2 보강 통과</text>
+
+    <text x="1252.5" y="540" text-anchor="middle" font-size="11" fill="#6c7086" font-style="italic">+ 60+ 카드 완료</text>
+    <text x="1252.5" y="558" text-anchor="middle" font-size="10" fill="#a6e3a1">(이번 주 누적)</text>
+  </g>
+
+  <!-- 카드 형식 설명 (하단) -->
+  <rect x="20" y="730" width="1365" height="55" rx="8" fill="#181825" stroke="#45475a"/>
+  <text x="35" y="752" font-size="13" font-weight="700" fill="#f5c2e7">🔑 카드 한 줄 형식 (마크다운)</text>
+  <text x="35" y="775" font-size="12" font-family="ui-monospace, Menlo, monospace" fill="#a6e3a1">- [ ] **카드 제목** — 설명·완료조건 #태그 @담당봇 📄[[관련노트]]</text>
+</svg>

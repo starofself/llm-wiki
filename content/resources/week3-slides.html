@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>22기 3주차 후기 — MCP·API + 칸반 = 2단계 더 깊이</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'Apple SD Gothic Neo', sans-serif; background: #1e293b; overflow: hidden; }
+  .slides { position: relative; width: 100vw; height: 100vh; }
+  .slide {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    display: none; flex-direction: column; padding: 60px 80px;
+    background: #fffbf3; color: #1e293b;
+  }
+  .slide.active { display: flex; }
+  .slide.dark { background: #1e293b; color: #fef3c7; }
+  .slide.dark h1 { color: #fbbf24; }
+  .slide h1 { font-size: 56px; margin-bottom: 20px; color: #0f172a; }
+  .slide h2 { font-size: 40px; margin-bottom: 18px; color: #f59e0b; }
+  .slide h3 { font-size: 32px; margin-bottom: 14px; color: #0f172a; }
+  .slide p, .slide li { font-size: 22px; line-height: 1.65; margin-bottom: 12px; }
+  .slide ul, .slide ol { padding-left: 30px; }
+  .slide table { border-collapse: collapse; margin: 16px 0; width: 100%; font-size: 18px; }
+  .slide th { background: #1e293b; color: #fef3c7; padding: 10px 14px; text-align: left; }
+  .slide td { padding: 10px 14px; border-bottom: 1px solid #cbd5e1; }
+  .slide tr:nth-child(even) td { background: #f1f5f9; }
+  .slide .highlight { background: #fef3c7; padding: 2px 6px; border-radius: 4px; font-weight: 700; }
+  .slide .quote { font-style: italic; color: #475569; border-left: 4px solid #f59e0b; padding-left: 16px; margin: 16px 0; }
+  .slide img { max-width: 100%; max-height: 60vh; margin: 16px auto; display: block; }
+  .center { text-align: center; }
+  .nav { position: fixed; bottom: 18px; right: 24px; color: #64748b; font-size: 14px; }
+  .nav-btn { position: fixed; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.2); color: #fff; border: none; padding: 12px 16px; cursor: pointer; font-size: 24px; border-radius: 6px; }
+  .nav-btn:hover { background: rgba(0,0,0,0.4); }
+  .prev { left: 12px; }
+  .next { right: 12px; }
+  .progress { position: fixed; top: 0; left: 0; height: 4px; background: #f59e0b; transition: width 0.3s; }
+  code { background: #1e293b; color: #fef3c7; padding: 2px 8px; border-radius: 4px; font-family: ui-monospace, Menlo, monospace; font-size: 18px; }
+  pre { background: #1e293b; color: #fef3c7; padding: 16px 20px; border-radius: 8px; font-family: ui-monospace, Menlo, monospace; font-size: 16px; line-height: 1.5; margin: 12px 0; overflow-x: auto; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .card { background: #f1f5f9; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 6px; }
+  .card.green { border-color: #16a34a; }
+  .card.red { border-color: #dc2626; }
+  .card.blue { border-color: #2563eb; }
+  .card.purple { border-color: #7c3aed; }
+  .big { font-size: 64px; font-weight: 700; line-height: 1.2; }
+  .super-big { font-size: 80px; font-weight: 700; line-height: 1.2; text-align: center; color: #f59e0b; }
+  .footer { position: absolute; bottom: 20px; left: 80px; font-size: 14px; color: #64748b; }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="slides">
+
+  <!-- Slide 1: 표지 -->
+  <div class="slide dark active">
+    <div class="center" style="margin-top: 80px;">
+      <h1 style="font-size: 72px; color: #fbbf24;">🚢 22기 3주차 후기</h1>
+      <h2 style="font-size: 44px; color: #fef3c7; margin-top: 30px;">"MCP·API + 칸반 = 2단계 더 깊이"</h2>
+      <p style="font-size: 24px; margin-top: 30px; color: #cbd5e1;">강의 교재 한 묶음이 어떻게 <em>리서치 깊이</em>를 바꿨나</p>
+      <p style="font-size: 20px; margin-top: 80px; color: #fbbf24;">발표 — <strong>냐안의별</strong> · 2026-06-07</p>
+      <p class="quote" style="margin-top: 40px; border-color: #fbbf24; color: #fef3c7;">
+        "AI한테 시키는 시대 → AI가 <em>루프 안에서 알아서 일하는</em> 시대"
+      </p>
+    </div>
+  </div>
+
+  <!-- Slide 2: 한 줄 결론 -->
+  <div class="slide">
+    <h1>🎯 한 줄 결론</h1>
+    <div class="center" style="margin-top: 80px;">
+      <p class="big">"리서치 한 번에 <span class="highlight">한 단계</span> 만 들어가던 게,</p>
+      <p class="big"><span class="highlight">두 단계 더 깊이</span> 들어갈 수 있게 됐다."</p>
+    </div>
+    <p class="quote" style="margin-top: 60px;">이 한 줄이 발표의 <em>전부</em> 입니다. 나머지 슬라이드는 <em>어떻게 그게 가능했는지</em> 입니다.</p>
+  </div>
+
+  <!-- Slide 3: 발단 -->
+  <div class="slide">
+    <h1>🌱 발단 — 강의에서 받은 <em>MCP·API 학습 자료</em></h1>
+    <p>3주차 (API) · 4주차 (MCP) 들어가기 <strong>전</strong>에 <strong>개념 학습 자료</strong>를 주셨습니다.</p>
+    <table>
+      <tr><th>개념</th><th>한 줄 정의</th></tr>
+      <tr><td><strong>MCP</strong></td><td><em>AI 세계의 USB-C 포트</em> — 도구마다 따로 배선 X, 한 규격으로 다 꽂는다</td></tr>
+      <tr><td><strong>API</strong></td><td><em>서비스 한 곳에 직접 말 거는 문</em></td></tr>
+      <tr><td><strong>하네스</strong></td><td><em>AI가 *스스로 일할 작업장*</em> — 운영체계</td></tr>
+    </table>
+    <p style="margin-top: 20px;"><span class="highlight">여기서 결심</span>: <em>"개념만 알고 끝낼 게 아니라, 진짜 손으로 만들자"</em></p>
+    <p class="quote">"이 자료가 없었으면 Boris Cherny 영상 봐도 '신기하다'로 끝났을 거예요. 강의 교재가 <em>언어</em> 를 깔아준 게 컸습니다."</p>
+  </div>
+
+  <!-- Slide 3.5: 2틀 학습 Q&A -->
+  <div class="slide">
+    <h1>🗣 <em>2틀</em> 동안 야마토랑 Q&A — <em>"MCP가 뭐지?"</em></h1>
+    <p>근데 <em>교재 한 번 본다고 바로</em> 만든 건 아닙니다. <strong>이틀 동안 야마토 봇과 Q&A</strong> — 그게 진짜 <em>학습 시간</em> 이었어요.</p>
+    <table style="font-size: 17px; margin-top: 16px;">
+      <tr><th style="width: 80px;">Day</th><th style="width: 250px;">질문 (나)</th><th>야마토 답</th></tr>
+      <tr><td><strong>6/6</strong></td><td>"MCP가 뭐야?"</td><td><em>AI 세계의 USB-C 포트</em> — 한 규격으로 다 꽂는다</td></tr>
+      <tr><td>6/6</td><td>"API랑 뭐 달라?"</td><td>API = <em>서비스 한 곳의 문</em> / MCP = <em>AI ↔ API 표준 허브</em></td></tr>
+      <tr><td>6/6</td><td>"왜 좋은데?"</td><td>N×M 개별연동 → <strong>N+M</strong> (곱셈 → 덧셈)</td></tr>
+      <tr><td><strong>6/7</strong></td><td>"보안은?"</td><td>filesystem MCP를 Mac 전체 X / Research 폴더만 ✅</td></tr>
+      <tr><td>6/7</td><td>"어디서 시작?"</td><td>5단계 로드맵 — ★ <em>작은 MCP 1개부터</em> (디버깅 지옥 방지)</td></tr>
+      <tr><td>6/7</td><td>"내 <em>하네스</em>는?"</td><td><em>언제·어떻게·어떤 권한</em>으로 도구 쓸지 정하는 <em>운영체계</em></td></tr>
+    </table>
+    <p style="margin-top: 16px;" class="center"><span class="highlight" style="font-size: 22px;">결심한 순간: "개념만 알고 끝낼 게 아니라, 진짜 만들자. 1개부터 천천히."</span></p>
+    <p class="footer">📓 정리한 노트: <code>2026-06-06-mcp-개념정리.md</code> (7KB) + <code>2026-06-07-API-MCP-야마토-대화정리.md</code> (9KB)</p>
+  </div>
+
+  <!-- Slide 4: 일주일 동안 만든 것 -->
+  <div class="slide">
+    <h1>🔨 일주일 동안 박은 것</h1>
+    <p>세 가지를 깔았습니다.</p>
+    <div class="grid-3" style="margin-top: 30px;">
+      <div class="card">
+        <h3 style="color: #f59e0b;">① 옵시디언 칸반</h3>
+        <p style="font-size: 18px;">5컬럼 마크다운 한 장</p>
+        <p style="font-size: 16px; color: #64748b;">어디까지 했는지 한 화면에</p>
+      </div>
+      <div class="card blue">
+        <h3 style="color: #2563eb;">② agent-bus</h3>
+        <p style="font-size: 18px;">GitHub repo 게시판</p>
+        <p style="font-size: 16px; color: #64748b;">봇들끼리 <em>직접</em> 소통</p>
+      </div>
+      <div class="card green">
+        <h3 style="color: #16a34a;">③ MCP 4 서버</h3>
+        <p style="font-size: 18px;">게시판·옵시디언·증권·레포</p>
+        <p style="font-size: 16px; color: #64748b;">봇이 <em>도구로</em> 일함</p>
+      </div>
+    </div>
+    <p style="margin-top: 40px;">각각 <em>마크다운 한 장 · cron 한 줄 · Node 150줄</em> 이면 시작 가능.</p>
+    <p><strong>반나절 안에 첫 작동.</strong></p>
+  </div>
+
+  <!-- Slide 5: 실제 칸반 -->
+  <div class="slide" style="padding: 30px 50px;">
+    <h1 style="font-size: 40px;">📋 실제 칸반 모양 (옵시디언)</h1>
+    <img src="../notes/assets/week3-kanban-real.svg" alt="실제 칸반 5컬럼" style="max-height: 75vh;">
+    <p class="footer">5컬럼 · 정본 1곳 · shanks 단독 편집 · 카드 한 줄 마크다운</p>
+  </div>
+
+  <!-- Slide 6: 텔레그램 mockup -->
+  <div class="slide" style="padding: 30px 50px;">
+    <h1 style="font-size: 40px;">📱 텔레그램 한 채팅창 안에서 다 흐름</h1>
+    <img src="../notes/assets/week3-telegram-mockup.svg" alt="텔레그램 자동 알림" style="max-height: 75vh;">
+    <p class="footer">자동 알림 → "마무리해줘" 한 마디 → 봇이 차례대로 처리 → 딥리서치 recursion</p>
+  </div>
+
+  <!-- Slide 7: 워크플로 사이클 -->
+  <div class="slide" style="padding: 30px 50px;">
+    <h1 style="font-size: 40px;">🔁 워크플로 한 사이클 (8단계)</h1>
+    <img src="../notes/assets/week3-loop-cycle.svg" alt="워크플로 8단계 사이클" style="max-height: 75vh;">
+    <p class="footer">① 카드 → ② 알림 → ③ 지시 → ④ 작업 → ⑤ 체크 → ⑥ FAIL 시 자동반복 / ⑦ 완료 → ⑧ "더 파줘" recursion</p>
+  </div>
+
+  <!-- Slide 7.5: MCP 지금 어떻게 쓰나 -->
+  <div class="slide">
+    <h1>🛠 지금 MCP를 어떻게 쓰고 있나 — <em>9 서버 / 36+ 도구</em></h1>
+    <div class="grid-2" style="margin-top: 16px;">
+      <div>
+        <table style="font-size: 17px;">
+          <tr><th>서버</th><th style="text-align:right;">도구</th><th>용도</th></tr>
+          <tr><td><strong>agent-bus</strong></td><td style="text-align:right;">4</td><td>봇끼리 메시지</td></tr>
+          <tr><td><strong>obsidian</strong></td><td style="text-align:right;">5</td><td>vault 검색·읽기·쓰기</td></tr>
+          <tr><td><strong>research-api</strong></td><td style="text-align:right;">4</td><td>미국 주가·SEC 공시</td></tr>
+          <tr><td><strong>korea-finance</strong></td><td style="text-align:right;">3</td><td>한국 주가·DART</td></tr>
+          <tr><td><strong>repo-helper</strong></td><td style="text-align:right;">6</td><td>레포 git·TODO</td></tr>
+          <tr><td><strong>arxiv</strong></td><td style="text-align:right;">3</td><td>논문 검색</td></tr>
+          <tr><td><strong>clinicaltrials</strong></td><td style="text-align:right;">4</td><td>임상 트리거 갱신</td></tr>
+          <tr><td><strong>vault-sweep</strong> ⭐</td><td style="text-align:right;">7</td><td>죽은링크·Quartz 발행</td></tr>
+          <tr><td><strong>kanban</strong></td><td style="text-align:right;">(운영)</td><td>칸반 자동 조작</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3 style="font-size: 22px;">실제 사용 예시</h3>
+        <ul style="font-size: 18px;">
+          <li><code>get_kr_quote("226330")</code> → 1초</li>
+          <li><code>search_notes("RXRX 경쟁사")</code> → 0.4초 (grep 대체)</li>
+          <li><code>bus_post("nami", ...)</code> → 즉시 자동 commit+push</li>
+          <li><code>find_dead_links()</code> → vault 607건 발견</li>
+          <li><code>track_readouts("Recursion")</code> → 임상 자동 추적</li>
+          <li><code>publish_to_wiki(path, build=true)</code> → vault → llm-wiki</li>
+        </ul>
+        <p style="margin-top: 18px;" class="quote">"MCP는 *그 자체로 빠른* 게 아니라, Claude가 매번 *같은 grep을 안 치게* 되는 게 본질. <strong>도구가 깔리면 *대화의 결*이 바뀐다.</strong>"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 8: 진짜 변화 -->
+  <div class="slide">
+    <h1>⭐ 진짜 변화 — <em>한 단계 → 두 단계 더 깊이</em></h1>
+    <div class="grid-2">
+      <div class="card red">
+        <h3 style="color: #dc2626;">Before (혼자)</h3>
+<pre style="font-size: 14px;">질문 → 답 찾으면 끝
+     → "더 궁금한데 시간이..."
+     → 한 단계만 들어가고 멈춤</pre>
+      </div>
+      <div class="card green">
+        <h3 style="color: #16a34a;">After (분담)</h3>
+<pre style="font-size: 14px;">질문 3개 → 카드 3장
+        → 5분 후 답 3개 동시
+        → "어, *이건 왜*?"
+        → 즉시 카드 추가
+        → **2단계 더 깊이**
+        → 또 "왜?" → **3단계까지**</pre>
+      </div>
+    </div>
+    <p style="margin-top: 30px;" class="center"><span class="highlight" style="font-size: 28px;">가속의 본질은 <em>속도</em> 가 아니라 <em>후속 질문이 살아남는 환경</em></span></p>
+  </div>
+
+  <!-- Slide 9: 뭐가 좋은가 -->
+  <div class="slide">
+    <h1>💡 그래서 뭐가 좋은가</h1>
+    <table>
+      <tr><th>항목</th><th>Before</th><th>After</th></tr>
+      <tr><td>질문 던지는 비용</td><td>"또 찾아야 하나..."</td><td>카드 한 줄 (10초)</td></tr>
+      <tr><td>답 받는 속도</td><td>30분~수시간</td><td>5분~30분 (병렬)</td></tr>
+      <tr><td>후속 질문</td><td>거의 없음 (지쳐서)</td><td><em>계속</em> (분담이라 여유)</td></tr>
+      <tr><td><strong>깊이</strong></td><td><strong>1단계</strong></td><td><strong><span class="highlight">2~3단계</span></strong></td></tr>
+    </table>
+    <p class="quote" style="margin-top: 30px;">"평소엔 시간 부족해서 한 번만 보고 넘어가던 자리에, <em>왜?</em> 한 마디만 던지면 봇이 다시 들고 옵니다."</p>
+  </div>
+
+  <!-- Slide 10: 발표 한 줄 -->
+  <div class="slide">
+    <h1>🎤 발표 한 줄 — 이거만 가져가셔도 됩니다</h1>
+    <div class="center" style="margin-top: 60px;">
+      <p class="super-big">"AI한테 <em>프롬프트</em> 잘 쓰는 시대에서,</p>
+      <p class="super-big" style="margin-top: 20px;">AI가 <em>루프 안에서</em></p>
+      <p class="super-big" style="margin-top: 20px;"><em>알아서 일하는</em> 시대로</p>
+      <p class="super-big" style="margin-top: 20px;">한 칸 내려왔습니다."</p>
+    </div>
+    <p class="center" style="margin-top: 40px; font-size: 22px;">비결은 <strong>분담</strong> — 카드 한 줄, 봇이 답을 들고 오면, <em>다음 궁금증</em> 이 자연스럽게 떠오릅니다.</p>
+  </div>
+
+  <!-- Slide 11: 강의 감사 -->
+  <div class="slide">
+    <h1>🙏 강의에 정말 고마웠던 점</h1>
+    <p style="font-size: 24px; margin-top: 30px;">이 모든 변화의 진짜 출발점은 <strong>3주차 들어가기 전에 주신 MCP·API 학습 자료</strong>입니다.</p>
+
+    <div class="card" style="margin-top: 40px;">
+      <h2 style="font-size: 32px;">22기 동료분께도 권합니다</h2>
+      <p class="super-big" style="margin: 30px 0;">"그 자료, <span class="highlight">진짜 펴서</span> 읽으세요."</p>
+    </div>
+
+    <p style="margin-top: 30px; font-size: 22px;">저는 두 노트로 정리하는 데 <strong>2시간</strong> 투자했는데, <br>
+    그 2시간이 <em>이번 주 모든 작업의 자본금</em> 이었습니다.</p>
+  </div>
+
+  <!-- Slide 12: 청중 질문 -->
+  <div class="slide">
+    <h1>📮 청중께 묻고 싶은 한 가지</h1>
+    <div class="center" style="margin-top: 80px;">
+      <p style="font-size: 28px; line-height: 1.8;">
+        "여러분이 이번 주 리서치한 주제 중에<br>
+        <span class="highlight"><em>한 단계만 보고 멈춘 자리</em></span> 가 있나요?<br><br>
+        그 자리에 <span class="highlight"><em>두 번째 질문 한 줄</em></span> 만 더 던질 수 있다면 —<br>
+        <strong style="font-size: 36px; color: #f59e0b;">답은 어디까지 갈까요?</strong>"
+      </p>
+    </div>
+    <p style="margin-top: 60px; text-align: center; font-size: 18px; color: #64748b;">다음 주 후기에 익명으로 모아 인용하겠습니다. ✍️</p>
+  </div>
+
+  <!-- Slide 13: 마무리 -->
+  <div class="slide dark">
+    <div class="center" style="margin-top: 100px;">
+      <h1 style="font-size: 80px; color: #fbbf24;">감사합니다 🙏</h1>
+      <p style="font-size: 24px; margin-top: 60px; color: #fef3c7;">풀스펙 후기 + 그림 9장은 vault에:</p>
+      <ul style="display: inline-block; text-align: left; margin-top: 30px; font-size: 18px; color: #cbd5e1;">
+        <li><code>Learning/지피터스22기-인터페이스/2026-06-07-3주차-수강후기.md</code> (1,059줄)</li>
+        <li><code>Learning/지피터스22기-인터페이스/2026-06-07-3주차-수강후기-간략판.md</code> (209줄)</li>
+        <li><code>Learning/지피터스22기-인터페이스/2026-06-06-mcp-개념정리.md</code></li>
+        <li><code>Learning/지피터스22기-인터페이스/2026-06-07-API-MCP-야마토-대화정리.md</code></li>
+      </ul>
+      <p style="font-size: 18px; margin-top: 80px; color: #94a3b8;">냐안의별 · 2026-06-07 · 22기 3주차 발표</p>
+    </div>
+  </div>
+
+</div>
+
+<button class="nav-btn prev" onclick="prevSlide()">‹</button>
+<button class="nav-btn next" onclick="nextSlide()">›</button>
+<div class="nav" id="nav">1 / 15 — ← → 키보드 / 클릭으로 이동 / F11 풀스크린</div>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+const nav = document.getElementById('nav');
+const progress = document.getElementById('progress');
+
+function show(n) {
+  slides.forEach(s => s.classList.remove('active'));
+  slides[n].classList.add('active');
+  nav.textContent = `${n+1} / ${total} — ← → 키보드 / 클릭으로 이동 / F11 풀스크린`;
+  progress.style.width = `${((n+1)/total)*100}%`;
+}
+
+function nextSlide() { current = (current + 1) % total; show(current); }
+function prevSlide() { current = (current - 1 + total) % total; show(current); }
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') nextSlide();
+  if (e.key === 'ArrowLeft' || e.key === 'PageUp') prevSlide();
+  if (e.key === 'Home') { current = 0; show(0); }
+  if (e.key === 'End') { current = total-1; show(total-1); }
+});
+
+show(0);
+</script>
+</body>
+</html>
