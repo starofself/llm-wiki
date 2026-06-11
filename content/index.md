@@ -37,6 +37,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-06-11-ai-digest]] — ⭐OpenAI S-1제출·9월상장설($1조+) · Fable 5 개발자반응"12시간자율작업"·Copilot/AWS/Foundry GA·6/15과금개편 D-4 · Gemini 3.5 Pro출시임박(2M컨텍스트·Deep Think)·CLI종료 D-7 · 메모리논문풍년(Infini Memory위키형·DCPM·MAGE) · Hermes v0.16.0 Surface(보안패치16건·어제정보정정) · OpenClaw 6.5 stable유지
 - [[2026-06-10-ai-digest]] — ⭐Claude Fable 5·Mythos 5 출시(1M컨텍스트·무료윈도우~6/22)·6/15과금개편 D-5 · Gemini CLI종료 D-8·AI Ultra $100플랜 · GPT-5.6 6월출시설·dreaming메모리·GPT-4.5은퇴 D-17 · 메모리연구 평가·거버넌스 정착기 · Obsidian 플러그인 1.2억DL·안전스코어카드 · Hermes Desktop 18만스타 · OpenClaw 6.5정식·메모리탈착
 - [[2026-06-09-ai-digest]] — Opus 4.8 기본승격·Dynamic Workflows(최대1000서브에이전트)·fallbackModel·6/15과금개편 D-6 · Antigravity 2.0 오케스트레이션플랫폼·Gemini 3.5 Flash·CLI종료 D-9·2.0백래시 · GPT-5.4 mini무료확대·메모리요약페이지·컨테이너분당과금·GPT-4.5 6/27은퇴 D-18 · 메모리평가벤치(MemoryCD교차도메인·구조평가) · PKM Smart Connections+Copilot+Ollama로컬 · Hermes Desktop v0.15.2 ~18만스타 · OpenClaw 6.5 MCP materialize경계·Parallel웹검색
 - [[2026-06-08-ai-digest]] — Anthropic IPO S-1제출(6/1)·6/15과금개편 D-7·Managed Agents셀프호스트샌드박스·Claude Security/Glasswing150조직 · Gemini 3.5 Flash쿼터리셋·신변종·CLI종료 D-10 · GPT-5.5응답재튜닝·메모리합성·GPT-4.5 6/27은퇴 D-19 · 메모리거버넌스(SSGM·Anatomy실증) · PKM 3아키텍처·로컬모델스택(Llama3.2·nomic) · Hermes Desktop원격백엔드·젠슨GTC · OpenClaw 6.5 채널세이프티·Parallel웹검색
