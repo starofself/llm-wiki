@@ -37,6 +37,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-06-14-ai-digest]] — 과금분리D-DAY·AgentSDK크레딧opt-in필수 · GeminiCLI종료D-4 · GPT-5.2은퇴완료·Canvas폐지 · AgentMemory4축분류논문 · ObsidianBases오프라인DB · Hermes ProfileBuilder · OpenClaw6.6안정
 - [[2026-06-13-ai-digest]] — Claude Code 모델거버넌스·과금분리D-2 · Anthropic IPO $965B · Gemini CLI종료D-5 · GPT-5.2은퇴·Codex Appshots · Agent Memory 시스템논문 · Obsidian Bases오프라인DB · Hermes Desktop v0.15.2 · OpenClaw 6.5안정
 - [[2026-06-11-ai-digest]] — ⭐OpenAI S-1제출·9월상장설($1조+) · Fable 5 개발자반응"12시간자율작업"·Copilot/AWS/Foundry GA·6/15과금개편 D-4 · Gemini 3.5 Pro출시임박(2M컨텍스트·Deep Think)·CLI종료 D-7 · 메모리논문풍년(Infini Memory위키형·DCPM·MAGE) · Hermes v0.16.0 Surface(보안패치16건·어제정보정정) · OpenClaw 6.5 stable유지
 - [[2026-06-10-ai-digest]] — ⭐Claude Fable 5·Mythos 5 출시(1M컨텍스트·무료윈도우~6/22)·6/15과금개편 D-5 · Gemini CLI종료 D-8·AI Ultra $100플랜 · GPT-5.6 6월출시설·dreaming메모리·GPT-4.5은퇴 D-17 · 메모리연구 평가·거버넌스 정착기 · Obsidian 플러그인 1.2억DL·안전스코어카드 · Hermes Desktop 18만스타 · OpenClaw 6.5정식·메모리탈착
