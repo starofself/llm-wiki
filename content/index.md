@@ -37,6 +37,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-08-28-ai-digest]] — ClaudeCode8월안정화·Auto모드탭 · Antigravity엔터프라이즈확장·VSCode익스텐션 · GPT-5.6Ultrafast14배속·o3은퇴 · MemForest·EverMemOS메모리보안서베이 · claude-obsidianLLMWiki패턴확산 · HermesV0.20.3MCP2.x · OpenClaw6.7.1Control UI개편
 - [[2026-06-19-ai-digest]] — ClaudeCode서브에이전트5단계재귀·fallbackModel·/cd·--safe-mode · GeminiCLI공식EOL완료·AntigravityCLI체제개막 · GPT-5.6출시D-3~9임박·GPT-4.5은퇴D-8 · ActiveContextCompression·Mem0-10way비교 · ObsidianBases오프라인DB완전통합·4350플러그인 · HermesV0.16.0SurfaceRelease보안16건 · OpenClaw6.8Telegram구조화렌더링
 - [[2026-06-18-ai-digest]] — GeminiCLID-DAY공식EOL·AntigravityCLI전환 · ClaudeCodev2.1.170+Fable5복구중 · GPT-4.5은퇴D-9·Canvas완전제거 · AgentMemory4축특성화논문·AgeMem자율관리 · ObsidianBases오프라인DB·1.13.x · HermesDesktopv0.15.2안정 · OpenClaw6.8Telegram구조화
 - [[2026-06-17-ai-digest]] — Fable5·Mythos5정부정지명령(역대최초AI수출통제) · GeminiCLI종료D-1최후마이그레이션 · GPT-4.5은퇴D-10·5.6출시임박 · MnemonicSovereignty6단계LTM보안 · Obsidian5대로컬LLM플러그인 · HermesDesktop안정 · OpenClaw6.8beta오늘릴리스
