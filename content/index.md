@@ -37,6 +37,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-10-29-ai-digest]] — MemCon메모리제어논문 · Antigravity2.0 · HermesV0.20 · OpenClaw · LLMWiki패턴
 - [[2026-10-28-ai-digest]] — GPT-6ChatGPT기본모델전환·Codex GPT-5.5은퇴 · 적응형메모리관리논문 · LLMWiki패턴확산 · OpenClaw2.0 · HermesV0.20
 - [[2026-08-28-ai-digest]] — ClaudeCode8월안정화·Auto모드탭 · Antigravity엔터프라이즈확장·VSCode익스텐션 · GPT-5.6Ultrafast14배속·o3은퇴 · MemForest·EverMemOS메모리보안서베이 · claude-obsidianLLMWiki패턴확산 · HermesV0.20.3MCP2.x · OpenClaw6.7.1Control UI개편
 - [[2026-06-19-ai-digest]] — ClaudeCode서브에이전트5단계재귀·fallbackModel·/cd·--safe-mode · GeminiCLI공식EOL완료·AntigravityCLI체제개막 · GPT-5.6출시D-3~9임박·GPT-4.5은퇴D-8 · ActiveContextCompression·Mem0-10way비교 · ObsidianBases오프라인DB완전통합·4350플러그인 · HermesV0.16.0SurfaceRelease보안16건 · OpenClaw6.8Telegram구조화렌더링
