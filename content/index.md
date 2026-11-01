@@ -37,6 +37,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-11-01-ai-digest]] — Claude10월정리 · GPT-5.6미검증 · 메모리MemCon · OKB플러그인 · OpenClaw
 - [[2026-10-31-ai-digest]] — Claude훅·Haiku5.5 · 메모리거버넌스 · LLMWiki패턴 · Hermes0.20
 - [[2026-10-30-ai-digest]] — CodeReviewGA · Antigravity2.0 · HermesV0.20 · 메모리논문 · LLMWiki패턴
 - [[2026-10-29-ai-digest]] — MemCon메모리제어논문 · Antigravity2.0 · HermesV0.20 · OpenClaw · LLMWiki패턴
