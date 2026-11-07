@@ -37,6 +37,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-11-07-ai-digest]] — 신규뉴스없음 · MemCon·메모리 정책 · Cursor-OpenAI 11/12 · Antigravity · OpenClaw 2.0
 - [[2026-11-06-ai-digest]] — 신규뉴스없음 · MemoryArena·메모리 서베이 · Antigravity · Hermes v0.20 · OpenClaw
 - [[2026-11-05-ai-digest]] — 신규뉴스없음 · SSGM·Memory-R1 · GPT-6(미검증) · OpenClaw CVE · Antigravity
 - [[2026-11-04-ai-digest]] — 신규뉴스없음 · MemCon · GPT-6.1(미검증) · Antigravity · OpenClaw2.0
