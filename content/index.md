@@ -37,6 +37,7 @@ tags: ["22기", "vault"]
 
 > 매일 밤 10시 — AI·도구·논문·PKM 새 소식 + "Claude가 배울 것 / 내가 알 것"
 
+- [[2026-11-09-ai-digest]] — 신규뉴스없음 · GPT-6.1 Terra · Antigravity CLI · 메모리 오류 전파 · OpenClaw CVE
 - [[2026-11-08-ai-digest]] — 신규뉴스없음 · Agentic Memory·MemCon · Antigravity CLI · 플러그인 보안 · OpenClaw
 - [[2026-11-07-ai-digest]] — 신규뉴스없음 · MemCon·메모리 정책 · Cursor-OpenAI 11/12 · Antigravity · OpenClaw 2.0
 - [[2026-11-06-ai-digest]] — 신규뉴스없음 · MemoryArena·메모리 서베이 · Antigravity · Hermes v0.20 · OpenClaw
